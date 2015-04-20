@@ -8,6 +8,9 @@ php:
   - hhvm
   - nightly
 
+env:
+  - SYMFONY_VERSION=2.6.*
+
 matrix:
   include:
     - php: 5.3.3
