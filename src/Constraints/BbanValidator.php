@@ -16,7 +16,7 @@ class BbanValidator extends ConstraintValidator
      */
     public function validate($value, Constraint $constraint)
     {
-        if (!Bban::validate($value)) {
+        if ($value && !Bban::validate($value)) {
             $this->context->addViolation($constraint->message);
         }
     }
