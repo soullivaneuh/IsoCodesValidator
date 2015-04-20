@@ -1,0 +1,24 @@
+{
+    "name": "sllh/iso-codes-validator",
+    "type": "library",
+    "description": "Symfony validator wrapper of ronanguilloux/isocodes",
+    "keywords": ["ISO codes", "Symfony", "Validator"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sullivan Senechal",
+            "email": "soullivaneuh@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/validator": "~2.3",
+        "ronanguilloux/isocodes": "~1.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.6"
+    },
+    "autoload": {
+        "psr-4": { "SLLH\\IsoCodesValidator\\": "src" }
+    }
+}
