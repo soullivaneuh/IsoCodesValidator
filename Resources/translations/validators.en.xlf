@@ -46,6 +46,10 @@
                 <source>This value is not a valid NINO.</source>
                 <target>This value is not a valid NINO.</target>
             </trans-unit>
+            <trans-unit id="12">
+                <source>This value is not a valid VAT.</source>
+                <target>This value is not a valid VAT.</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

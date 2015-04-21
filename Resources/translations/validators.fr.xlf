@@ -42,6 +42,10 @@
                 <source>This value is not a valid NINO.</source>
                 <target>Cette valeur n'est pas un code NINO valide.</target>
             </trans-unit>
+            <trans-unit id="11">
+                <source>This value is not a valid VAT.</source>
+                <target>Cette valeur n'est pas un code NIF valide.</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
