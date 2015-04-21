@@ -38,6 +38,10 @@
                 <source>This value is not a valid structured communication code.</source>
                 <target>Cette valeur n'est pas un code de communication structurée valide.</target>
             </trans-unit>
+            <trans-unit id="10">
+                <source>This value is not a valid SWIFT.</source>
+                <target>Cette valeur n'est pas un code BIC valide.</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
