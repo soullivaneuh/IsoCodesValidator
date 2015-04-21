@@ -34,6 +34,10 @@
                 <source>This value is not a valid SSN.</source>
                 <target>Cette valeur n'est pas un code SSN valide.</target>
             </trans-unit>
+            <trans-unit id="9">
+                <source>This value is not a valid structured communication code.</source>
+                <target>Cette valeur n'est pas un code de communication structurée valide.</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
