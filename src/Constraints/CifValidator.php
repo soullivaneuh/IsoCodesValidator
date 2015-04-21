@@ -22,7 +22,6 @@ class CifValidator extends ConstraintValidator
         }
 
         if ($value && !IsoCodes\Cif::validate($value)) {
-            // TODO: Remove conditional methods when bumping requirements to SF 2.5+
             if ($this->context instanceof ExecutionContextInterface) {
                 $this->context->buildViolation($constraint->message)
                     ->addViolation();
