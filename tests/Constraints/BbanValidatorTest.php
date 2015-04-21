@@ -9,7 +9,7 @@ class BbanValidatorTest extends AbstractConstraintValidatorTest
 {
     protected function getApiVersion()
     {
-        return Validation::API_VERSION_2_4;
+        return Validation::API_VERSION_2_5_BC;
     }
 
     protected function createValidator()
