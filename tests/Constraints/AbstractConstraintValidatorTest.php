@@ -12,13 +12,13 @@ abstract class AbstractConstraintValidatorTest extends BaseAbstractConstraintVal
     /**
      * @var Constraint
      */
-    protected $constraint;
+    protected $srcConstraint;
 
     protected function setUp()
     {
         parent::setUp();
 
-        $this->constraint = $this->createConstraint();
+        $this->srcConstraint = $this->createConstraint();
     }
 
     protected function getApiVersion()
@@ -30,7 +30,7 @@ abstract class AbstractConstraintValidatorTest extends BaseAbstractConstraintVal
     {
         $this->setExpectedException(
             'Symfony\Component\Validator\Exception\UnexpectedTypeException',
-            sprintf('Expected argument of type "%s", "Symfony\Component\Validator\Constraints\Blank" given', get_class($this->constraint))
+            sprintf('Expected argument of type "%s", "Symfony\Component\Validator\Constraints\Blank" given', get_class($this->srcConstraint))
         );
 
         $this->validator->validate(null, new Blank());
