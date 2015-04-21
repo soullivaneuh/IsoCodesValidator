@@ -12,3 +12,9 @@
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Soullivaneuh/IsoCodesValidator/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Soullivaneuh/IsoCodesValidator/?branch=master)
 [![Code Climate](https://codeclimate.com/github/Soullivaneuh/IsoCodesValidator/badges/gpa.svg)](https://codeclimate.com/github/Soullivaneuh/IsoCodesValidator)
 [![Coverage Status](https://coveralls.io/repos/Soullivaneuh/IsoCodesValidator/badge.svg?branch=master)](https://coveralls.io/r/Soullivaneuh/IsoCodesValidator?branch=master)
+
+## TODO
+
+ * Add documentation
+ * Add lines note about not implemented already existing validator (with list of them)
+ * Push stable version
