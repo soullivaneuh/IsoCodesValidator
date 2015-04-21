@@ -14,6 +14,10 @@
                 <source>This EAN 13 code is not valid.</source>
                 <target>Ce code EAN 13 est invalide.</target>
             </trans-unit>
+            <trans-unit id="4">
+                <source>This INSEE number is not valid.</source>
+                <target>Ce numéro INSEE est invalide.</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
