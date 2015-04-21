@@ -5,6 +5,7 @@ namespace SLLH\IsoCodesValidator\Constraints;
 use IsoCodes;
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
+use Symfony\Component\Validator\Exception\UnexpectedTypeException;
 
 /**
  * Class CifValidator
@@ -16,6 +17,10 @@ class CifValidator extends ConstraintValidator
      */
     public function validate($value, Constraint $constraint)
     {
+        if (!$constraint instanceof Cif) {
+            throw new UnexpectedTypeException($constraint, __NAMESPACE__.'\Cif');
+        }
+
         if ($value && !IsoCodes\Cif::validate($value)) {
             // TODO: Remove conditional methods when bumping requirements to SF 2.5+
             if ($this->context instanceof ExecutionContextInterface) {
