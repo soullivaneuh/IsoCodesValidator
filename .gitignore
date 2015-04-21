@@ -3,3 +3,4 @@ nbproject
 composer.lock
 /vendor
 composer.phar
+/build
