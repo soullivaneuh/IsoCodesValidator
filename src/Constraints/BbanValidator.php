@@ -3,15 +3,14 @@
 namespace SLLH\IsoCodesValidator\Constraints;
 
 use IsoCodes;
+use SLLH\IsoCodesValidator\IsoCodesConstraintValidator;
 use Symfony\Component\Validator\Constraint;
-use Symfony\Component\Validator\ConstraintValidator;
-use Symfony\Component\Validator\Context\ExecutionContextInterface;
 use Symfony\Component\Validator\Exception\UnexpectedTypeException;
 
 /**
  * Class BbanValidator
  */
-class BbanValidator extends ConstraintValidator
+class BbanValidator extends IsoCodesConstraintValidator
 {
     /**
      * {@inheritdoc}
@@ -23,15 +22,7 @@ class BbanValidator extends ConstraintValidator
         }
 
         if ($value && !IsoCodes\Bban::validate($value)) {
-            if ($this->context instanceof ExecutionContextInterface) {
-                $this->context->buildViolation($constraint->message)
-                    ->addViolation();
-            } elseif (method_exists($this, 'buildViolation')) {
-                $this->buildViolation($constraint->message)
-                    ->addViolation();
-            } else {
-                $this->context->addViolation($constraint->message);
-            }
+            $this->createViolation($constraint->message);
         }
     }
 }
