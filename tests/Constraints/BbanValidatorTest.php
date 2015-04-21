@@ -38,7 +38,7 @@ class BbanValidatorTest extends AbstractConstraintValidatorTest
     {
         $this->validator->validate($value, new Bban());
 
-        $this->buildViolation('This Bban code is not valid.')
+        $this->buildViolation('This BBAN code is not valid.')
             ->assertRaised();
     }
 

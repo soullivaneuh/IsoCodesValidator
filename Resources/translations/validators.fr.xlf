@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>This BBAN code is not valid.</source>
+                <target>Ce code BBAN est invalide.</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>This CIF code is not valid.</source>
+                <target>Ce code NIF est invalide.</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>This credit card scheme is not valid.</source>
+                <target>Ce numéro de carte de crédit est invalide.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

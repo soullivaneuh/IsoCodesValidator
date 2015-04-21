@@ -9,5 +9,5 @@ use Symfony\Component\Validator\Constraint;
  */
 class CreditCard extends Constraint
 {
-    public $message = 'This CreditCard scheme is not valid.';
+    public $message = 'This credit card scheme is not valid.';
 }

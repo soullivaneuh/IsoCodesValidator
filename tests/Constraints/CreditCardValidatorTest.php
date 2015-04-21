@@ -48,7 +48,7 @@ class CreditCardValidatorTest extends AbstractConstraintValidatorTest
     {
         $this->validator->validate($value, new CreditCard());
 
-        $this->buildViolation('This CreditCard scheme is not valid.')
+        $this->buildViolation('This credit card scheme is not valid.')
             ->assertRaised();
     }
 
