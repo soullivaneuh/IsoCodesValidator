@@ -2,7 +2,7 @@
 
 namespace SLLH\IsoCodesValidator\Constraints;
 
-use IsoCodes\Bban;
+use IsoCodes;
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
 
@@ -16,7 +16,7 @@ class BbanValidator extends ConstraintValidator
      */
     public function validate($value, Constraint $constraint)
     {
-        if ($value && !Bban::validate($value)) {
+        if ($value && !IsoCodes\Bban::validate($value)) {
             $this->context->addViolation($constraint->message);
         }
     }
