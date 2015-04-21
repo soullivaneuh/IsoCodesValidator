@@ -18,3 +18,4 @@
  * Add documentation
  * Add lines note about not implemented already existing validator (with list of them)
  * Push stable version
+ * Make a iso-codes-sandbox project for demo
