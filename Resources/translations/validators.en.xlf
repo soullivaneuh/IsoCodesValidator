@@ -26,6 +26,10 @@
                 <source>This value is not a valid SIREN.</source>
                 <target>This value is not a valid SIREN.</target>
             </trans-unit>
+            <trans-unit id="7">
+                <source>This value is not a valid SIRET.</source>
+                <target>This value is not a valid SIRET.</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
