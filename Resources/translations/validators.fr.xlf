@@ -8,7 +8,7 @@
             </trans-unit>
             <trans-unit id="2">
                 <source>This CIF code is not valid.</source>
-                <target>Ce code NIF est invalide.</target>
+                <target>Ce code CIF est invalide.</target>
             </trans-unit>
             <trans-unit id="3">
                 <source>This EAN 13 code is not valid.</source>
