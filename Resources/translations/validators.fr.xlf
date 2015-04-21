@@ -30,6 +30,10 @@
                 <source>This value is not a valid SIRET.</source>
                 <target>Cette valeur n'est pas un code SIREN valide.</target>
             </trans-unit>
+            <trans-unit id="8">
+                <source>This value is not a valid SSN.</source>
+                <target>Cette valeur n'est pas un code SSN valide.</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

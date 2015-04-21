@@ -30,6 +30,10 @@
                 <source>This value is not a valid SIRET.</source>
                 <target>This value is not a valid SIRET.</target>
             </trans-unit>
+            <trans-unit id="8">
+                <source>This value is not a valid SSN.</source>
+                <target>This value is not a valid SSN.</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
