@@ -9,5 +9,5 @@ use Symfony\Component\Validator\Constraint;
  */
 class Bban extends Constraint
 {
-    public $message = 'This BBAN code is not valid.';
+    public $message = 'This value is not a valid BBAN.';
 }

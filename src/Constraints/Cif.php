@@ -9,5 +9,5 @@ use Symfony\Component\Validator\Constraint;
  */
 class Cif extends Constraint
 {
-    public $message = 'This CIF code is not valid.';
+    public $message = 'This value is not a valid CIF.';
 }

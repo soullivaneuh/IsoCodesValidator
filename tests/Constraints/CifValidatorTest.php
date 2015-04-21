@@ -44,7 +44,7 @@ class CifValidatorTest extends AbstractConstraintValidatorTest
     {
         $this->validator->validate($value, new Cif());
 
-        $this->buildViolation('This CIF code is not valid.')
+        $this->buildViolation('This value is not a valid CIF.')
             ->assertRaised();
     }
 

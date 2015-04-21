@@ -3,20 +3,20 @@
     <file source-language="en" datatype="plaintext" original="file.ext">
         <body>
             <trans-unit id="1">
-                <source>This BBAN code is not valid.</source>
-                <target>This BBAN code is not valid.</target>
+                <source>This value is not a valid BBAN.</source>
+                <target>This value is not a valid BBAN.</target>
             </trans-unit>
             <trans-unit id="2">
-                <source>This CIF code is not valid.</source>
-                <target>This CIF code is not valid.</target>
+                <source>This value is not a valid CIF.</source>
+                <target>This value is not a valid CIF.</target>
             </trans-unit>
             <trans-unit id="3">
-                <source>This EAN 13 code is not valid.</source>
-                <target>This EAN 13 code is not valid.</target>
+                <source>This value is not a valid EAN-13.</source>
+                <target>This value is not a valid EAN-13.</target>
             </trans-unit>
             <trans-unit id="4">
-                <source>This INSEE number is not valid.</source>
-                <target>This INSEE number is not valid.</target>
+                <source>This value is not a valid INSEE number.</source>
+                <target>This value is not a valid INSEE number.</target>
             </trans-unit>
         </body>
     </file>
