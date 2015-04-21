@@ -22,6 +22,10 @@
                 <source>This value is not a valid NIF.</source>
                 <target>This value is not a valid NIF.</target>
             </trans-unit>
+            <trans-unit id="6">
+                <source>This value is not a valid SIREN.</source>
+                <target>This value is not a valid SIREN.</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
