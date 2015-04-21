@@ -19,3 +19,5 @@
  * Add lines note about not implemented already existing validators (with list of them)
  * Push stable version
  * Make a iso-codes-sandbox project for demo
+ * Add author PHP doc tags
+ * Add Licence file
