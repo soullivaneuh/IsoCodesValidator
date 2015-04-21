@@ -17,7 +17,16 @@ class CifValidator extends ConstraintValidator
     public function validate($value, Constraint $constraint)
     {
         if ($value && !IsoCodes\Cif::validate($value)) {
-            $this->context->addViolation($constraint->message);
+            // TODO: Remove conditional methods when bumping requirements to SF 2.5+
+            if ($this->context instanceof ExecutionContextInterface) {
+                $this->context->buildViolation($constraint->message)
+                    ->addViolation();
+            } elseif (method_exists($this, 'buildViolation')) {
+                $this->buildViolation($constraint->message)
+                    ->addViolation();
+            } else {
+                $this->context->addViolation($constraint->message);
+            }
         }
     }
 }
