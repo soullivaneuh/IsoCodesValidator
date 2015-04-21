@@ -11,10 +11,6 @@
                 <target>Ce code NIF est invalide.</target>
             </trans-unit>
             <trans-unit id="3">
-                <source>This credit card scheme is not valid.</source>
-                <target>Ce numéro de carte de crédit est invalide.</target>
-            </trans-unit>
-            <trans-unit id="4">
                 <source>This EAN 13 code is not valid.</source>
                 <target>Ce code EAN 13 est invalide.</target>
             </trans-unit>
