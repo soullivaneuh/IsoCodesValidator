@@ -2,6 +2,7 @@
 
 namespace SLLH\IsoCodesValidator\Constraints;
 
+use Symfony\Component\Validator\Constraints\Blank;
 use Symfony\Component\Validator\Tests\Constraints\AbstractConstraintValidatorTest;
 use Symfony\Component\Validator\Validation;
 
@@ -15,6 +16,16 @@ class CifValidatorTest extends AbstractConstraintValidatorTest
     protected function createValidator()
     {
         return new CifValidator();
+    }
+
+    public function testUnexpectedConstraintException()
+    {
+        $this->setExpectedException(
+            'Symfony\Component\Validator\Exception\UnexpectedTypeException',
+            'Expected argument of type "SLLH\IsoCodesValidator\Constraints\Cif", "Symfony\Component\Validator\Constraints\Blank" given'
+        );
+
+        $this->validator->validate(null, new Blank());
     }
 
     public function testNullIsValid()
