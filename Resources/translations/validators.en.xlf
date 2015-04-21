@@ -18,6 +18,10 @@
                 <source>This value is not a valid INSEE number.</source>
                 <target>This value is not a valid INSEE number.</target>
             </trans-unit>
+            <trans-unit id="5">
+                <source>This value is not a valid NIF.</source>
+                <target>This value is not a valid NIF.</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
