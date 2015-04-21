@@ -30,7 +30,7 @@ abstract class IsoCodesConstraintValidator extends ConstraintValidator
      *
      * @param string $message
      */
-    public function createViolation($message)
+    protected function createViolation($message)
     {
         if ($this->context instanceof ExecutionContextInterface) {
             $this->context->buildViolation($message)
