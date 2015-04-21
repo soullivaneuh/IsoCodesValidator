@@ -39,7 +39,7 @@ before_script:
   - composer update --prefer-source $COMPOSER_FLAGS
 
 script:
-  - php vendor/bin/phpunit -c phpunit.xml.dist
+  - php vendor/bin/phpunit -c phpunit.xml.dist --coverage-clover build/logs/clover.xml
 
 after_script:
   - php vendor/bin/coveralls -v
