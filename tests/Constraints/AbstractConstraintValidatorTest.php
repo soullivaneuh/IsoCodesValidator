@@ -7,7 +7,6 @@ use Symfony\Component\Validator\Constraints\Blank;
 use Symfony\Component\Validator\Tests\Constraints\AbstractConstraintValidatorTest as BaseAbstractConstraintValidatorTest;
 use Symfony\Component\Validator\Validation;
 
-
 abstract class AbstractConstraintValidatorTest extends BaseAbstractConstraintValidatorTest
 {
     /**

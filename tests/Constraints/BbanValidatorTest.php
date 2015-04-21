@@ -4,7 +4,6 @@ namespace SLLH\IsoCodesValidator\Constraints;
 
 class BbanValidatorTest extends AbstractConstraintValidatorTest
 {
-
     protected function createValidator()
     {
         return new BbanValidator();

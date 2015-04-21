@@ -4,11 +4,6 @@ namespace SLLH\IsoCodesValidator\Constraints;
 
 class CifValidatorTest extends AbstractConstraintValidatorTest
 {
-    protected function getApiVersion()
-    {
-        return Validation::API_VERSION_2_5_BC;
-    }
-
     protected function createValidator()
     {
         return new CifValidator();
@@ -56,14 +51,14 @@ class CifValidatorTest extends AbstractConstraintValidatorTest
     public function getInvalidValues()
     {
         return array(
-            array('K11111111'), // Spanish children under the age of 14 who need a fiscal number
-            array('L61685095'), // Spanish citizens resident outside Spain who do not have a Spanish Identity Card
-            array('X61685095'), // Foreign individuals with financial interests in Spain < 15/07/2008
-            array('Y61685095'), // Foreign individuals with financial interests in Spain > 15/07/2008
-            array('N0032484'),      // no end control
-            array('N0032484I'),     // NIF: first digit OK, end control digit KO
-            array('M0032484I'),     // NIF: first digit KO, end control digit KO
-            array('M0032484H'),     // NIF: first digit KO, end control digit OK
+            array('K11111111'),
+            array('L61685095'),
+            array('X61685095'),
+            array('Y61685095'),
+            array('N0032484'),
+            array('N0032484I'),
+            array('M0032484I'),
+            array('M0032484H'),
             array(' '),
         );
     }
