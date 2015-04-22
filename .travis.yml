@@ -12,6 +12,7 @@ env:
   - SYMFONY_VERSION=2.6.*
 
 matrix:
+  fast_finish: true
   include:
     - php: 5.3.3
       env: SYMFONY_VERSION=2.3.* COMPOSER_FLAGS="--prefer-lowest"
@@ -36,10 +37,16 @@ matrix:
     - env: SYMFONY_VERSION=2.8.*@dev
     - env: SYMFONY_VERSION="3.0.x-dev as 2.6"
 
+cache:
+  directories:
+    - vendor
+    - $HOME/.composer/cache
+
 before_script:
   - composer selfupdate
+  - composer config -g github-oauth.github.com $GITHUB_OAUTH_TOKEN
   - composer require "symfony/symfony:${SYMFONY_VERSION}" --no-update
-  - composer update --prefer-source $COMPOSER_FLAGS
+  - composer update --prefer-dist $COMPOSER_FLAGS
 
 script:
   - php vendor/bin/phpunit -c phpunit.xml.dist --coverage-clover build/logs/clover.xml
