@@ -1,6 +1,9 @@
 <?php
 
-namespace SLLH\IsoCodesValidator\Constraints;
+namespace SLLH\IsoCodesValidator\Tests\Constraints;
+
+use SLLH\IsoCodesValidator\Constraints\Ssn;
+use SLLH\IsoCodesValidator\Constraints\SsnValidator;
 
 class SsnValidatorTest extends AbstractConstraintValidatorTest
 {

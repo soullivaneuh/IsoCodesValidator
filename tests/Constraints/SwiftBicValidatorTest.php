@@ -1,6 +1,9 @@
 <?php
 
-namespace SLLH\IsoCodesValidator\Constraints;
+namespace SLLH\IsoCodesValidator\Tests\Constraints;
+
+use SLLH\IsoCodesValidator\Constraints\SwiftBic;
+use SLLH\IsoCodesValidator\Constraints\SwiftBicValidator;
 
 class SwiftBicValidatorTest extends AbstractConstraintValidatorTest
 {

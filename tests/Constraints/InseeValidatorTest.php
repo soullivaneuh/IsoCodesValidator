@@ -1,6 +1,9 @@
 <?php
 
-namespace SLLH\IsoCodesValidator\Constraints;
+namespace SLLH\IsoCodesValidator\Tests\Constraints;
+
+use SLLH\IsoCodesValidator\Constraints\Insee;
+use SLLH\IsoCodesValidator\Constraints\InseeValidator;
 
 class InseeValidatorTest extends AbstractConstraintValidatorTest
 {

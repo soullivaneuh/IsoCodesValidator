@@ -1,6 +1,9 @@
 <?php
 
-namespace SLLH\IsoCodesValidator\Constraints;
+namespace SLLH\IsoCodesValidator\Tests\Constraints;
+
+use SLLH\IsoCodesValidator\Constraints\Vat;
+use SLLH\IsoCodesValidator\Constraints\VatValidator;
 
 class VatValidatorTest extends AbstractConstraintValidatorTest
 {

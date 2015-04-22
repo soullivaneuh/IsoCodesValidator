@@ -1,6 +1,9 @@
 <?php
 
-namespace SLLH\IsoCodesValidator\Constraints;
+namespace SLLH\IsoCodesValidator\Tests\Constraints;
+
+use SLLH\IsoCodesValidator\Constraints\Bban;
+use SLLH\IsoCodesValidator\Constraints\BbanValidator;
 
 class BbanValidatorTest extends AbstractConstraintValidatorTest
 {

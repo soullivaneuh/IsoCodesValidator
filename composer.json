@@ -24,6 +24,9 @@
     "autoload": {
         "psr-4": { "SLLH\\IsoCodesValidator\\": "src" }
     },
+    "autoload-dev": {
+        "psr-4": { "SLLH\\IsoCodesValidator\\Tests\\": "src" }
+    },
     "extra": {
         "branch-alias": {
             "dev-master": "1.x-dev"

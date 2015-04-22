@@ -1,6 +1,9 @@
 <?php
 
-namespace SLLH\IsoCodesValidator\Constraints;
+namespace SLLH\IsoCodesValidator\Tests\Constraints;
+
+use SLLH\IsoCodesValidator\Constraints\Ean13;
+use SLLH\IsoCodesValidator\Constraints\Ean13Validator;
 
 class Ean13ValidatorTest extends AbstractConstraintValidatorTest
 {

@@ -1,6 +1,9 @@
 <?php
 
-namespace SLLH\IsoCodesValidator\Constraints;
+namespace SLLH\IsoCodesValidator\Tests\Constraints;
+
+use SLLH\IsoCodesValidator\Constraints\StructuredCommunication;
+use SLLH\IsoCodesValidator\Constraints\StructuredCommunicationValidator;
 
 class StructuredCommunicationTest extends AbstractConstraintValidatorTest
 {

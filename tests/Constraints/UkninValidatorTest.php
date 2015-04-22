@@ -1,6 +1,9 @@
 <?php
 
-namespace SLLH\IsoCodesValidator\Constraints;
+namespace SLLH\IsoCodesValidator\Tests\Constraints;
+
+use SLLH\IsoCodesValidator\Constraints\Uknin;
+use SLLH\IsoCodesValidator\Constraints\UkninValidator;
 
 class UkninValidatorTest extends AbstractConstraintValidatorTest
 {

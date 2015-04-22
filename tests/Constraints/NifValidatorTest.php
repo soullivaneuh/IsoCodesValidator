@@ -1,6 +1,9 @@
 <?php
 
-namespace SLLH\IsoCodesValidator\Constraints;
+namespace SLLH\IsoCodesValidator\Tests\Constraints;
+
+use SLLH\IsoCodesValidator\Constraints\Nif;
+use SLLH\IsoCodesValidator\Constraints\NifValidator;
 
 class NifValidatorTest extends AbstractConstraintValidatorTest
 {

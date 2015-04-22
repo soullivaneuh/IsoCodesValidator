@@ -1,6 +1,9 @@
 <?php
 
-namespace SLLH\IsoCodesValidator\Constraints;
+namespace SLLH\IsoCodesValidator\Tests\Constraints;
+
+use SLLH\IsoCodesValidator\Constraints\Siren;
+use SLLH\IsoCodesValidator\Constraints\SirenValidator;
 
 class SirenValidatorTest extends AbstractConstraintValidatorTest
 {

@@ -1,6 +1,9 @@
 <?php
 
-namespace SLLH\IsoCodesValidator\Constraints;
+namespace SLLH\IsoCodesValidator\Tests\Constraints;
+
+use SLLH\IsoCodesValidator\Constraints\ZipCode;
+use SLLH\IsoCodesValidator\Constraints\ZipCodeValidator;
 
 class ZipCodeValidatorTest extends AbstractConstraintValidatorTest
 {

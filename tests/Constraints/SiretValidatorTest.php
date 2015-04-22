@@ -1,6 +1,9 @@
 <?php
 
-namespace SLLH\IsoCodesValidator\Constraints;
+namespace SLLH\IsoCodesValidator\Tests\Constraints;
+
+use SLLH\IsoCodesValidator\Constraints\Siret;
+use SLLH\IsoCodesValidator\Constraints\SiretValidator;
 
 class SiretValidatorTest extends AbstractConstraintValidatorTest
 {

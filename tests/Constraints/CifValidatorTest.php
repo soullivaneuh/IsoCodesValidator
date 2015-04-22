@@ -1,6 +1,9 @@
 <?php
 
-namespace SLLH\IsoCodesValidator\Constraints;
+namespace SLLH\IsoCodesValidator\Tests\Constraints;
+
+use SLLH\IsoCodesValidator\Constraints\Cif;
+use SLLH\IsoCodesValidator\Constraints\CifValidator;
 
 class CifValidatorTest extends AbstractConstraintValidatorTest
 {
