@@ -39,6 +39,7 @@ matrix:
 before_script:
   - composer selfupdate
   - composer require "symfony/symfony:${SYMFONY_VERSION}" --no-update
+  - cat composer.json
   - composer update --prefer-source $COMPOSER_FLAGS
 
 script:
