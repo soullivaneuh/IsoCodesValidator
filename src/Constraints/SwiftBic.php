@@ -6,6 +6,9 @@ use Symfony\Component\Validator\Constraint;
 
 /**
  * Class SwiftBic
+ *
+ * @Annotation
+ * @Target({"PROPERTY", "METHOD", "ANNOTATION"})
  */
 class SwiftBic extends Constraint
 {

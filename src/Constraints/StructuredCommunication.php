@@ -6,6 +6,9 @@ use Symfony\Component\Validator\Constraint;
 
 /**
  * Class StructuredCommunication
+ *
+ * @Annotation
+ * @Target({"PROPERTY", "METHOD", "ANNOTATION"})
  */
 class StructuredCommunication extends Constraint
 {

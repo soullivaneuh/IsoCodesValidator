@@ -6,6 +6,9 @@ use Symfony\Component\Validator\Constraint;
 
 /**
  * Class Siren
+ *
+ * @Annotation
+ * @Target({"PROPERTY", "METHOD", "ANNOTATION"})
  */
 class Siren extends Constraint
 {

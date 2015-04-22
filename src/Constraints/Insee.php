@@ -6,6 +6,9 @@ use Symfony\Component\Validator\Constraint;
 
 /**
  * Class Insee
+ *
+ * @Annotation
+ * @Target({"PROPERTY", "METHOD", "ANNOTATION"})
  */
 class Insee extends Constraint
 {

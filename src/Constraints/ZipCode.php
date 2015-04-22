@@ -7,6 +7,9 @@ use Symfony\Component\Validator\Exception\ConstraintDefinitionException;
 
 /**
  * Class ZipCode
+ *
+ * @Annotation
+ * @Target({"PROPERTY", "METHOD", "ANNOTATION"})
  */
 class ZipCode extends Constraint
 {
