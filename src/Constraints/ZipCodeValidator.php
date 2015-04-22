@@ -5,7 +5,6 @@ namespace SLLH\IsoCodesValidator\Constraints;
 use IsoCodes;
 use SLLH\IsoCodesValidator\IsoCodesConstraintValidator;
 use Symfony\Component\Validator\Constraint;
-use Symfony\Component\Validator\Exception\InvalidArgumentException;
 
 /**
  * Class ZipCodeValidator
@@ -40,14 +39,8 @@ class ZipCodeValidator extends IsoCodesConstraintValidator
                 $this->createViolation($constraint->message);
             }
         } catch (\InvalidArgumentException $e) {
-            switch ($e->getMessage()) {
-                // Add violation instead of throwing error. Could be removed if following PR is accepted: https://github.com/ronanguilloux/IsoCodes/pull/13
-                case 'ERROR: The zipcode value cannot be empty.':
-                    $this->createViolation($constraint->message);
-                    break;
-                default:
-                    throw new InvalidArgumentException($e->getMessage());
-            }
+            // Add violation instead of throwing error. Could be removed if following PR is accepted: https://github.com/ronanguilloux/IsoCodes/pull/13
+            $this->createViolation($constraint->message);
         }
     }
 }
