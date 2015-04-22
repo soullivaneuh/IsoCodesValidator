@@ -28,18 +28,17 @@ matrix:
     - php: 5.6
       env: SYMFONY_VERSION=2.8.*@dev
     - php: 5.6
-      env: SYMFONY_VERSION="3.0.*@dev as 2.6" # Trick to avoid deps error
+      env: SYMFONY_VERSION="3.0.x-dev as 2.6" # Trick to avoid deps error
   allow_failures:
     - php: hhvm
     - php: nightly
     - env: SYMFONY_VERSION=2.7.*@dev
     - env: SYMFONY_VERSION=2.8.*@dev
-    - env: SYMFONY_VERSION="3.0.*@dev as 2.6"
+    - env: SYMFONY_VERSION="3.0.x-dev as 2.6"
 
 before_script:
   - composer selfupdate
   - composer require "symfony/symfony:${SYMFONY_VERSION}" --no-update
-  - cat composer.json
   - composer update --prefer-source $COMPOSER_FLAGS
 
 script:
