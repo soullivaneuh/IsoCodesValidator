@@ -36,6 +36,11 @@ matrix:
     - env: SYMFONY_VERSION=2.8.*@dev
     - env: SYMFONY_VERSION="3.0.x-dev as 2.6"
 
+cache:
+  directories:
+    - vendor
+    - $HOME/.composer/cache
+
 before_script:
   - composer selfupdate
   - composer require "symfony/symfony:${SYMFONY_VERSION}" --no-update
