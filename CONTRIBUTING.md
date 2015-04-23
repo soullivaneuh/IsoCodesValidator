@@ -1,0 +1,41 @@
+## Reporting bugs
+
+If you happen to find a bug, we kindly request you to report it. You may report it using Github by following these 3 points:
+
+  * Check if the bug is not already reported and/or fixed!
+  * A clear title to resume the issue
+  * A description of the workflow needed to reproduce the bug,
+
+> _NOTE:_ Don’t hesitate giving as much information as you can (OS, PHP/Symfony/Silex version, extensions...)
+
+**BE AWARE**: If you found a bug provided by IsoCodes core, please submit an issue directly on the concerned repository: https://github.com/ronanguilloux/IsoCodes
+
+## Pull requests
+
+I will be glad to review your code changes propositions! :-)
+
+But please, read the following before.
+
+### Writing a Pull Request
+
+Before writing a PR, you have to check on what branch your changes should be based:
+
+ * For patches, bugfixes, typo and minor improvements, choose the concerned stable branch (e.g. `1.x`).
+ * For new features and major improvements, choose the `master` branch.
+
+> _NOTE:_ As current stable version is 1.x, master is used for all 1.x version. This will change when bumping a new major version.
+
+Be aware that pull requests with BC breaks could be not accepted or reported for next major release.
+
+If you are not sure of what to do, don't hesitate to open an issue about your PR project.
+
+### Sending a Pull Request
+
+When you send a PR, just make sure that:
+
+ * You add valid test cases (for new features).
+ * Tests are green.
+ * The related documentation is up-to-date.
+ * You make the PR on the same branch you based your changes on. If you see commits
+ that you did not make in your PR, you're doing it wrong.
+ * Also don't forget to add a comment when you update a PR with a ping to the maintainer (``@username``), so he/she will get a notification.
