@@ -1,4 +1,6 @@
-# IsoCodes Validator
+# IsoCodesValidator
+
+Symfony validator wrapper of [IsoCodes](https://github.com/ronanguilloux/IsoCodes) project.
 
 [![Latest Stable Version](https://poser.pugx.org/sllh/iso-codes-validator/v/stable)](https://packagist.org/packages/sllh/iso-codes-validator)
 [![Latest Unstable Version](https://poser.pugx.org/sllh/iso-codes-validator/v/unstable)](https://packagist.org/packages/sllh/iso-codes-validator)
@@ -14,18 +16,114 @@
 [![Coverage Status](https://coveralls.io/repos/Soullivaneuh/IsoCodesValidator/badge.svg?branch=master)](https://coveralls.io/r/Soullivaneuh/IsoCodesValidator?branch=master)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/15e2cfed-cfb8-4856-ac0d-92768fc0c324/mini.png)](https://insight.sensiolabs.com/projects/15e2cfed-cfb8-4856-ac0d-92768fc0c324)
 
+## Prerequisites
+
+This version of the bundle requires Symfony 2.3+.
+
+## Installation
+
+### As a Symfony bundle
+
+Please see [SLLHIsoCodesValidatorBundle](https://github.com/Soullivaneuh/SLLHIsoCodesValidatorBundle) documentation.
+
+### Manually using composer
+
+``` bash
+$ php composer.phar require sllh/iso-codes-validator "~1.0"
+```
+
+## Usage
+
+IsoCodesValidator is based on Symfony [Validator](http://symfony.com/components/Validator) library.
+
+### Manual usage
+
+Create and use IsoCodes constraints by using the Symfony [Validation](https://github.com/symfony/Validator#usage) class:
+
+```php
+use Symfony\Component\Validator\Validation;
+use SLLH\IsoCodesValidator\Constraints\Vat;
+
+$validator = Validation::createValidator();
+
+$violations = $validator->validateValue('DE123456789', new Vat());
+```
+
+### With annotations
+
+> Validation of objects is possible using "constraint mapping".
+With such a mapping you can put constraints onto properties and objects of classes.
+Whenever an object of this class is validated, its properties and method results are matched against the constraints.
+
+```php
+use Symfony\Component\Validator\Validation;
+use Symfony\Component\Validator\Constraints as Assert;
+use SLLH\IsoCodesValidator\Constraints as IsoCodesAssert;
+
+class Company
+{
+    /**
+     * @Assert\NotBlank
+     * @IsoCodesAssert\Siret
+     */
+    private $siret;
+
+    /**
+     * @Assert\NotBlank
+     * @IsoCodesAssert\Siren
+     */
+    private $siren;
+
+    /**
+     * @IsoCodesAssert\Vat
+     */
+    private $vat;
+
+    /**
+     * @IsoCodesAssert\ZipCode(country = "France")
+     */
+    private $zipCode;
+
+    public function __construct($siret, $siren, $vat, $zipCode)
+    {
+        $this->siret = $siret;
+        $this->siren = $siren;
+        $this->vat = $vat;
+        $this->zipCode = $zipCode
+    }
+}
+
+$validator = Validation::createValidatorBuilder()
+    ->enableAnnotationMapping()
+    ->getValidator();
+
+$company = new Company('48853781200015', '432167567', 'DE123456789', '59000');
+
+$violations = $validator->validate($company);
+```
+
+## Constraints reference
+
+Constraints classes can be found on [src/Constraints](https://github.com/Soullivaneuh/IsoCodesValidator/tree/master/src/Constraints).
+
+All works "as is" without any options unless `message`.
+
+Only [ZipCode](https://github.com/Soullivaneuh/IsoCodesValidator/blob/master/src/Constraints/ZipCode.php) constraint
+accept a `country` option to limit validation ('all' by default).
+
+Please note that some [IsoCodes](https://github.com/ronanguilloux/IsoCodes/tree/master/src/IsoCodes) classes
+are not implemented here because equivalent constraint already exists on Symfony.
+
+If you think an IsoCodes class is missing, feel free to open an issue or make a PR.
+
+## License
+
+This bundle is under the MIT license. See the complete license on the [LICENSE](https://github.com/Soullivaneuh/IsoCodesValidator/blob/master/LICENSE) file.
+
 ## TODO
 
- * Add documentation
- * Add lines note about not implemented already existing validators (with list of them)
- * Push stable version
- * Make a iso-codes-sandbox project for demo
- * Add author PHP doc tags
- * Add Licence file
  * Try to implement https://github.com/ronanguilloux/IsoCodes/blob/master/src/IsoCodes/OrganismeType12NormeB2.php (Maybe with a special form type?)
  * Contributing: Precise that core validation issue must be opened on vendor project
- * Make this library compliant to Symfony and Silex (Works actually on Symfony but without translations):
-   * Move `Resources` onto `src` dir
-   * Make a final class `Validation` like this:
-   * Make a Symfony bundle with translations detection like this: https://github.com/symfony/FrameworkBundle/blob/master/DependencyInjection/FrameworkExtension.php#L664-L668
-   * Make a Silex provider with translations detection like this: https://github.com/fabpot/Silex/blob/master/src/Silex/Provider/ValidatorServiceProvider.php#L36-L40
+ * Changelog file before pusing new stable version
+ * Implement and test xml/yaml assert config for Symfony: http://symfony.com/doc/current/book/validation.html#the-basics-of-validation
+ * Make a Silex provider of this library: https://github.com/fabpot/Silex/blob/master/src/Silex/Provider/ValidatorServiceProvider.php#L36-L40
