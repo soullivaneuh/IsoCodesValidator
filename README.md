@@ -122,7 +122,7 @@ This bundle is under the MIT license. See the complete license on the [LICENSE](
 
 ## TODO
 
- * Try to implement https://github.com/ronanguilloux/IsoCodes/blob/master/src/IsoCodes/OrganismeType12NormeB2.php (Maybe with a special form type?)
+ * Try to implement [OrganismeType12NormeB2](https://github.com/ronanguilloux/IsoCodes/blob/master/src/IsoCodes/OrganismeType12NormeB2.php) (Maybe with a special form type?)
  * Contributing: Precise that core validation issue must be opened on vendor project
  * Changelog file before pusing new stable version
  * Implement and test xml/yaml assert config for Symfony: http://symfony.com/doc/current/book/validation.html#the-basics-of-validation
