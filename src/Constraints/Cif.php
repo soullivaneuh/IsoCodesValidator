@@ -9,6 +9,8 @@ use Symfony\Component\Validator\Constraint;
  *
  * @Annotation
  * @Target({"PROPERTY", "METHOD", "ANNOTATION"})
+ *
+ * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
 class Cif extends Constraint
 {

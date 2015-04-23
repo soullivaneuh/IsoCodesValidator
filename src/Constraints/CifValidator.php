@@ -8,6 +8,8 @@ use Symfony\Component\Validator\Constraint;
 
 /**
  * Class CifValidator
+ *
+ * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
 class CifValidator extends IsoCodesConstraintValidator
 {

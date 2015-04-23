@@ -8,6 +8,8 @@ use Symfony\Component\Validator\Constraint;
 
 /**
  * Class ZipCodeValidator
+ *
+ * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
 class ZipCodeValidator extends IsoCodesConstraintValidator
 {

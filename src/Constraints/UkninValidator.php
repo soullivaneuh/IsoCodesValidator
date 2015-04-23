@@ -8,6 +8,8 @@ use Symfony\Component\Validator\Constraint;
 
 /**
  * Class UkninValidator
+ *
+ * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
 class UkninValidator extends IsoCodesConstraintValidator
 {

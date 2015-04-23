@@ -8,6 +8,8 @@ use Symfony\Component\Validator\Constraint;
 
 /**
  * Class VatValidator
+ *
+ * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
 class VatValidator extends IsoCodesConstraintValidator
 {

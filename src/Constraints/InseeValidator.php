@@ -8,6 +8,8 @@ use Symfony\Component\Validator\Constraint;
 
 /**
  * Class InseeValidator
+ *
+ * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
 class InseeValidator extends IsoCodesConstraintValidator
 {
