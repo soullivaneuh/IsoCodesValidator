@@ -26,6 +26,10 @@ This version of the bundle requires Symfony 2.3+.
 
 Please see [SLLHIsoCodesValidatorBundle](https://github.com/Soullivaneuh/SLLHIsoCodesValidatorBundle) documentation.
 
+### As a Silex service provider
+
+Please see [IsoCodesValidatorServiceProvider](https://github.com/Soullivaneuh/IsoCodesValidatorServiceProvider) documentation.
+
 ### Manually using composer
 
 ``` bash
@@ -101,6 +105,28 @@ $company = new Company('48853781200015', '432167567', 'DE123456789', '59000');
 
 $violations = $validator->validate($company);
 ```
+
+### Silex method
+
+> You can validate values directly using the validateValue validator method
+
+```php
+use SLLH\IsoCodesValidator\Constraints as IsoCodesAssert;
+
+$app->get('/validate/{vat}', function ($vat) use ($app) {
+    $errors = $app['validator']->validateValue($vat, new IsoCodesAssert\Vat());
+
+    if (count($errors) > 0) {
+        return (string) $errors;
+    } else {
+        return 'The VAT is valid';
+    }
+});
+```
+
+More implementations could be found on official [Silex Validator usage](http://silex.sensiolabs.org/doc/providers/validator.html#usage) documentation.
+
+Remember to replace `Assert` by `IsoCodesAssert` with the correct import statement.
 
 ## Constraints reference
 
