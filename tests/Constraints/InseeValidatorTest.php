@@ -28,13 +28,13 @@ class InseeValidatorTest extends AbstractConstraintValidatorTest
 
     public function getValidValues()
     {
-        return array(
-            array('177022A00100229'),
-            array('253012B073004'),
-            array('177025626004544'),
-            array('253077507300483'),
-            array('188057208107893'),
-        );
+        return [
+            ['177022A00100229'],
+            ['253012B073004'],
+            ['177025626004544'],
+            ['253077507300483'],
+            ['188057208107893'],
+        ];
     }
 
     /**
@@ -50,10 +50,10 @@ class InseeValidatorTest extends AbstractConstraintValidatorTest
 
     public function getInvalidValues()
     {
-        return array(
-            array('353072B07300483'),
-            array('253072C07300483'),
-            array(' '),
-        );
+        return [
+            ['353072B07300483'],
+            ['253072C07300483'],
+            [' '],
+        ];
     }
 }

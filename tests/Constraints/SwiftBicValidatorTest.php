@@ -28,15 +28,15 @@ class SwiftBicValidatorTest extends AbstractConstraintValidatorTest
 
     public function getValidValues()
     {
-        return array(
-            array('RBOSGGSX'),
-            array('RZTIAT22263'),
-            array('BCEELULL'),
-            array('MARKDEFF'),
-            array('GENODEF1JEV'),
-            array('UBSWCHZH80A'),
-            array('CEDELULLXXX'),
-        );
+        return [
+            ['RBOSGGSX'],
+            ['RZTIAT22263'],
+            ['BCEELULL'],
+            ['MARKDEFF'],
+            ['GENODEF1JEV'],
+            ['UBSWCHZH80A'],
+            ['CEDELULLXXX'],
+        ];
     }
 
     /**
@@ -52,10 +52,10 @@ class SwiftBicValidatorTest extends AbstractConstraintValidatorTest
 
     public function getInvalidValues()
     {
-        return array(
-            array('CE1EL2LLFFF'),
-            array('E31DCLLFFF'),
-            array(' '),
-        );
+        return [
+            ['CE1EL2LLFFF'],
+            ['E31DCLLFFF'],
+            [' '],
+        ];
     }
 }

@@ -28,16 +28,16 @@ class CifValidatorTest extends AbstractConstraintValidatorTest
 
     public function getValidValues()
     {
-        return array(
-            array('N0032484H'),
-            array('A09212275'),
-            array('A59032557'),
-            array('A17031246'),
-            array('B85358596'),
-            array('E61685095'),
-            array('V27236942'),
-            array('G61685095'),
-        );
+        return [
+            ['N0032484H'],
+            ['A09212275'],
+            ['A59032557'],
+            ['A17031246'],
+            ['B85358596'],
+            ['E61685095'],
+            ['V27236942'],
+            ['G61685095'],
+        ];
     }
 
     /**
@@ -53,16 +53,16 @@ class CifValidatorTest extends AbstractConstraintValidatorTest
 
     public function getInvalidValues()
     {
-        return array(
-            array('K11111111'),
-            array('L61685095'),
-            array('X61685095'),
-            array('Y61685095'),
-            array('N0032484'),
-            array('N0032484I'),
-            array('M0032484I'),
-            array('M0032484H'),
-            array(' '),
-        );
+        return [
+            ['K11111111'],
+            ['L61685095'],
+            ['X61685095'],
+            ['Y61685095'],
+            ['N0032484'],
+            ['N0032484I'],
+            ['M0032484I'],
+            ['M0032484H'],
+            [' '],
+        ];
     }
 }

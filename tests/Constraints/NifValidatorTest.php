@@ -28,13 +28,13 @@ class NifValidatorTest extends AbstractConstraintValidatorTest
 
     public function getValidValues()
     {
-        return array(
-            array('04381012H'),
-            array('04381012h'),
-            array('12345678Z'),
-            array('99999999R'),
-            array('Z6171167L'),
-        );
+        return [
+            ['04381012H'],
+            ['04381012h'],
+            ['12345678Z'],
+            ['99999999R'],
+            ['Z6171167L'],
+        ];
     }
 
     /**
@@ -50,16 +50,16 @@ class NifValidatorTest extends AbstractConstraintValidatorTest
 
     public function getInvalidValues()
     {
-        return array(
-            array('A08000143'),
-            array('12345678'),
-            array('9999999L'),
-            array('999999999L'),
-            array('12345678W'),
-            array('L9999999K'),
-            array('A9999999L'),
-            array('A9999999L'),
-            array(' '),
-        );
+        return [
+            ['A08000143'],
+            ['12345678'],
+            ['9999999L'],
+            ['999999999L'],
+            ['12345678W'],
+            ['L9999999K'],
+            ['A9999999L'],
+            ['A9999999L'],
+            [' '],
+        ];
     }
 }

@@ -28,10 +28,10 @@ class BbanValidatorTest extends AbstractConstraintValidatorTest
 
     public function getValidValues()
     {
-        return array(
-            array('15459450000411700920U62'),
-            array('10207000260402601177083')
-        );
+        return [
+            ['15459450000411700920U62'],
+            ['10207000260402601177083']
+        ];
     }
 
     /**
@@ -47,12 +47,12 @@ class BbanValidatorTest extends AbstractConstraintValidatorTest
 
     public function getInvalidValues()
     {
-        return array(
-            array(10207000260402601177083),
-            array('15459 45000 0411700920U 62'),
-            array('10207000260402601177084'),
-            array(10207000260402601177084),
-            array(' '),
-        );
+        return [
+            [10207000260402601177083],
+            ['15459 45000 0411700920U 62'],
+            ['10207000260402601177084'],
+            [10207000260402601177084],
+            [' '],
+        ];
     }
 }

@@ -22,12 +22,12 @@ class ZipCode extends Constraint
 
     const ALL           = 'all';
 
-    public static $countries = array(
+    public static $countries = [
         self::US,
         self::CANADA,
         self::FRANCE,
         self::NETHERLANDS,
-    );
+    ];
 
     public $country = self::ALL;
 
