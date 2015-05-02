@@ -5,6 +5,8 @@ Symfony validator wrapper of [IsoCodes](https://github.com/ronanguilloux/IsoCode
 [![Latest Stable Version](https://poser.pugx.org/sllh/iso-codes-validator/v/stable)](https://packagist.org/packages/sllh/iso-codes-validator)
 [![Latest Unstable Version](https://poser.pugx.org/sllh/iso-codes-validator/v/unstable)](https://packagist.org/packages/sllh/iso-codes-validator)
 [![License](https://poser.pugx.org/sllh/iso-codes-validator/license)](https://packagist.org/packages/sllh/iso-codes-validator)
+[![Dependency Status](https://www.versioneye.com/php/sllh:iso-codes-validator/badge.svg)](https://www.versioneye.com/php/sllh:iso-codes-validator)
+[![Reference Status](https://www.versioneye.com/php/sllh:iso-codes-validator/reference_badge.svg)](https://www.versioneye.com/php/sllh:iso-codes-validator/references)
 
 [![Total Downloads](https://poser.pugx.org/sllh/iso-codes-validator/downloads)](https://packagist.org/packages/sllh/iso-codes-validator)
 [![Monthly Downloads](https://poser.pugx.org/sllh/iso-codes-validator/d/monthly)](https://packagist.org/packages/sllh/iso-codes-validator)
