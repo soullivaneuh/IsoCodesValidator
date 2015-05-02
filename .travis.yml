@@ -4,8 +4,10 @@ php:
   - 5.4
   - 5.5
   - 5.6
-  - hhvm
+  - 7.0
   - nightly
+  - hhvm
+  - hhvm-nightly
 
 matrix:
   fast_finish: true
@@ -23,13 +25,15 @@ matrix:
     - php: 5.6
       env: SYMFONY_VERSION=2.8.*@dev
     - php: 5.6
-      env: SYMFONY_VERSION="3.0.x-dev as 2.6"
+      env: SYMFONY_VERSION="3.0.x-dev as 2.8"
   allow_failures:
-    - php: hhvm
+    - php: 7.0
     - php: nightly
+    - php: hhvm
+    - php: hhvm-nightly
     - env: SYMFONY_VERSION=2.7.*@dev
     - env: SYMFONY_VERSION=2.8.*@dev
-    - env: SYMFONY_VERSION="3.0.x-dev as 2.6"
+    - env: SYMFONY_VERSION="3.0.x-dev as 2.8"
 
 sudo: false
 
