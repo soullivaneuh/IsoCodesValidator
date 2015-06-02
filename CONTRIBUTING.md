@@ -22,10 +22,11 @@ This project follows [PSR-1](http://www.php-fig.org/psr/psr-1/), [PSR-2](http://
 and [Symfony Coding Standards](http://symfony.com/doc/current/contributing/code/standards.html) for coding style,
 [PSR-4](http://www.php-fig.org/psr/psr-4/) for autoloading.
 
-Please, run this command before committing your modifications:
+Please [install PHP Coding Standard Fixer](http://cs.sensiolabs.org/#installation)
+and run this command before committing your modifications:
 
 ```bash
-php vendor/bin/php-cs-fixer fix --verbose
+php-cs-fixer fix --verbose
 ```
 
 ### Writing a Pull Request
