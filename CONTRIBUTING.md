@@ -33,10 +33,8 @@ php-cs-fixer fix --verbose
 
 Before writing a PR, you have to check on what branch your changes should be based:
 
- * For patches, bugfixes, typo and minor improvements, choose the concerned stable branch (e.g. `1.x`).
+ * For patches, bugfixes, typo and minor improvements, choose the oldest but still maintained stable branch: `1.0`
  * For new features and major improvements, choose the `master` branch.
-
-> _NOTE:_ As current stable version is 1.x, master is used for all 1.x version. This will change when bumping a new major version.
 
 Be aware that pull requests with BC breaks could be not accepted or reported for next major release.
 
