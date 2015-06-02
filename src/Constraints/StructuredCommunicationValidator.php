@@ -7,7 +7,7 @@ use SLLH\IsoCodesValidator\IsoCodesConstraintValidator;
 use Symfony\Component\Validator\Constraint;
 
 /**
- * Class StructuredCommunication
+ * Class StructuredCommunication.
  *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */

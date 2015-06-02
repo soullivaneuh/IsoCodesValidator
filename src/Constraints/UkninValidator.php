@@ -7,7 +7,7 @@ use SLLH\IsoCodesValidator\IsoCodesConstraintValidator;
 use Symfony\Component\Validator\Constraint;
 
 /**
- * Class UkninValidator
+ * Class UkninValidator.
  *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */

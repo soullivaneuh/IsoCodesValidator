@@ -5,7 +5,7 @@ namespace SLLH\IsoCodesValidator\Constraints;
 use Symfony\Component\Validator\Constraint;
 
 /**
- * Class Vat
+ * Class Vat.
  *
  * @Annotation
  * @Target({"PROPERTY", "METHOD", "ANNOTATION"})

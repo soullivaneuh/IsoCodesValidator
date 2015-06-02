@@ -7,7 +7,7 @@ use SLLH\IsoCodesValidator\IsoCodesConstraintValidator;
 use Symfony\Component\Validator\Constraint;
 
 /**
- * Class VatValidator
+ * Class VatValidator.
  *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */

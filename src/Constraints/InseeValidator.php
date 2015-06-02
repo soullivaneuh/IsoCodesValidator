@@ -7,7 +7,7 @@ use SLLH\IsoCodesValidator\IsoCodesConstraintValidator;
 use Symfony\Component\Validator\Constraint;
 
 /**
- * Class InseeValidator
+ * Class InseeValidator.
  *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */

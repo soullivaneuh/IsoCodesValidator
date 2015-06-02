@@ -8,7 +8,7 @@ use Symfony\Component\Validator\Context\ExecutionContextInterface;
 use Symfony\Component\Validator\Exception\UnexpectedTypeException;
 
 /**
- * Class IsoCodesConstraintValidator
+ * Class IsoCodesConstraintValidator.
  *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
@@ -28,7 +28,7 @@ abstract class IsoCodesConstraintValidator extends ConstraintValidator
 
     /**
      * Makes and adds a Constraint violation
-     * This method permits to keep Symfony BC from 2.3+
+     * This method permits to keep Symfony BC from 2.3+.
      *
      * @param string $message
      */

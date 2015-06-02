@@ -5,7 +5,7 @@ namespace SLLH\IsoCodesValidator\Constraints;
 use Symfony\Component\Validator\Constraint;
 
 /**
- * Class StructuredCommunication
+ * Class StructuredCommunication.
  *
  * @Annotation
  * @Target({"PROPERTY", "METHOD", "ANNOTATION"})

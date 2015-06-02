@@ -7,7 +7,7 @@ use SLLH\IsoCodesValidator\IsoCodesConstraintValidator;
 use Symfony\Component\Validator\Constraint;
 
 /**
- * Class SsnValidator
+ * Class SsnValidator.
  *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */

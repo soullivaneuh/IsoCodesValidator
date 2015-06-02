@@ -7,7 +7,7 @@ use SLLH\IsoCodesValidator\IsoCodesConstraintValidator;
 use Symfony\Component\Validator\Constraint;
 
 /**
- * Class ZipCodeValidator
+ * Class ZipCodeValidator.
  *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
