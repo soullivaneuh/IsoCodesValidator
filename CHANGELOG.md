@@ -1,5 +1,9 @@
 # CHANGELOG
 
+* dev-master
+
+ * Add .gitattributes to ignore useless files on export.
+
 * 1.0.2 (2015-05-01)
 
  * Add `sllh/iso-codes-validator-bundle` and `sllh/iso-codes-validator-service-provider` suggest on composer.json
