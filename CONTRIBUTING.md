@@ -16,6 +16,18 @@ I will be glad to review your code changes propositions! :-)
 
 But please, read the following before.
 
+### Coding style
+
+This project follows [PSR-1](http://www.php-fig.org/psr/psr-1/), [PSR-2](http://www.php-fig.org/psr/psr-2/)
+and [Symfony Coding Standards](http://symfony.com/doc/current/contributing/code/standards.html) for coding style,
+[PSR-4](http://www.php-fig.org/psr/psr-4/) for autoloading.
+
+Please, run this command before committing your modifications:
+
+```bash
+php vendor/bin/php-cs-fixer fix --verbose
+```
+
 ### Writing a Pull Request
 
 Before writing a PR, you have to check on what branch your changes should be based:
