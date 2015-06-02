@@ -1,6 +1,6 @@
 # CHANGELOG
 
-* dev-master
+* 1.0.3 (2015-06-02)
 
  * Add .gitattributes to ignore useless files on export.
 
