@@ -3,7 +3,7 @@
 namespace SLLH\IsoCodesValidator\Constraints;
 
 use IsoCodes;
-use SLLH\IsoCodesValidator\IsoCodesConstraintValidator;
+use SLLH\IsoCodesValidator\AbstractIsoCodesConstraintValidator;
 use Symfony\Component\Validator\Constraint;
 
 /**
@@ -11,7 +11,7 @@ use Symfony\Component\Validator\Constraint;
  *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-class SsnValidator extends IsoCodesConstraintValidator
+class SsnValidator extends AbstractIsoCodesConstraintValidator
 {
     /**
      * {@inheritdoc}

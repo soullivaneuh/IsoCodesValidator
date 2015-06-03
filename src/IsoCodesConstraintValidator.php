@@ -2,46 +2,15 @@
 
 namespace SLLH\IsoCodesValidator;
 
-use Symfony\Component\Validator\Constraint;
-use Symfony\Component\Validator\ConstraintValidator;
-use Symfony\Component\Validator\Context\ExecutionContextInterface;
-use Symfony\Component\Validator\Exception\UnexpectedTypeException;
+trigger_error('SLLH\IsoCodesValidator\IsoCodesConstraintValidator is deprecated since version 1.1, to be removed in 2.0. Use SLLH\IsoCodesValidator\AbstractIsoCodesConstraintValidator instead.', E_USER_DEPRECATED);
 
 /**
- * Class IsoCodesConstraintValidator.
+ * Class IsoCodesConstraintValidator
  *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
+ * @deprecated since version 1.1, to be removed in 2.0.
+ *             Use {@link AbstractIsoCodesConstraintValidator} instead.
  */
-abstract class IsoCodesConstraintValidator extends ConstraintValidator
+abstract class IsoCodesConstraintValidator extends AbstractIsoCodesConstraintValidator
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function validate($value, Constraint $constraint)
-    {
-        $constraintClass = preg_replace('/Validator$/', '', get_class($this));
-
-        if (!$constraint instanceof $constraintClass) {
-            throw new UnexpectedTypeException($constraint, $constraintClass);
-        }
-    }
-
-    /**
-     * Makes and adds a Constraint violation
-     * This method permits to keep Symfony BC from 2.3+.
-     *
-     * @param string $message
-     */
-    protected function createViolation($message)
-    {
-        if ($this->context instanceof ExecutionContextInterface) {
-            $this->context->buildViolation($message)
-                ->addViolation();
-        } elseif (method_exists($this, 'buildViolation')) {
-            $this->buildViolation($message)
-                ->addViolation();
-        } else {
-            $this->context->addViolation($message);
-        }
-    }
 }
