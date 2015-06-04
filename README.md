@@ -140,7 +140,8 @@ Only [ZipCode](https://github.com/Soullivaneuh/IsoCodesValidator/blob/master/src
 accept a `country` option to limit validation ('all' by default).
 
 Please note that some [IsoCodes](https://github.com/ronanguilloux/IsoCodes/tree/master/src/IsoCodes) classes
-are not implemented here because equivalent constraint already exists on Symfony.
+are already implemented on [Symfony Validator component](http://symfony.com/doc/current/reference/constraints.html).
+It's up to you to decide which one to use.
 
 If you think an IsoCodes class is missing, feel free to open an issue or make a PR.
 
