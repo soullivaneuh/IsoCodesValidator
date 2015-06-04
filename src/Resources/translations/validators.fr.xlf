@@ -54,6 +54,10 @@
                 <source>This value is not a valid ZIP Code.</source>
                 <target>Cette valeur n'est pas un code ZIP valide.</target>
             </trans-unit>
+            <trans-unit id="14">
+                <source>This value is not a valid credit card scheme.</source>
+                <target>Cette valeur n'est pas un numéro de carte de crédit valide.</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
