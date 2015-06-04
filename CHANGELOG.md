@@ -6,6 +6,7 @@
  * Add `CreditCard` constraint.
  * Add `Ip` constraint.
  * Add `Iban` constraint.
+ * Add `Isbn10` constraint.
 
 * 1.0.3 (2015-06-02)
 
