@@ -58,6 +58,10 @@
                 <source>This value is not a valid credit card scheme.</source>
                 <target>This value is not a valid credit card scheme.</target>
             </trans-unit>
+            <trans-unit id="15">
+                <source>This value is not a valid IP address.</source>
+                <target>This value is not a valid IP address.</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
