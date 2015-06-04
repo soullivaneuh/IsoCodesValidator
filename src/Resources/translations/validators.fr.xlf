@@ -62,6 +62,10 @@
                 <source>This value is not a valid IP address.</source>
                 <target>Cette valeure n'est pas une adresse IP valide.</target>
             </trans-unit>
+            <trans-unit id="16">
+                <source>This value is not a valid IBAN.</source>
+                <target>Cette valeur n'est pas un code IBAN valide.</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
