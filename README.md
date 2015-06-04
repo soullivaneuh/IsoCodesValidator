@@ -35,7 +35,7 @@ Please see [IsoCodesValidatorServiceProvider](https://github.com/Soullivaneuh/Is
 ### Manually using composer
 
 ``` bash
-$ php composer.phar require sllh/iso-codes-validator "~1.0"
+$ php composer.phar require sllh/iso-codes-validator
 ```
 
 ## Usage
