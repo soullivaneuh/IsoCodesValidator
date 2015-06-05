@@ -54,6 +54,22 @@
                 <source>This value is not a valid ZIP code.</source>
                 <target>This value is not a valid ZIP code.</target>
             </trans-unit>
+            <trans-unit id="14">
+                <source>This value is not a valid credit card scheme.</source>
+                <target>This value is not a valid credit card scheme.</target>
+            </trans-unit>
+            <trans-unit id="15">
+                <source>This value is not a valid IP address.</source>
+                <target>This value is not a valid IP address.</target>
+            </trans-unit>
+            <trans-unit id="16">
+                <source>This value is not a valid IBAN.</source>
+                <target>This value is not a valid IBAN.</target>
+            </trans-unit>
+            <trans-unit id="17">
+                <source>This value is not a valid ISBN-10.</source>
+                <target>This value is not a valid ISBN-10.</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
