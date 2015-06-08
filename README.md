@@ -18,9 +18,17 @@ Symfony validator wrapper of [IsoCodes](https://github.com/ronanguilloux/IsoCode
 [![Coverage Status](https://coveralls.io/repos/Soullivaneuh/IsoCodesValidator/badge.svg?branch=master)](https://coveralls.io/r/Soullivaneuh/IsoCodesValidator?branch=master)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/15e2cfed-cfb8-4856-ac0d-92768fc0c324/mini.png)](https://insight.sensiolabs.com/projects/15e2cfed-cfb8-4856-ac0d-92768fc0c324)
 
+## Documentation
+
+All the installation and usage instructions are located in this README.
+Check it for specific version:
+
+* [__2.0__](https://github.com/Soullivaneuh/IsoCodesValidator/tree/master) with support for Symfony `>=2.7`
+* [__1.1__](https://github.com/Soullivaneuh/IsoCodesValidator/tree/1.1) with support for Symfony `>=2.3,<2.7`
+
 ## Prerequisites
 
-This version of the bundle requires Symfony 2.3+ and PHP 5.4+.
+This version of the bundle requires Symfony 2.7+ and PHP 5.4+.
 
 ## Installation
 

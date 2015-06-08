@@ -12,8 +12,8 @@
     ],
     "require": {
         "php": ">=5.4",
-        "symfony/validator": "^2.3.20",
-        "symfony/translation": "^2.0.5",
+        "symfony/validator": "~2.7",
+        "symfony/translation": "~2.7",
         "ronanguilloux/isocodes": "^1.1.4"
     },
     "require-dev": {
