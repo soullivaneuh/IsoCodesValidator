@@ -4,6 +4,7 @@ namespace SLLH\IsoCodesValidator;
 
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
+use Symfony\Component\Validator\Context\ExecutionContext;
 use Symfony\Component\Validator\Context\ExecutionContextInterface;
 use Symfony\Component\Validator\Exception\UnexpectedTypeException;
 
@@ -14,6 +15,15 @@ use Symfony\Component\Validator\Exception\UnexpectedTypeException;
  */
 abstract class AbstractIsoCodesConstraintValidator extends ConstraintValidator
 {
+    /**
+     * Override PHP doc block to get IDE completion.
+     * Can be removed when `buildViolation` would be added on ExecutionContextInterface.
+     * Should probably done in Symfony 3.0
+     *
+     * @var ExecutionContextInterface|ExecutionContext
+     */
+    protected $context;
+
     /**
      * {@inheritdoc}
      */
@@ -28,20 +38,12 @@ abstract class AbstractIsoCodesConstraintValidator extends ConstraintValidator
 
     /**
      * Makes and adds a Constraint violation
-     * This method permits to keep Symfony BC from 2.3+.
      *
      * @param string $message
      */
     protected function createViolation($message)
     {
-        if ($this->context instanceof ExecutionContextInterface) {
-            $this->context->buildViolation($message)
-                ->addViolation();
-        } elseif (method_exists($this, 'buildViolation')) {
-            $this->buildViolation($message)
-                ->addViolation();
-        } else {
-            $this->context->addViolation($message);
-        }
+        $this->context->buildViolation($message)
+            ->addViolation();
     }
 }
