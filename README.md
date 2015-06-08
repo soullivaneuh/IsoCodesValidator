@@ -24,7 +24,7 @@ All the installation and usage instructions are located in this README.
 Check it for specific version:
 
 * [__2.0__](https://github.com/Soullivaneuh/IsoCodesValidator/tree/master) with support for Symfony `>=2.7`
-* [__1.1__](https://github.com/Soullivaneuh/IsoCodesValidator/tree/1.1) with support for Symfony `>=2.3,<2.7`
+* [__1.1__](https://github.com/Soullivaneuh/IsoCodesValidator/tree/1.1) with support for Symfony `>=2.3,<=2.7`
 
 ## Prerequisites
 
