@@ -7,8 +7,6 @@ use SLLH\IsoCodesValidator\AbstractIsoCodesConstraintValidator;
 use Symfony\Component\Validator\Constraint;
 
 /**
- * Class CreditCardValidator.
- *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
 class CreditCardValidator extends AbstractIsoCodesConstraintValidator

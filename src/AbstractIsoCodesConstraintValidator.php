@@ -8,8 +8,6 @@ use Symfony\Component\Validator\Context\ExecutionContextInterface;
 use Symfony\Component\Validator\Exception\UnexpectedTypeException;
 
 /**
- * Class AbstractIsoCodesConstraintValidator.
- *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
 abstract class AbstractIsoCodesConstraintValidator extends ConstraintValidator
