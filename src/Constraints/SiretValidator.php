@@ -7,8 +7,6 @@ use SLLH\IsoCodesValidator\IsoCodesConstraintValidator;
 use Symfony\Component\Validator\Constraint;
 
 /**
- * Class SiretValidator.
- *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
 class SiretValidator extends IsoCodesConstraintValidator

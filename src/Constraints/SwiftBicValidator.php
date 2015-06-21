@@ -7,8 +7,6 @@ use SLLH\IsoCodesValidator\IsoCodesConstraintValidator;
 use Symfony\Component\Validator\Constraint;
 
 /**
- * Class SwiftBicValidator.
- *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
 class SwiftBicValidator extends IsoCodesConstraintValidator

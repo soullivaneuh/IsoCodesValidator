@@ -5,8 +5,6 @@ namespace SLLH\IsoCodesValidator\Constraints;
 use Symfony\Component\Validator\Constraint;
 
 /**
- * Class Siren.
- *
  * @Annotation
  * @Target({"PROPERTY", "METHOD", "ANNOTATION"})
  *

@@ -7,8 +7,6 @@ use SLLH\IsoCodesValidator\IsoCodesConstraintValidator;
 use Symfony\Component\Validator\Constraint;
 
 /**
- * Class Ean13Validator.
- *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
 class Ean13Validator extends IsoCodesConstraintValidator

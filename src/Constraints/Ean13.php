@@ -5,8 +5,6 @@ namespace SLLH\IsoCodesValidator\Constraints;
 use Symfony\Component\Validator\Constraint;
 
 /**
- * Class Ean13.
- *
  * @Annotation
  * @Target({"PROPERTY", "METHOD", "ANNOTATION"})
  *
