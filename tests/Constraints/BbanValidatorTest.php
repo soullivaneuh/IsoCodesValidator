@@ -30,7 +30,7 @@ class BbanValidatorTest extends AbstractConstraintValidatorTest
     {
         return [
             ['15459450000411700920U62'],
-            ['10207000260402601177083']
+            ['10207000260402601177083'],
         ];
     }
 
