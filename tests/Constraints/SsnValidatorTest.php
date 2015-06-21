@@ -33,7 +33,7 @@ class SsnValidatorTest extends AbstractConstraintValidatorTest
             ['432-01-5257'],
             ['600-01-4950'],
             ['619-01-7173'],
-            ['651-01-3431']
+            ['651-01-3431'],
         ];
     }
 

@@ -7,8 +7,6 @@ use SLLH\IsoCodesValidator\AbstractIsoCodesConstraintValidator;
 use Symfony\Component\Validator\Constraint;
 
 /**
- * Class BbanValidator.
- *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
 class BbanValidator extends AbstractIsoCodesConstraintValidator

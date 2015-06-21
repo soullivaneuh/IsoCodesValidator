@@ -50,7 +50,7 @@ class ZipCodeTest extends \PHPUnit_Framework_TestCase
             ['us'],
             ['uS'],
             ['Us'],
-            ['qwertyuiop']
+            ['qwertyuiop'],
         ];
     }
 }

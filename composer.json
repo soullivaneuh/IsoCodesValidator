@@ -17,7 +17,6 @@
         "ronanguilloux/isocodes": "^1.1.4"
     },
     "require-dev": {
-        "phpunit/phpunit": "~4.6",
         "satooshi/php-coveralls": "~0.6",
         "codeclimate/php-test-reporter": "dev-master"
     },

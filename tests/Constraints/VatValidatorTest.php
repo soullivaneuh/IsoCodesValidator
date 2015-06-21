@@ -93,7 +93,7 @@ class VatValidatorTest extends AbstractConstraintValidatorTest
             [' '],
             [999999999],
             [9999.9999],
-            ["aaa"],
+            ['aaa'],
             ["&é\"'array(-è_çà$^$*,;:!¨£%µ?./§¹~#{[|->\^@]}¤->^̣··´"],
             ['DE12345678'],
             ['EE1234567'],
