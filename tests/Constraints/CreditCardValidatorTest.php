@@ -60,7 +60,7 @@ class CreditCardValidatorTest extends AbstractConstraintValidatorTest
         return [
             ['CE1EL2LLFFF'],
             ['E31DCLLFFF'],
-            [' ']
+            [' '],
         ];
     }
 }

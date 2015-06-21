@@ -5,8 +5,6 @@ namespace SLLH\IsoCodesValidator\Constraints;
 use Symfony\Component\Validator\Constraint;
 
 /**
- * Class Isbn10.
- *
  * @Annotation
  * @Target({"PROPERTY", "METHOD", "ANNOTATION"})
  *

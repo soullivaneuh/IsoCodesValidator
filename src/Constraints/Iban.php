@@ -5,8 +5,6 @@ namespace SLLH\IsoCodesValidator\Constraints;
 use Symfony\Component\Validator\Constraint;
 
 /**
- * Class Iban.
- *
  * @Annotation
  * @Target({"PROPERTY", "METHOD", "ANNOTATION"})
  *
