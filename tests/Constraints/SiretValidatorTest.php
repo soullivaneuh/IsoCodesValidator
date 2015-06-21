@@ -35,7 +35,7 @@ class SiretValidatorTest extends AbstractConstraintValidatorTest
             ['41762563900030'],
             ['33493272000017'],
             ['44028837100014'],
-            ['51743954300011']
+            ['51743954300011'],
         ];
     }
 
@@ -63,7 +63,7 @@ class SiretValidatorTest extends AbstractConstraintValidatorTest
             ['44028837100015'],
             ['51743954300012'],
             [' '],
-            ['azertyuiopqsdf']
+            ['azertyuiopqsdf'],
 
         ];
     }

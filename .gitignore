@@ -2,3 +2,4 @@ composer.lock
 /vendor
 composer.phar
 /build
+.php_cs.cache

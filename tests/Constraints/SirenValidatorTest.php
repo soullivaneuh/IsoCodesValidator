@@ -34,7 +34,7 @@ class SirenValidatorTest extends AbstractConstraintValidatorTest
             ['417625639'],
             ['334932720'],
             ['440288371'],
-            ['517439543']
+            ['517439543'],
         ];
     }
 

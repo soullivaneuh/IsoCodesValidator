@@ -57,7 +57,7 @@ class Ean13ValidatorTest extends AbstractConstraintValidatorTest
             ['A782868890061'],
             ['4006381333932'],
             ['4719.5120.0288.9'],
-            [' ']
+            [' '],
         ];
     }
 }
