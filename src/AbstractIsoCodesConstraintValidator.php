@@ -16,7 +16,7 @@ abstract class AbstractIsoCodesConstraintValidator extends ConstraintValidator
     /**
      * Override PHP doc block to get IDE completion.
      * Can be removed when `buildViolation` would be added on ExecutionContextInterface.
-     * Should probably done in Symfony 3.0
+     * Should probably done in Symfony 3.0.
      *
      * @var ExecutionContextInterface|ExecutionContext
      */
@@ -35,7 +35,7 @@ abstract class AbstractIsoCodesConstraintValidator extends ConstraintValidator
     }
 
     /**
-     * Makes and adds a Constraint violation
+     * Makes and adds a Constraint violation.
      *
      * @param string $message
      */
