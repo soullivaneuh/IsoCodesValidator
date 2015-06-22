@@ -67,10 +67,6 @@
                 <target>This value is not a valid IBAN.</target>
             </trans-unit>
             <trans-unit id="17">
-                <source>This value is not a valid ISBN-10.</source>
-                <target>This value is not a valid ISBN-10.</target>
-            </trans-unit>
-            <trans-unit id="18">
                 <source>This value is not a valid ISBN.</source>
                 <target>This value is not a valid ISBN.</target>
             </trans-unit>
