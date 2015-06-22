@@ -2,6 +2,7 @@
 
 * 1.1.0 (2015-??-??)
 
+ * Bump `ronanguilloux/isocodes` package to `~1.2`.
  * Deprecate `IsoCodesConstraintValidator` in favor of `AbstractIsoCodesConstraintValidator`.
  * Add `CreditCard` constraint.
  * Add `Ip` constraint.
