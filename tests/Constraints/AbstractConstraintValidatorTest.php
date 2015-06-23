@@ -23,7 +23,7 @@ abstract class AbstractConstraintValidatorTest extends BaseAbstractConstraintVal
 
     protected function getApiVersion()
     {
-        return Validation::API_VERSION_2_5_BC;
+        return Validation::API_VERSION_2_5;
     }
 
     public function testUnexpectedConstraintException()
