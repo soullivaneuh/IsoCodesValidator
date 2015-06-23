@@ -9,6 +9,10 @@
  * Add `Iban` constraint.
  * Add `Isbn10` constraint.
 
+* 1.0.4 (2015-06-23)
+
+ * Fix deprecation issues for ZipCode validator and Symfony validator context.
+
 * 1.0.3 (2015-06-02)
 
  * Add .gitattributes to ignore useless files on export.
