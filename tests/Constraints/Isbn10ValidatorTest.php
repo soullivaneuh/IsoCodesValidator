@@ -5,6 +5,11 @@ namespace SLLH\IsoCodesValidator\Tests\Constraints;
 use SLLH\IsoCodesValidator\Constraints\Isbn10;
 use SLLH\IsoCodesValidator\Constraints\Isbn10Validator;
 
+/**
+ * @group legacy
+ *
+ * @author Sullivan Senechal <soullivaneuh@gmail.com>
+ */
 class Isbn10ValidatorTest extends AbstractConstraintValidatorTest
 {
     protected function createValidator()

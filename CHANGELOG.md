@@ -6,11 +6,16 @@
 
 * 1.1.0 (2015-??-??)
 
+ * Bump `ronanguilloux/isocodes` package to `~1.2`.
  * Deprecate `IsoCodesConstraintValidator` in favor of `AbstractIsoCodesConstraintValidator`.
  * Add `CreditCard` constraint.
  * Add `Ip` constraint.
  * Add `Iban` constraint.
  * Add `Isbn10` constraint.
+
+* 1.0.4 (2015-06-23)
+
+ * Fix deprecation issues for ZipCode validator and Symfony validator context.
 
 * 1.0.3 (2015-06-02)
 

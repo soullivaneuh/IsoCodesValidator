@@ -14,11 +14,12 @@
         "php": ">=5.4",
         "symfony/validator": "~2.7",
         "symfony/translation": "~2.7",
-        "ronanguilloux/isocodes": "^1.1.4"
+        "ronanguilloux/isocodes": "~1.2"
     },
     "require-dev": {
         "satooshi/php-coveralls": "~0.6",
-        "codeclimate/php-test-reporter": "dev-master"
+        "codeclimate/php-test-reporter": "dev-master",
+        "symfony/phpunit-bridge": "~2.7|~3.0"
     },
     "suggest": {
         "sllh/iso-codes-validator-bundle": "For Symfony integration with ease",
