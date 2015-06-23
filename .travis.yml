@@ -30,9 +30,9 @@ matrix:
     - php: 5.6
       env: SYMFONY_VERSION="3.0.x-dev as 2.8"
     - php: 5.6
-      env: ISOCODES_VERSION="1.1.*"
+      env: ISOCODES_VERSION=1.2.*
     - php: 5.6
-      env: ISOCODES_VERSION="1.2.*@dev"
+      env: ISOCODES_VERSION="dev-master"
   allow_failures:
     - php: 7.0
     - php: nightly
@@ -40,7 +40,7 @@ matrix:
     - php: hhvm-nightly
     - env: SYMFONY_VERSION=2.8.*@dev
     - env: SYMFONY_VERSION="3.0.x-dev as 2.8"
-    - env: ISOCODES_VERSION="1.2.*@dev"
+    - env: ISOCODES_VERSION="dev-master"
 
 sudo: false
 
