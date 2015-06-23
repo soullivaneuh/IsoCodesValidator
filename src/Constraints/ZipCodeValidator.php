@@ -56,6 +56,6 @@ class ZipCodeValidator extends AbstractIsoCodesConstraintValidator
             'Netherlands'   => 'NL',
         ];
 
-        return IsoCodes\ZipCode::validate($value, method_exists('Isocodes\ZipCode', 'getAvailableCountries') ? $deprecatedOptionsBridge[$country] : $country);
+        return IsoCodes\ZipCode::validate($value, $deprecatedOptionsBridge[$country]);
     }
 }
