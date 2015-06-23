@@ -9,7 +9,7 @@ use Symfony\Component\Validator\Constraint;
 /**
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-class Isbn10Validator extends AbstractIsoCodesConstraintValidator
+class IsbnValidator extends AbstractIsoCodesConstraintValidator
 {
     /**
      * {@inheritdoc}
@@ -18,7 +18,7 @@ class Isbn10Validator extends AbstractIsoCodesConstraintValidator
     {
         parent::validate($value, $constraint);
 
-        if ($value && !IsoCodes\Isbn10::validate($value)) {
+        if ($value && !IsoCodes\Isbn::validate($value, $constraint->type)) {
             $this->createViolation($constraint->message);
         }
     }
