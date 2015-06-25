@@ -48,7 +48,6 @@ cache:
   directories:
     - $HOME/.composer/cache
     - $HOME/.composer/vendor
-    - vendor
 
 before_script:
   - composer selfupdate
