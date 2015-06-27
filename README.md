@@ -43,7 +43,7 @@ Please see [IsoCodesValidatorServiceProvider](https://github.com/Soullivaneuh/Is
 ### Manually using composer
 
 ``` bash
-$ php composer.phar require sllh/iso-codes-validator
+$ composer require sllh/iso-codes-validator
 ```
 
 ## Usage
