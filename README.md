@@ -28,7 +28,7 @@ Check it for specific version:
 
 ## Prerequisites
 
-This version of the bundle requires Symfony 2.7+ and PHP 5.4+.
+This version of the project requires Symfony 2.7+ and PHP 5.4+.
 
 ## Installation
 
