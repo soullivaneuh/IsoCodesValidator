@@ -20,7 +20,7 @@ Symfony validator wrapper of [IsoCodes](https://github.com/ronanguilloux/IsoCode
 
 ## Prerequisites
 
-This version of the bundle requires Symfony 2.3+ and PHP 5.4+.
+This version of the project requires Symfony 2.3+ and PHP 5.4+.
 
 ## Installation
 
