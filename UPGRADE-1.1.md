@@ -1,5 +1,76 @@
 # Upgrade from 1.0 to 1.1
 
+## Symfony and Silex integration
+
+To simplify project dependencies, Symfony and Silex integration systems are now inside the project itself.
+
+Class namespaces are changed on some composer modification has to be done.
+
+### Symfony integration
+
+If your project **is not using** [Symfony Full Stack](http://symfony.com/projects/symfonyfs),
+you must add the following dependencies:
+
+```bash
+composer require symfony/dependency-injection symfony/http-kernel symfony/finder
+```
+
+Replace `sllh/iso-codes-validator-bundle` by `sllh/iso-codes-validator` (`~1.1`)
+on your `composer.json` file.
+
+Change bundle namespace and your code.
+
+Before:
+
+```php
+// app/AppKernel.php
+
+public function registerBundles()
+{
+    $bundles = array(
+        // ...
+        new SLLH\IsoCodesValidatorBundle\SLLHIsoCodesValidatorBundle(),
+    );
+}
+```
+
+After:
+
+```php
+// app/AppKernel.php
+
+public function registerBundles()
+{
+    $bundles = array(
+        // ...
+        new SLLH\IsoCodesValidator\Bundle\SLLHIsoCodesValidatorBundle(),
+    );
+}
+```
+
+### Silex integration
+
+Replace `sllh/iso-codes-validator-service-provider` by `sllh/iso-codes-validator` (`~1.1`)
+on your `composer.json` file.
+
+Change service provider namespace and your code.
+
+Before:
+
+```php
+use SLLH\Provider\IsoCodesValidatorServiceProvider;
+
+$app->register(new IsoCodesValidatorServiceProvider());
+```
+
+After:
+
+```php
+use SLLH\IsoCodesValidator\Provider\IsoCodesValidatorServiceProvider;
+
+$app->register(new IsoCodesValidatorServiceProvider());
+```
+
 ## ConstraintValidator base class
 
 `IsoCodesConstraintValidator` abstract class is deprecated in favor of `AbstractIsoCodesConstraintValidator`

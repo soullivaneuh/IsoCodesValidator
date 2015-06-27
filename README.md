@@ -26,11 +26,54 @@ This version of the bundle requires Symfony 2.3+ and PHP 5.4+.
 
 ### As a Symfony bundle
 
-Please see [SLLHIsoCodesValidatorBundle](https://github.com/Soullivaneuh/SLLHIsoCodesValidatorBundle) documentation.
+If your project **is not using** [Symfony Full Stack](http://symfony.com/projects/symfonyfs),
+you must add the following dependencies:
+
+```bash
+composer require symfony/dependency-injection symfony/http-kernel symfony/finder
+```
+
+#### Translations
+
+If you wish to use default validator messages translations in this bundle,
+you have to make sure you have translator enabled in your config.
+
+``` yaml
+# app/config/config.yml
+
+framework:
+    translator: ~
+```
+
+#### Enable the bundle
+
+``` php
+// app/AppKernel.php
+
+public function registerBundles()
+{
+    $bundles = array(
+        // ...
+        new SLLH\IsoCodesValidator\Bundle\SLLHIsoCodesValidatorBundle(),
+    );
+}
+```
 
 ### As a Silex service provider
 
-Please see [IsoCodesValidatorServiceProvider](https://github.com/Soullivaneuh/IsoCodesValidatorServiceProvider) documentation.
+Add Silex dependency on your project:
+
+```bash
+composer require silex/silex
+```
+
+#### Register the service
+
+```php
+use SLLH\IsoCodesValidator\Provider\IsoCodesValidatorServiceProvider;
+
+$app->register(new IsoCodesValidatorServiceProvider());
+```
 
 ### Manually using composer
 
