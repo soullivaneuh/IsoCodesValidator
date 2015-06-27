@@ -1,5 +1,9 @@
 # CHANGELOG
 
+* 1.0.5 (2015-06-27)
+
+ * Fix invalid translation source on zip code
+
 * 1.0.4 (2015-06-23)
 
  * Fix deprecation issues for ZipCode validator and Symfony validator context.
