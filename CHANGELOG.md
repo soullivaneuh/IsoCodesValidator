@@ -12,6 +12,7 @@
  * Add `Ip` constraint.
  * Add `Iban` constraint.
  * Add `Isbn` constraint.
+ * Refactor `ZipCode` to get new countries option. See related PR: [ronanguilloux/IsoCodes#38](https://github.com/ronanguilloux/IsoCodes/pull/38)
 
 * 1.0.4 (2015-06-23)
 
