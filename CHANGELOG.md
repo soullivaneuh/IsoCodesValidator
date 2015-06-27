@@ -1,6 +1,6 @@
 # CHANGELOG
 
-* 1.1.0 (2015-??-??)
+* 1.1.0 (2015-06-27)
 
  * Bump `ronanguilloux/isocodes` package to `~1.2`.
  * Deprecate `IsoCodesConstraintValidator` in favor of `AbstractIsoCodesConstraintValidator`.
