@@ -3,6 +3,7 @@
 * 2.0.0 (2015-??-??)
 
  * Make Symfony 2.7 LTS as a minimum requirement.
+ * Remove deprecated `IsoCodesConstraintValidator` interface.
 
 * 1.1.0 (2015-??-??)
 
