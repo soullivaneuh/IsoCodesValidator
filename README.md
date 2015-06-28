@@ -33,7 +33,7 @@ This version of the project requires:
 * PHP 5.4+
 * Symfony Validator component 2.7+
 * Symfony 2.7+ for bundle integration
-* Silex 1.1+ for service provider integration
+* Silex 1.2+ for service provider integration
 
 ## Installation
 

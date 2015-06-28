@@ -3,6 +3,7 @@
 * 2.0.0 (2015-??-??)
 
  * Make Symfony 2.7 LTS as a minimum requirement.
+ * Make Silex 1.2 as a minimum requirement.
  * Remove deprecated `IsoCodesConstraintValidator` interface.
  * Remove deprecated `ZipCode` country option values.
 
