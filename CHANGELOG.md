@@ -7,6 +7,8 @@
  * Remove deprecated `IsoCodesConstraintValidator` interface.
  * Remove deprecated `ZipCode` country option values.
 
+* 1.2.0 (2015-??-??)
+
 * 1.1.0 (2015-06-27)
 
  * Bump `ronanguilloux/isocodes` package to `~1.2`.

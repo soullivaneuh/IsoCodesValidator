@@ -23,8 +23,9 @@ Symfony validator wrapper of [IsoCodes](https://github.com/ronanguilloux/IsoCode
 All the installation and usage instructions are located in this README.
 Check it for specific version:
 
-* [__2.0__](https://github.com/Soullivaneuh/IsoCodesValidator/tree/master) with support for Symfony `>=2.7`
-* [__1.1__](https://github.com/Soullivaneuh/IsoCodesValidator/tree/1.1) with support for Symfony `>=2.3`
+* [__2.0__](https://github.com/Soullivaneuh/IsoCodesValidator/tree/master) with support for Symfony `>=2.7` and Silex `>=1.2`
+* [__1.2__](https://github.com/Soullivaneuh/IsoCodesValidator/tree/1.2) with support for Symfony `>=2.3` and Silex `>=1.1`
+* [__1.1__](https://github.com/Soullivaneuh/IsoCodesValidator/tree/1.1) with support for Symfony `>=2.3` and Silex `>=1.1`
 
 ## Prerequisites
 
@@ -158,6 +159,7 @@ class Company
 $validator = Validation::createValidatorBuilder()
     ->enableAnnotationMapping()
     ->getValidator();
+<<<<<<< HEAD
 
 $company = new Company('48853781200015', '432167567', 'DE123456789', '59000');
 
