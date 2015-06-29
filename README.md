@@ -159,7 +159,6 @@ class Company
 $validator = Validation::createValidatorBuilder()
     ->enableAnnotationMapping()
     ->getValidator();
-<<<<<<< HEAD
 
 $company = new Company('48853781200015', '432167567', 'DE123456789', '59000');
 
