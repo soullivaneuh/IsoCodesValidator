@@ -7,6 +7,14 @@ use SLLH\IsoCodesValidator\Constraints\SwiftBicValidator;
 
 class SwiftBicValidatorTest extends AbstractConstraintValidatorTest
 {
+    /**
+     * @group legacy
+     */
+    protected function setUp()
+    {
+        parent::setUp();
+    }
+
     protected function createValidator()
     {
         return new SwiftBicValidator();

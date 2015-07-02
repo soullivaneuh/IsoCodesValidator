@@ -2,6 +2,7 @@
 
 namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
+use SLLH\IsoCodesValidator\Constraints\IsoCodesGenericValidator;
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\Constraints\Blank;
 use Symfony\Component\Validator\Tests\Constraints\AbstractConstraintValidatorTest as BaseAbstractConstraintValidatorTest;
@@ -28,10 +29,7 @@ abstract class AbstractConstraintValidatorTest extends BaseAbstractConstraintVal
 
     public function testUnexpectedConstraintException()
     {
-        $this->setExpectedException(
-            'Symfony\Component\Validator\Exception\UnexpectedTypeException',
-            sprintf('Expected argument of type "%s", "Symfony\Component\Validator\Constraints\Blank" given', get_class($this->srcConstraint))
-        );
+        $this->setExpectedException('Symfony\Component\Validator\Exception\UnexpectedTypeException');
 
         $this->validator->validate(null, new Blank());
     }
@@ -48,6 +46,11 @@ abstract class AbstractConstraintValidatorTest extends BaseAbstractConstraintVal
         $this->validator->validate('', $this->createConstraint());
 
         $this->assertNoViolation();
+    }
+
+    protected function createValidator()
+    {
+        return new IsoCodesGenericValidator();
     }
 
     abstract protected function createConstraint();

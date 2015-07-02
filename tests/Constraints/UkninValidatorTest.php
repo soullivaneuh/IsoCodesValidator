@@ -7,6 +7,14 @@ use SLLH\IsoCodesValidator\Constraints\UkninValidator;
 
 class UkninValidatorTest extends AbstractConstraintValidatorTest
 {
+    /**
+     * @group legacy
+     */
+    protected function setUp()
+    {
+        parent::setUp();
+    }
+
     protected function createValidator()
     {
         return new UkninValidator();
