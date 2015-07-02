@@ -9,6 +9,8 @@
 
 * 1.2.0 (2015-??-??)
 
+ * Factor simple IsoCodes validators by adding a generic one.
+
 * 1.1.0 (2015-06-27)
 
  * Bump `ronanguilloux/isocodes` package to `~1.2`.

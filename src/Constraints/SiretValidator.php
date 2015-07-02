@@ -2,24 +2,11 @@
 
 namespace SLLH\IsoCodesValidator\Constraints;
 
-use IsoCodes;
-use SLLH\IsoCodesValidator\AbstractIsoCodesConstraintValidator;
-use Symfony\Component\Validator\Constraint;
+trigger_error('The '.__NAMESPACE__.'\SiretValidator class is deprecated since 1.2 and will be removed in 2.0. User '.__NAMESPACE__.'\IsoCodesGenericValidator instead', E_USER_DEPRECATED);
 
 /**
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-class SiretValidator extends AbstractIsoCodesConstraintValidator
+class SiretValidator extends IsoCodesGenericValidator
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function validate($value, Constraint $constraint)
-    {
-        parent::validate($value, $constraint);
-
-        if ($value && !IsoCodes\Siret::validate($value)) {
-            $this->createViolation($constraint->message);
-        }
-    }
 }
