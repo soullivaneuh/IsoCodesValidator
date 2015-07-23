@@ -6,8 +6,6 @@ use Silex\Application;
 use Silex\ServiceProviderInterface;
 
 /**
- * Class IsoCodesValidatorServiceProvider.
- *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
 class IsoCodesValidatorServiceProvider implements ServiceProviderInterface
