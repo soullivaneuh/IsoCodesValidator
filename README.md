@@ -97,6 +97,10 @@ $ composer require silex/silex
 ```php
 use SLLH\IsoCodesValidator\Provider\IsoCodesValidatorServiceProvider;
 
+// Get translation working
+$app->register(new TranslationServiceProvider());
+
+// Register the provider
 $app->register(new IsoCodesValidatorServiceProvider());
 ```
 
