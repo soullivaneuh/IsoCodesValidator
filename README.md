@@ -38,13 +38,24 @@ This version of the project requires:
 
 ## Installation
 
+First of all, you need to require this library through composer:
+
+``` bash
+$ composer require sllh/iso-codes-validator
+```
+
+After this, you can use it as is.
+
+If you are using it on a **Symfony** or **Silex** project,
+you should read the following instructions for a better integration.
+
 ### As a Symfony bundle
 
 If your project **is not using** [Symfony Full Stack](http://symfony.com/projects/symfonyfs),
 you must add the following dependencies:
 
 ```bash
-composer require symfony/dependency-injection symfony/http-kernel symfony/finder
+$ composer require symfony/dependency-injection symfony/http-kernel symfony/finder
 ```
 
 #### Translations
@@ -78,7 +89,7 @@ public function registerBundles()
 Add Silex dependency on your project:
 
 ```bash
-composer require silex/silex
+$ composer require silex/silex
 ```
 
 #### Register the service
@@ -87,12 +98,6 @@ composer require silex/silex
 use SLLH\IsoCodesValidator\Provider\IsoCodesValidatorServiceProvider;
 
 $app->register(new IsoCodesValidatorServiceProvider());
-```
-
-### Manually using composer
-
-``` bash
-$ composer require sllh/iso-codes-validator
 ```
 
 ## Usage
