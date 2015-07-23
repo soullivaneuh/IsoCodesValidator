@@ -62,7 +62,7 @@ class ZipCode extends Constraint
                 'Netherlands'   => 'NL',
             ];
 
-            trigger_error('The value "'.$this->country.'" for '.__CLASS__.'::country options is deprecated since version 1.1 and will be removed in 2.0. Use '.$deprecatedOptionsBridge[$this->country].' instead.', E_USER_DEPRECATED);
+            @trigger_error('The value "'.$this->country.'" for '.__CLASS__.'::country options is deprecated since version 1.1 and will be removed in 2.0. Use '.$deprecatedOptionsBridge[$this->country].' instead.', E_USER_DEPRECATED);
 
             $this->country = $deprecatedOptionsBridge[$this->country];
         }
