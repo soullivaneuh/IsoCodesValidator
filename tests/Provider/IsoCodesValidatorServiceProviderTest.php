@@ -3,6 +3,7 @@
 namespace SLLH\IsoCodesValidator\Tests\Provider;
 
 use Silex\Application;
+use Silex\Provider\LocaleServiceProvider;
 use Silex\Provider\TranslationServiceProvider;
 use SLLH\IsoCodesValidator\Provider\IsoCodesValidatorServiceProvider;
 use Symfony\Component\Translation\TranslatorInterface;
@@ -28,6 +29,7 @@ class IsoCodesValidatorServiceProviderTest extends \PHPUnit_Framework_TestCase
     {
         $app = new Application();
 
+        $app->register(new LocaleServiceProvider());
         $app->register(new TranslationServiceProvider());
         $app->register(new IsoCodesValidatorServiceProvider());
     }

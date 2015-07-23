@@ -2,8 +2,8 @@
 
 namespace SLLH\IsoCodesValidator\Provider;
 
-use Silex\Application;
-use Silex\ServiceProviderInterface;
+use Pimple\Container;
+use Pimple\ServiceProviderInterface;
 
 /**
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
@@ -13,7 +13,7 @@ class IsoCodesValidatorServiceProvider implements ServiceProviderInterface
     /**
      * {@inheritdoc}
      */
-    public function register(Application $app)
+    public function register(Container $app)
     {
         if (isset($app['translator'])) {
             $file = __DIR__.'/../Resources/translations/validators.'.$app['locale'].'.xlf';
@@ -21,12 +21,5 @@ class IsoCodesValidatorServiceProvider implements ServiceProviderInterface
                 $app['translator']->addResource('xliff', $file, $app['locale'], 'validators');
             }
         }
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function boot(Application $app)
-    {
     }
 }

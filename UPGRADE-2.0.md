@@ -4,6 +4,10 @@
 
 This version need now Symfony 2.7 LTS as a minimum requirement.
 
+## Silex requirement
+
+This version need now Silex 2.0 as a minimum requirement.
+
 ## API closing
 
 Constraint and validator classes are now `final` because there is no reason to override them.
