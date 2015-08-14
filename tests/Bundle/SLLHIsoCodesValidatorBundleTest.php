@@ -1,6 +1,6 @@
 <?php
 
-namespace SLLH\IsoCodesValidator\Tests\Bundle;
+namespace SLLH\IsoCodesValidator\tests\Bundle;
 
 use Matthias\SymfonyDependencyInjectionTest\PhpUnit\AbstractContainerBuilderTestCase;
 use SLLH\IsoCodesValidator\Bundle\SLLHIsoCodesValidatorBundle;

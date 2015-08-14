@@ -32,8 +32,7 @@ class TranslationPass implements CompilerPassInterface
             ->filter(function (\SplFileInfo $file) {
                 return 2 === substr_count($file->getBasename(), '.') && preg_match('/\.\w+$/', $file->getBasename());
             })
-            ->in(__DIR__.'/../../../Resources/translations')
-        ;
+            ->in(__DIR__.'/../../../Resources/translations');
 
         foreach ($finder as $file) {
             list($domain, $locale, $format) = explode('.', $file->getBasename(), 3);

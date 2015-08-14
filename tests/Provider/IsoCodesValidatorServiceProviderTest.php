@@ -1,6 +1,6 @@
 <?php
 
-namespace SLLH\IsoCodesValidator\Tests\Provider;
+namespace SLLH\IsoCodesValidator\tests\Provider;
 
 use Silex\Application;
 use Silex\Provider\TranslationServiceProvider;

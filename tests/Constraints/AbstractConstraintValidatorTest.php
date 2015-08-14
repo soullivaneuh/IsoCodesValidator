@@ -1,6 +1,6 @@
 <?php
 
-namespace SLLH\IsoCodesValidator\Tests\Constraints;
+namespace SLLH\IsoCodesValidator\tests\Constraints;
 
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\Constraints\Blank;

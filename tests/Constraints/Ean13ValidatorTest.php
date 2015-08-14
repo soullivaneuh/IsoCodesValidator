@@ -1,6 +1,6 @@
 <?php
 
-namespace SLLH\IsoCodesValidator\Tests\Constraints;
+namespace SLLH\IsoCodesValidator\tests\Constraints;
 
 use SLLH\IsoCodesValidator\Constraints\Ean13;
 use SLLH\IsoCodesValidator\Constraints\Ean13Validator;

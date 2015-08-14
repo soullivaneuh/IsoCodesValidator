@@ -1,6 +1,6 @@
 <?php
 
-namespace SLLH\IsoCodesValidator\Tests\Constraints;
+namespace SLLH\IsoCodesValidator\tests\Constraints;
 
 use SLLH\IsoCodesValidator\Constraints\Isbn;
 use SLLH\IsoCodesValidator\Constraints\IsbnValidator;
