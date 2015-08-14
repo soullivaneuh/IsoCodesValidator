@@ -1,11 +1,11 @@
 <?php
 
-namespace SLLH\IsoCodesValidator\Tests\Constraints;
+namespace SLLH\IsoCodesValidator\tests\Constraints;
 
 use SLLH\IsoCodesValidator\Constraints\StructuredCommunication;
 use SLLH\IsoCodesValidator\Constraints\StructuredCommunicationValidator;
 
-class StructuredCommunicationTest extends AbstractConstraintValidatorTest
+class StructuredCommunicationValidatorTest extends AbstractConstraintValidatorTest
 {
     protected function createValidator()
     {

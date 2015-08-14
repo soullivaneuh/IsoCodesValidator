@@ -1,6 +1,6 @@
 <?php
 
-namespace SLLH\IsoCodesValidator\Tests\Bundle\DependencyInjection\Compiler;
+namespace SLLH\IsoCodesValidator\tests\Bundle\DependencyInjection\Compiler;
 
 use Matthias\SymfonyDependencyInjectionTest\PhpUnit\AbstractCompilerPassTestCase;
 use SLLH\IsoCodesValidator\Bundle\DependencyInjection\Compiler\TranslationPass;
