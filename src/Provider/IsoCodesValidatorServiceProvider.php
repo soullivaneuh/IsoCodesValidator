@@ -15,7 +15,7 @@ class IsoCodesValidatorServiceProvider implements ServiceProviderInterface
      */
     public function register(Application $app)
     {
-        if (isset($app['translator'])) {
+        if (isset($app['translator'])){
             $file = __DIR__.'/../Resources/translations/validators.'.$app['locale'].'.xlf';
             if (file_exists($file)) {
                 $app['translator']->addResource('xliff', $file, $app['locale'], 'validators');
