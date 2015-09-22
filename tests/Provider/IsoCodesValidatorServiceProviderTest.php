@@ -47,7 +47,7 @@ class IsoCodesValidatorServiceProviderTest extends \PHPUnit_Framework_TestCase
         $translation = $translator->trans($source, [], 'validators', $locale);
         if ($locale !== 'en') {
             // String should be translated
-            $existing ? $this->assertNotEquals($source, $translation) : $this->assertEquals($source, $translation);
+            $existing ? $this->assertNotSame($source, $translation) : $this->assertSame($source, $translation);
         }
     }
 
