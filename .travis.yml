@@ -46,8 +46,7 @@ sudo: false
 
 cache:
   directories:
-    - $HOME/.composer/cache
-    - $HOME/.composer/vendor
+    - $HOME/.composer/cache/files
 
 before_script:
   - composer selfupdate
