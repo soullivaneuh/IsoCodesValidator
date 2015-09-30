@@ -3,23 +3,9 @@
 namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
 use SLLH\IsoCodesValidator\Constraints\Insee;
-use SLLH\IsoCodesValidator\Constraints\InseeValidator;
 
 class InseeValidatorTest extends AbstractConstraintValidatorTest
 {
-    /**
-     * @group legacy
-     */
-    protected function setUp()
-    {
-        parent::setUp();
-    }
-
-    protected function createValidator()
-    {
-        return new InseeValidator();
-    }
-
     protected function createConstraint()
     {
         return new Insee();

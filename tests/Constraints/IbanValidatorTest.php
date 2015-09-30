@@ -3,23 +3,9 @@
 namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
 use SLLH\IsoCodesValidator\Constraints\Iban;
-use SLLH\IsoCodesValidator\Constraints\IbanValidator;
 
 class IbanValidatorTest extends AbstractConstraintValidatorTest
 {
-    /**
-     * @group legacy
-     */
-    protected function setUp()
-    {
-        parent::setUp();
-    }
-
-    protected function createValidator()
-    {
-        return new IbanValidator();
-    }
-
     protected function createConstraint()
     {
         return new Iban();

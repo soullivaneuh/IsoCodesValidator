@@ -3,23 +3,9 @@
 namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
 use SLLH\IsoCodesValidator\Constraints\Bban;
-use SLLH\IsoCodesValidator\Constraints\BbanValidator;
 
 class BbanValidatorTest extends AbstractConstraintValidatorTest
 {
-    /**
-     * @group legacy
-     */
-    protected function setUp()
-    {
-        parent::setUp();
-    }
-
-    protected function createValidator()
-    {
-        return new BbanValidator();
-    }
-
     protected function createConstraint()
     {
         return new Bban();

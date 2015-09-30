@@ -3,23 +3,9 @@
 namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
 use SLLH\IsoCodesValidator\Constraints\Siren;
-use SLLH\IsoCodesValidator\Constraints\SirenValidator;
 
 class SirenValidatorTest extends AbstractConstraintValidatorTest
 {
-    /**
-     * @group legacy
-     */
-    protected function setUp()
-    {
-        parent::setUp();
-    }
-
-    protected function createValidator()
-    {
-        return new SirenValidator();
-    }
-
     protected function createConstraint()
     {
         return new Siren();

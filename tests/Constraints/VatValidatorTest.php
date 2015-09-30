@@ -3,23 +3,9 @@
 namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
 use SLLH\IsoCodesValidator\Constraints\Vat;
-use SLLH\IsoCodesValidator\Constraints\VatValidator;
 
 class VatValidatorTest extends AbstractConstraintValidatorTest
 {
-    /**
-     * @group legacy
-     */
-    protected function setUp()
-    {
-        parent::setUp();
-    }
-
-    protected function createValidator()
-    {
-        return new VatValidator();
-    }
-
     protected function createConstraint()
     {
         return new Vat();

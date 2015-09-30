@@ -3,23 +3,9 @@
 namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
 use SLLH\IsoCodesValidator\Constraints\StructuredCommunication;
-use SLLH\IsoCodesValidator\Constraints\StructuredCommunicationValidator;
 
 class StructuredCommunicationValidatorTest extends AbstractConstraintValidatorTest
 {
-    /**
-     * @group legacy
-     */
-    protected function setUp()
-    {
-        parent::setUp();
-    }
-
-    protected function createValidator()
-    {
-        return new StructuredCommunicationValidator();
-    }
-
     protected function createConstraint()
     {
         return new StructuredCommunication();
