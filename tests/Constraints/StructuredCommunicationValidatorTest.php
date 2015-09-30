@@ -5,7 +5,7 @@ namespace SLLH\IsoCodesValidator\Tests\Constraints;
 use SLLH\IsoCodesValidator\Constraints\StructuredCommunication;
 use SLLH\IsoCodesValidator\Constraints\StructuredCommunicationValidator;
 
-class StructuredCommunicationTest extends AbstractConstraintValidatorTest
+class StructuredCommunicationValidatorTest extends AbstractConstraintValidatorTest
 {
     protected function createValidator()
     {
