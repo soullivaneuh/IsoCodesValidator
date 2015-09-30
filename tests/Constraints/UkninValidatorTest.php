@@ -3,23 +3,9 @@
 namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
 use SLLH\IsoCodesValidator\Constraints\Uknin;
-use SLLH\IsoCodesValidator\Constraints\UkninValidator;
 
 class UkninValidatorTest extends AbstractConstraintValidatorTest
 {
-    /**
-     * @group legacy
-     */
-    protected function setUp()
-    {
-        parent::setUp();
-    }
-
-    protected function createValidator()
-    {
-        return new UkninValidator();
-    }
-
     protected function createConstraint()
     {
         return new Uknin();

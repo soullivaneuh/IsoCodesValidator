@@ -3,23 +3,9 @@
 namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
 use SLLH\IsoCodesValidator\Constraints\Siret;
-use SLLH\IsoCodesValidator\Constraints\SiretValidator;
 
 class SiretValidatorTest extends AbstractConstraintValidatorTest
 {
-    /**
-     * @group legacy
-     */
-    protected function setUp()
-    {
-        parent::setUp();
-    }
-
-    protected function createValidator()
-    {
-        return new SiretValidator();
-    }
-
     protected function createConstraint()
     {
         return new Siret();

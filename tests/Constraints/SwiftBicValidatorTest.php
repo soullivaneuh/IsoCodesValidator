@@ -3,23 +3,9 @@
 namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
 use SLLH\IsoCodesValidator\Constraints\SwiftBic;
-use SLLH\IsoCodesValidator\Constraints\SwiftBicValidator;
 
 class SwiftBicValidatorTest extends AbstractConstraintValidatorTest
 {
-    /**
-     * @group legacy
-     */
-    protected function setUp()
-    {
-        parent::setUp();
-    }
-
-    protected function createValidator()
-    {
-        return new SwiftBicValidator();
-    }
-
     protected function createConstraint()
     {
         return new SwiftBic();

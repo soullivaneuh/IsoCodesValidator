@@ -3,23 +3,9 @@
 namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
 use SLLH\IsoCodesValidator\Constraints\CreditCard;
-use SLLH\IsoCodesValidator\Constraints\CreditCardValidator;
 
 class CreditCardValidatorTest extends AbstractConstraintValidatorTest
 {
-    /**
-     * @group legacy
-     */
-    protected function setUp()
-    {
-        parent::setUp();
-    }
-
-    protected function createValidator()
-    {
-        return new CreditCardValidator();
-    }
-
     protected function createConstraint()
     {
         return new CreditCard();

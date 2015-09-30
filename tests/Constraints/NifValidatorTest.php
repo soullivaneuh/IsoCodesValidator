@@ -3,23 +3,9 @@
 namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
 use SLLH\IsoCodesValidator\Constraints\Nif;
-use SLLH\IsoCodesValidator\Constraints\NifValidator;
 
 class NifValidatorTest extends AbstractConstraintValidatorTest
 {
-    /**
-     * @group legacy
-     */
-    protected function setUp()
-    {
-        parent::setUp();
-    }
-
-    protected function createValidator()
-    {
-        return new NifValidator();
-    }
-
     protected function createConstraint()
     {
         return new Nif();
