@@ -6,6 +6,8 @@ namespace SLLH\IsoCodesValidator\Constraints;
 
 /**
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
+ *
+ * @deprecated since 1.2, will be removed in 2.0
  */
 class UkninValidator extends IsoCodesGenericValidator
 {
