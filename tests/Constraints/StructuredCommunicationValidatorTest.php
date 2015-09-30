@@ -7,6 +7,14 @@ use SLLH\IsoCodesValidator\Constraints\StructuredCommunicationValidator;
 
 class StructuredCommunicationValidatorTest extends AbstractConstraintValidatorTest
 {
+    /**
+     * @group legacy
+     */
+    protected function setUp()
+    {
+        parent::setUp();
+    }
+
     protected function createValidator()
     {
         return new StructuredCommunicationValidator();

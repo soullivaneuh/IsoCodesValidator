@@ -7,6 +7,14 @@ use SLLH\IsoCodesValidator\Constraints\Ean13Validator;
 
 class Ean13ValidatorTest extends AbstractConstraintValidatorTest
 {
+    /**
+     * @group legacy
+     */
+    protected function setUp()
+    {
+        parent::setUp();
+    }
+
     protected function createValidator()
     {
         return new Ean13Validator();
