@@ -8,9 +8,13 @@
  * Remove deprecated `ZipCode` country option values.
  * Remove deprecated validators introduced in [#44](https://github.com/Soullivaneuh/IsoCodesValidator/pull/44)
 
-* 1.2.0 (2015-??-??)
+* 1.2.0 (2015-10-27)
 
  * Factor simple IsoCodes validators by adding a generic one.
+
+* 1.1.1 (2015-07-23)
+
+ * Fix not silenced deprecation notices.
 
 * 1.1.0 (2015-06-27)
 
