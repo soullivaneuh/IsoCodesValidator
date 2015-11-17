@@ -1,5 +1,9 @@
 # CHANGELOG
 
+* 1.2.1 (2015-11-17)
+
+ * Allow Symfony3 requirement.
+
 * 1.2.0 (2015-10-27)
 
  * Factor simple IsoCodes validators by adding a generic one.
