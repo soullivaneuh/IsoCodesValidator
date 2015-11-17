@@ -11,21 +11,21 @@
         }
     ],
     "require": {
-        "php": ">=5.4",
-        "symfony/validator": "~2.7",
-        "symfony/translation": "~2.7",
-        "ronanguilloux/isocodes": "~1.2"
+        "php": "^5.4|^7.0",
+        "symfony/validator": "^2.7|^3.0",
+        "symfony/translation": "^2.7|^3.0",
+        "ronanguilloux/isocodes": "^1.2"
     },
     "require-dev": {
-        "symfony/dependency-injection": "~2.7",
-        "symfony/http-kernel": "~2.7",
-        "symfony/finder": "~2.7",
-        "silex/silex": "~1.2",
+        "symfony/dependency-injection": "^2.7|^3.0",
+        "symfony/http-kernel": "^2.7|^3.0",
+        "symfony/finder": "^2.7|^3.0",
+        "silex/silex": "^1.2",
         "matthiasnoback/symfony-dependency-injection-test": "^0.7.4",
-        "satooshi/php-coveralls": "~0.6",
+        "satooshi/php-coveralls": "^0.6",
         "codeclimate/php-test-reporter": "dev-master",
-        "symfony/phpunit-bridge": "~2.7|~3.0",
-        "sllh/php-cs-fixer-styleci-bridge": "~1.0"
+        "symfony/phpunit-bridge": "^2.7|^3.0",
+        "sllh/php-cs-fixer-styleci-bridge": "^1.0"
     },
     "suggest": {
         "symfony/dependency-injection": "For Symfony integration as a bundle",
@@ -34,10 +34,10 @@
         "silex/silex": "For Silex integration as a service provider"
     },
     "conflict": {
-        "symfony/dependency-injection": "<2.7",
-        "symfony/http-kernel": "<2.7",
-        "symfony/finder": "<2.7",
-        "silex/silex": "<1.2"
+        "symfony/dependency-injection": "<2.7|>=4.0",
+        "symfony/http-kernel": "<2.7|>=4.0",
+        "symfony/finder": "<2.7|>=4.0",
+        "silex/silex": "<1.2|>=2.0"
     },
     "autoload": {
         "psr-4": { "SLLH\\IsoCodesValidator\\": "src" }
