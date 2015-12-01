@@ -59,7 +59,12 @@ cache:
   directories:
     - $HOME/.composer/cache/files
 
-before_script:
+before_install:
+  - phpenv config-rm xdebug.ini
+  - alias php='php -dzend_extension=xdebug.so'
+  - alias phpunit='php $(which phpunit)'
+
+install:
   - composer config -g github-oauth.github.com $GITHUB_OAUTH_TOKEN
   - composer global require phpunit/phpunit:@stable --no-update
   - composer global update --prefer-dist --no-interaction
