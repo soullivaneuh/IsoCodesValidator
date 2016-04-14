@@ -8,7 +8,7 @@ namespace SLLH\IsoCodesValidator\Constraints;
  *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-class Uknin extends IsoCodesGeneric
+final class Uknin extends IsoCodesGeneric
 {
     public $message = 'This value is not a valid NINO.';
 }

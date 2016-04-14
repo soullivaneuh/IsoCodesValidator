@@ -12,7 +12,7 @@ use Symfony\Component\Validator\Exception\ConstraintDefinitionException;
  *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-class ZipCode extends Constraint
+final class ZipCode extends Constraint
 {
     const ALL           = 'all';
 

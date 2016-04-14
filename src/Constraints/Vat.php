@@ -8,7 +8,7 @@ namespace SLLH\IsoCodesValidator\Constraints;
  *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-class Vat extends IsoCodesGeneric
+final class Vat extends IsoCodesGeneric
 {
     public $message = 'This value is not a valid VAT.';
 }

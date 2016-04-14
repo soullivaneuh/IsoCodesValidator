@@ -10,7 +10,7 @@ use Symfony\Component\Validator\Constraint;
  *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-class Ip extends Constraint
+final class Ip extends Constraint
 {
     public $message = 'This value is not a valid IP address.';
 }

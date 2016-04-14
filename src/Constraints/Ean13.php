@@ -8,7 +8,7 @@ namespace SLLH\IsoCodesValidator\Constraints;
  *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-class Ean13 extends IsoCodesGeneric
+final class Ean13 extends IsoCodesGeneric
 {
     public $message = 'This EAN 13 code is not valid.';
 }

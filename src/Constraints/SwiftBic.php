@@ -8,7 +8,7 @@ namespace SLLH\IsoCodesValidator\Constraints;
  *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-class SwiftBic extends IsoCodesGeneric
+final class SwiftBic extends IsoCodesGeneric
 {
     public $message = 'This value is not a valid SWIFT.';
 }

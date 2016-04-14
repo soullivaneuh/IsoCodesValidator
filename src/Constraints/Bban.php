@@ -8,7 +8,7 @@ namespace SLLH\IsoCodesValidator\Constraints;
  *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-class Bban extends IsoCodesGeneric
+final class Bban extends IsoCodesGeneric
 {
     public $message = 'This value is not a valid BBAN.';
 }

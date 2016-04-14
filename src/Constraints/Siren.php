@@ -8,7 +8,7 @@ namespace SLLH\IsoCodesValidator\Constraints;
  *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-class Siren extends IsoCodesGeneric
+final class Siren extends IsoCodesGeneric
 {
     public $message = 'This value is not a valid SIREN.';
 }
