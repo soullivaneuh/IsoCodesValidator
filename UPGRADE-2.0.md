@@ -13,3 +13,7 @@ Constraint and validator classes are now `final` because there is no reason to o
 All deprecated code introduced on 1.x are removed on 2.0.
 
 Please read 1.x upgrade guides for more information.
+
+## Classes removal
+
+* `SLLH\IsoCodesValidator\Constraints\SsnValidator` does not exist anymore.

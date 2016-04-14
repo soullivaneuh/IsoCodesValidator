@@ -3,15 +3,9 @@
 namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
 use SLLH\IsoCodesValidator\Constraints\Ssn;
-use SLLH\IsoCodesValidator\Constraints\SsnValidator;
 
 class SsnValidatorTest extends AbstractConstraintValidatorTest
 {
-    protected function createValidator()
-    {
-        return new SsnValidator();
-    }
-
     protected function createConstraint()
     {
         return new Ssn();
