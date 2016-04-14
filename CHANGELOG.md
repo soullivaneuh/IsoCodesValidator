@@ -1,5 +1,9 @@
 # CHANGELOG
 
+* 1.2.3 (2016-04-14)
+
+ * Add `ronanguilloux/isocodes` `2.x` compatibility.
+
 * 1.2.2 (2016-04-14)
 
  * Fix some french translations.
