@@ -1,5 +1,9 @@
 # CHANGELOG
 
+* 1.2.2 (2016-04-14)
+
+ * Fix some french translations.
+
 * 1.2.1 (2015-11-17)
 
  * Allow Symfony3 requirement.
