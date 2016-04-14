@@ -18,10 +18,14 @@ class SsnValidator extends AbstractIsoCodesConstraintValidator
     {
         parent::validate($value, $constraint);
 
-        // Have to instantiate it. See: https://github.com/ronanguilloux/IsoCodes/issues/12
-        $ssn = new IsoCodes\Ssn();
+        if (in_array('IsoCodes\IsoCodeInterface', class_implements('IsoCodes\Ssn'), true)) {
+            $isValid = IsoCodes\Ssn::validate($value);
+        } else { // IsoCodes 1.x BC. Should extends IsoCodesGenericValidator on next major.
+            $ssn = new IsoCodes\Ssn();
+            $isValid = $ssn->validate($value);
+        }
 
-        if ($value && !$ssn->validate($value)) {
+        if ($value && !$isValid) {
             $this->createViolation($constraint->message);
         }
     }
