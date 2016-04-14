@@ -28,7 +28,7 @@
             </trans-unit>
             <trans-unit id="7">
                 <source>This value is not a valid SIRET.</source>
-                <target>Cette valeur n'est pas un code SIREN valide.</target>
+                <target>Cette valeur n'est pas un code SIRET valide.</target>
             </trans-unit>
             <trans-unit id="8">
                 <source>This value is not a valid SSN.</source>
@@ -48,11 +48,11 @@
             </trans-unit>
             <trans-unit id="12">
                 <source>This value is not a valid VAT.</source>
-                <target>Cette valeur n'est pas un code NIF valide.</target>
+                <target>Cette valeur n'est pas un code TVA valide.</target>
             </trans-unit>
             <trans-unit id="13">
                 <source>This value is not a valid ZIP code.</source>
-                <target>Cette valeur n'est pas un code ZIP valide.</target>
+                <target>Cette valeur n'est pas un code postal valide.</target>
             </trans-unit>
             <trans-unit id="14">
                 <source>This value is not a valid credit card scheme.</source>
