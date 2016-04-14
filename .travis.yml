@@ -66,7 +66,7 @@ before_install:
 
 install:
   - composer config -g github-oauth.github.com $GITHUB_OAUTH_TOKEN
-  - composer global require phpunit/phpunit:@stable --no-update
+  - composer global require phpunit/phpunit:@stable satooshi/php-coveralls:@stable codeclimate/php-test-reporter:@stable --no-update
   - composer global update --prefer-dist --no-interaction
   - if [ "$SYMFONY_VERSION" != "" ]; then composer require "symfony/symfony:${SYMFONY_VERSION}" --no-update; PHPUNIT_OPTION="--group symfony"; fi;
   - if [ "$SILEX_VERSION" != "" ]; then composer require "silex/silex:${SILEX_VERSION}" --no-update; PHPUNIT_OPTION="--group silex"; fi;
@@ -76,5 +76,5 @@ install:
 script: phpunit -c phpunit.xml.dist --coverage-clover build/logs/clover.xml ${PHPUNIT_OPTION}
 
 after_script:
-  - php vendor/bin/coveralls -v
-  - php vendor/bin/test-reporter
+  - coveralls -v
+  - test-reporter
