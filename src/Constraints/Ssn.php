@@ -10,7 +10,7 @@ use Symfony\Component\Validator\Constraint;
  *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-class Ssn extends Constraint
+final class Ssn extends Constraint
 {
     public $message = 'This value is not a valid SSN.';
 }

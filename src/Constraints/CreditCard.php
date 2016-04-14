@@ -8,7 +8,7 @@ namespace SLLH\IsoCodesValidator\Constraints;
  *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-class CreditCard extends IsoCodesGeneric
+final class CreditCard extends IsoCodesGeneric
 {
     public $message = 'This value is not a valid credit card scheme.';
 }

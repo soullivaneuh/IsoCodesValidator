@@ -8,7 +8,7 @@ namespace SLLH\IsoCodesValidator\Constraints;
  *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-class Insee extends IsoCodesGeneric
+final class Insee extends IsoCodesGeneric
 {
     public $message = 'This INSEE number is not valid.';
 }

@@ -8,7 +8,7 @@ namespace SLLH\IsoCodesValidator\Constraints;
  *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-class Siret extends IsoCodesGeneric
+final class Siret extends IsoCodesGeneric
 {
     public $message = 'This value is not a valid SIRET.';
 }

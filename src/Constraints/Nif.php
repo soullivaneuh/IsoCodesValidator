@@ -8,7 +8,7 @@ namespace SLLH\IsoCodesValidator\Constraints;
  *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-class Nif extends IsoCodesGeneric
+final class Nif extends IsoCodesGeneric
 {
     public $message = 'This value is not a valid NIF.';
 }

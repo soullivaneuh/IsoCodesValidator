@@ -8,7 +8,7 @@ namespace SLLH\IsoCodesValidator\Constraints;
  *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-class StructuredCommunication extends IsoCodesGeneric
+final class StructuredCommunication extends IsoCodesGeneric
 {
     public $message = 'This value is not a valid structured communication code.';
 }

@@ -9,7 +9,7 @@ use Symfony\Component\Validator\Constraint;
 /**
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-class IpValidator extends AbstractIsoCodesConstraintValidator
+final class IpValidator extends AbstractIsoCodesConstraintValidator
 {
     /**
      * {@inheritdoc}

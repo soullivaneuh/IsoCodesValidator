@@ -8,7 +8,7 @@ namespace SLLH\IsoCodesValidator\Constraints;
  *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-class Iban extends IsoCodesGeneric
+final class Iban extends IsoCodesGeneric
 {
     public $message = 'This value is not a valid IBAN.';
 }

@@ -9,7 +9,7 @@ use Symfony\Component\Validator\Constraint;
 /**
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-class ZipCodeValidator extends AbstractIsoCodesConstraintValidator
+final class ZipCodeValidator extends AbstractIsoCodesConstraintValidator
 {
     /**
      * @param mixed              $value
