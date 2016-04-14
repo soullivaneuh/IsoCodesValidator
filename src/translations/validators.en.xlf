@@ -46,6 +46,10 @@
                 <source>This value is not a valid NIF.</source>
                 <target>This value is not a valid NIF.</target>
             </trans-unit>
+            <trans-unit id="phone_number_message">
+                <source>This value is not a valid phone number.</source>
+                <target>This value is not a valid phone number.</target>
+            </trans-unit>
             <trans-unit id="siren_message">
                 <source>This value is not a valid SIREN.</source>
                 <target>This value is not a valid SIREN.</target>
