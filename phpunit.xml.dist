@@ -21,4 +21,13 @@
             <directory>./src</directory>
         </whitelist>
     </filter>
+
+    <groups>
+        <exclude>
+            <group>symfony</group>
+        </exclude>
+        <exclude>
+            <group>silex</group>
+        </exclude>
+    </groups>
 </phpunit>

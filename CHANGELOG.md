@@ -1,12 +1,20 @@
 # CHANGELOG
 
-* 2.0.0 (2015-??-??)
+* 2.0.0 (2016-??-??)
 
  * Make Symfony 2.7 LTS as a minimum requirement.
  * Make Silex 1.2 as a minimum requirement.
  * Remove deprecated `IsoCodesConstraintValidator` interface.
  * Remove deprecated `ZipCode` country option values.
  * Remove deprecated validators introduced in [#44](https://github.com/Soullivaneuh/IsoCodesValidator/pull/44)
+
+* 1.2.3 (2016-04-14)
+
+ * Add `ronanguilloux/isocodes` `2.x` compatibility.
+
+* 1.2.2 (2016-04-14)
+
+ * Fix some french translations.
 
 * 1.2.1 (2015-11-17)
 
