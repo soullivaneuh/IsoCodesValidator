@@ -4,6 +4,7 @@
 
  * Make Symfony 2.7 LTS as a minimum requirement.
  * Make Silex 1.2 as a minimum requirement.
+ * Make `ronanguilloux/isocodes` 2.1 as a minimum requirement.
  * Remove deprecated `IsoCodesConstraintValidator` interface.
  * Remove deprecated `ZipCode` country option values.
  * Remove deprecated validators introduced in [#44](https://github.com/Soullivaneuh/IsoCodesValidator/pull/44)
