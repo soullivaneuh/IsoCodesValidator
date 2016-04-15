@@ -23,16 +23,17 @@ Symfony validator wrapper of [IsoCodes](https://github.com/ronanguilloux/IsoCode
 All the installation and usage instructions are located in this README.
 Check it for specific version:
 
-* [__2.x__](https://github.com/Soullivaneuh/IsoCodesValidator/tree/master) with support for Symfony `>=2.7` and Silex `>=1.2`
-* [__1.x__](https://github.com/Soullivaneuh/IsoCodesValidator/tree/1.x) with support for Symfony `>=2.3` and Silex `>=1.1`
+* [__3.x__ (unstable)](https://github.com/Soullivaneuh/IsoCodesValidator/tree/master) with support for Symfony `^2.7|^3.0` and Silex `^1.2`
+* [__2.x__](https://github.com/Soullivaneuh/IsoCodesValidator/tree/2.x) with support for Symfony `^2.7|^3.0` and Silex `^1.2`
+* [__1.x__](https://github.com/Soullivaneuh/IsoCodesValidator/tree/1.x) with support for Symfony `^2.3|^3.0` and Silex `^1.1`
 
 ## Prerequisites
 
 This version of the project requires:
 
-* PHP 5.4+
+* PHP 5.6+ or 7.0+
 * Symfony Validator component 2.7+
-* Symfony 2.7+ for bundle integration
+* Symfony 2.7+ or 3.0+ for bundle integration
 * Silex 1.2+ for service provider integration
 
 ## Installation
