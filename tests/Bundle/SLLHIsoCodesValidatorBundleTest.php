@@ -7,8 +7,6 @@ use SLLH\IsoCodesValidator\Bundle\SLLHIsoCodesValidatorBundle;
 
 /**
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
- *
- * @group symfony
  */
 class SLLHIsoCodesValidatorBundleTest extends AbstractContainerBuilderTestCase
 {
