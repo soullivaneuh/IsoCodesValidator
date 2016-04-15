@@ -31,7 +31,7 @@ php-cs-fixer fix --verbose
 
 ### Writing a Pull Request
 
-Before writing a PR, you have to check on what branch your changes should be based:
+Before writing a PR, you have to check on which branch your changes should be based:
 
  * For patches, bugfixes, typo and minor improvements, choose the most recent stable branch: `2.x`
  * For new features and major improvements, choose the `master` branch.
