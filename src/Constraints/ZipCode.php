@@ -3,7 +3,7 @@
 namespace SLLH\IsoCodesValidator\Constraints;
 
 use IsoCodes;
-use Symfony\Component\Validator\Constraint;
+use SLLH\IsoCodesValidator\AbstractConstraint;
 use Symfony\Component\Validator\Exception\ConstraintDefinitionException;
 
 /**
@@ -12,7 +12,7 @@ use Symfony\Component\Validator\Exception\ConstraintDefinitionException;
  *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-final class ZipCode extends Constraint
+final class ZipCode extends AbstractConstraint
 {
     const ALL           = 'all';
 
@@ -33,5 +33,21 @@ final class ZipCode extends Constraint
                 implode('", "', IsoCodes\ZipCode::getAvailableCountries())
             ));
         }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getIsoCodesVersion()
+    {
+        return '1.0.0';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getIsoCodesClass()
+    {
+        return IsoCodes\ZipCode::class;
     }
 }

@@ -2,8 +2,8 @@
 
 namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
+use SLLH\IsoCodesValidator\ConstraintInterface;
 use SLLH\IsoCodesValidator\Constraints\IsoCodesGenericValidator;
-use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\Constraints\Blank;
 use Symfony\Component\Validator\Tests\Constraints\AbstractConstraintValidatorTest as BaseAbstractConstraintValidatorTest;
 use Symfony\Component\Validator\Validation;
@@ -11,7 +11,7 @@ use Symfony\Component\Validator\Validation;
 abstract class AbstractConstraintValidatorTest extends BaseAbstractConstraintValidatorTest
 {
     /**
-     * @var Constraint
+     * @var ConstraintInterface
      */
     protected $srcConstraint;
 
@@ -20,6 +20,10 @@ abstract class AbstractConstraintValidatorTest extends BaseAbstractConstraintVal
         parent::setUp();
 
         $this->srcConstraint = $this->createConstraint();
+
+        if (!class_exists($this->srcConstraint->getIsoCodesClass())) {
+            $this->markTestSkipped('The '.$this->srcConstraint->getIsoCodesClass().' validator class does not exists.');
+        }
     }
 
     protected function getApiVersion()
@@ -46,6 +50,20 @@ abstract class AbstractConstraintValidatorTest extends BaseAbstractConstraintVal
         $this->validator->validate('', $this->createConstraint());
 
         $this->assertNoViolation();
+    }
+
+    public function testItImplementsInterface()
+    {
+        $this->assertInstanceOf(ConstraintInterface::class, $this->srcConstraint);
+    }
+
+    public function testItProvidesAnIsoCodesVersion()
+    {
+        $this->assertStringMatchesFormat(
+            '%d.%d.%d',
+            $this->srcConstraint->getIsoCodesVersion(),
+            'You should provide a proper version of IsoCodes library.'
+        );
     }
 
     protected function createValidator()
