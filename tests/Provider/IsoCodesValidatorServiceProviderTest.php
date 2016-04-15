@@ -9,8 +9,6 @@ use Symfony\Component\Translation\TranslatorInterface;
 
 /**
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
- *
- * @group silex
  */
 class IsoCodesValidatorServiceProviderTest extends \PHPUnit_Framework_TestCase
 {

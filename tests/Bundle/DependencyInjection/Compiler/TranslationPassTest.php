@@ -8,8 +8,6 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 /**
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
- *
- * @group symfony
  */
 class TranslationPassTest extends AbstractCompilerPassTestCase
 {
