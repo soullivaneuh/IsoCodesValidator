@@ -2,73 +2,73 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
     <file source-language="en" datatype="plaintext" original="file.ext">
         <body>
-            <trans-unit id="1">
+            <trans-unit id="bban_message">
                 <source>This value is not a valid BBAN.</source>
                 <target>Cette valeur n'est pas un code BBAN valide.</target>
             </trans-unit>
-            <trans-unit id="2">
+            <trans-unit id="cif_message">
                 <source>This value is not a valid CIF.</source>
                 <target>Cette valeur n'est pas un code CIF valide.</target>
             </trans-unit>
-            <trans-unit id="3">
-                <source>This value is not a valid EAN-13.</source>
-                <target>Cette valeur n'est pas un code EAN-13 valide.</target>
-            </trans-unit>
-            <trans-unit id="4">
-                <source>This value is not a valid INSEE number.</source>
-                <target>Cette valeur n'est pas un numéro INSEE valide.</target>
-            </trans-unit>
-            <trans-unit id="5">
-                <source>This value is not a valid NIF.</source>
-                <target>Cette valeur n'est pas un code NIF valide.</target>
-            </trans-unit>
-            <trans-unit id="6">
-                <source>This value is not a valid SIREN.</source>
-                <target>Cette valeur n'est pas un code SIREN valide.</target>
-            </trans-unit>
-            <trans-unit id="7">
-                <source>This value is not a valid SIRET.</source>
-                <target>Cette valeur n'est pas un code SIRET valide.</target>
-            </trans-unit>
-            <trans-unit id="8">
-                <source>This value is not a valid SSN.</source>
-                <target>Cette valeur n'est pas un code SSN valide.</target>
-            </trans-unit>
-            <trans-unit id="9">
-                <source>This value is not a valid structured communication code.</source>
-                <target>Cette valeur n'est pas un code de communication structurée valide.</target>
-            </trans-unit>
-            <trans-unit id="10">
-                <source>This value is not a valid SWIFT.</source>
-                <target>Cette valeur n'est pas un code BIC valide.</target>
-            </trans-unit>
-            <trans-unit id="11">
-                <source>This value is not a valid NINO.</source>
-                <target>Cette valeur n'est pas un code NINO valide.</target>
-            </trans-unit>
-            <trans-unit id="12">
-                <source>This value is not a valid VAT.</source>
-                <target>Cette valeur n'est pas un code TVA valide.</target>
-            </trans-unit>
-            <trans-unit id="13">
-                <source>This value is not a valid ZIP code.</source>
-                <target>Cette valeur n'est pas un code postal valide.</target>
-            </trans-unit>
-            <trans-unit id="14">
+            <trans-unit id="credit_card_message">
                 <source>This value is not a valid credit card scheme.</source>
                 <target>Cette valeur n'est pas un numéro de carte de crédit valide.</target>
             </trans-unit>
-            <trans-unit id="15">
-                <source>This value is not a valid IP address.</source>
-                <target>Cette valeure n'est pas une adresse IP valide.</target>
+            <trans-unit id="ean_13_message">
+                <source>This value is not a valid EAN-13.</source>
+                <target>Cette valeur n'est pas un code EAN-13 valide.</target>
             </trans-unit>
-            <trans-unit id="16">
+            <trans-unit id="iban_message">
                 <source>This value is not a valid IBAN.</source>
                 <target>Cette valeur n'est pas un code IBAN valide.</target>
             </trans-unit>
-            <trans-unit id="17">
+            <trans-unit id="insee_message">
+                <source>This value is not a valid INSEE number.</source>
+                <target>Cette valeur n'est pas un numéro INSEE valide.</target>
+            </trans-unit>
+            <trans-unit id="ip_message">
+                <source>This value is not a valid IP address.</source>
+                <target>Cette valeure n'est pas une adresse IP valide.</target>
+            </trans-unit>
+            <trans-unit id="isbn_message">
                 <source>This value is not a valid ISBN.</source>
                 <target>Cette valeur n'est pas un code ISBN valide.</target>
+            </trans-unit>
+            <trans-unit id="nif_message">
+                <source>This value is not a valid NIF.</source>
+                <target>Cette valeur n'est pas un code NIF valide.</target>
+            </trans-unit>
+            <trans-unit id="siren_message">
+                <source>This value is not a valid SIREN.</source>
+                <target>Cette valeur n'est pas un code SIREN valide.</target>
+            </trans-unit>
+            <trans-unit id="siret_message">
+                <source>This value is not a valid SIRET.</source>
+                <target>Cette valeur n'est pas un code SIRET valide.</target>
+            </trans-unit>
+            <trans-unit id="ssn_message">
+                <source>This value is not a valid SSN.</source>
+                <target>Cette valeur n'est pas un code SSN valide.</target>
+            </trans-unit>
+            <trans-unit id="structured_communication_message">
+                <source>This value is not a valid structured communication code.</source>
+                <target>Cette valeur n'est pas un code de communication structurée valide.</target>
+            </trans-unit>
+            <trans-unit id="swift_bic_message">
+                <source>This value is not a valid SWIFT.</source>
+                <target>Cette valeur n'est pas un code BIC valide.</target>
+            </trans-unit>
+            <trans-unit id="uknin_message">
+                <source>This value is not a valid NINO.</source>
+                <target>Cette valeur n'est pas un code NINO valide.</target>
+            </trans-unit>
+            <trans-unit id="vat_message">
+                <source>This value is not a valid VAT.</source>
+                <target>Cette valeur n'est pas un code TVA valide.</target>
+            </trans-unit>
+            <trans-unit id="zip_code_message">
+                <source>This value is not a valid ZIP code.</source>
+                <target>Cette valeur n'est pas un code postal valide.</target>
             </trans-unit>
         </body>
     </file>

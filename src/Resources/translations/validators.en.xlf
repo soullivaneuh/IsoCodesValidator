@@ -2,73 +2,73 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
     <file source-language="en" datatype="plaintext" original="file.ext">
         <body>
-            <trans-unit id="1">
+            <trans-unit id="bban_message">
                 <source>This value is not a valid BBAN.</source>
                 <target>This value is not a valid BBAN.</target>
             </trans-unit>
-            <trans-unit id="2">
+            <trans-unit id="cif_message">
                 <source>This value is not a valid CIF.</source>
                 <target>This value is not a valid CIF.</target>
             </trans-unit>
-            <trans-unit id="3">
-                <source>This value is not a valid EAN-13.</source>
-                <target>This value is not a valid EAN-13.</target>
-            </trans-unit>
-            <trans-unit id="4">
-                <source>This value is not a valid INSEE number.</source>
-                <target>This value is not a valid INSEE number.</target>
-            </trans-unit>
-            <trans-unit id="5">
-                <source>This value is not a valid NIF.</source>
-                <target>This value is not a valid NIF.</target>
-            </trans-unit>
-            <trans-unit id="6">
-                <source>This value is not a valid SIREN.</source>
-                <target>This value is not a valid SIREN.</target>
-            </trans-unit>
-            <trans-unit id="7">
-                <source>This value is not a valid SIRET.</source>
-                <target>This value is not a valid SIRET.</target>
-            </trans-unit>
-            <trans-unit id="8">
-                <source>This value is not a valid SSN.</source>
-                <target>This value is not a valid SSN.</target>
-            </trans-unit>
-            <trans-unit id="9">
-                <source>This value is not a valid structured communication code.</source>
-                <target>This value is not a valid structured communication code.</target>
-            </trans-unit>
-            <trans-unit id="10">
-                <source>This value is not a valid SWIFT.</source>
-                <target>This value is not a valid SWIFT.</target>
-            </trans-unit>
-            <trans-unit id="11">
-                <source>This value is not a valid NINO.</source>
-                <target>This value is not a valid NINO.</target>
-            </trans-unit>
-            <trans-unit id="12">
-                <source>This value is not a valid VAT.</source>
-                <target>This value is not a valid VAT.</target>
-            </trans-unit>
-            <trans-unit id="13">
-                <source>This value is not a valid ZIP code.</source>
-                <target>This value is not a valid ZIP code.</target>
-            </trans-unit>
-            <trans-unit id="14">
+            <trans-unit id="credit_card_message">
                 <source>This value is not a valid credit card scheme.</source>
                 <target>This value is not a valid credit card scheme.</target>
             </trans-unit>
-            <trans-unit id="15">
-                <source>This value is not a valid IP address.</source>
-                <target>This value is not a valid IP address.</target>
+            <trans-unit id="ean_13_message">
+                <source>This value is not a valid EAN-13.</source>
+                <target>This value is not a valid EAN-13.</target>
             </trans-unit>
-            <trans-unit id="16">
+            <trans-unit id="iban_message">
                 <source>This value is not a valid IBAN.</source>
                 <target>This value is not a valid IBAN.</target>
             </trans-unit>
-            <trans-unit id="17">
+            <trans-unit id="insee_message">
+                <source>This value is not a valid INSEE number.</source>
+                <target>This value is not a valid INSEE number.</target>
+            </trans-unit>
+            <trans-unit id="ip_message">
+                <source>This value is not a valid IP address.</source>
+                <target>This value is not a valid IP address.</target>
+            </trans-unit>
+            <trans-unit id="isbn_message">
                 <source>This value is not a valid ISBN.</source>
                 <target>This value is not a valid ISBN.</target>
+            </trans-unit>
+            <trans-unit id="nif_message">
+                <source>This value is not a valid NIF.</source>
+                <target>This value is not a valid NIF.</target>
+            </trans-unit>
+            <trans-unit id="siren_message">
+                <source>This value is not a valid SIREN.</source>
+                <target>This value is not a valid SIREN.</target>
+            </trans-unit>
+            <trans-unit id="siret_message">
+                <source>This value is not a valid SIRET.</source>
+                <target>This value is not a valid SIRET.</target>
+            </trans-unit>
+            <trans-unit id="ssn_message">
+                <source>This value is not a valid SSN.</source>
+                <target>This value is not a valid SSN.</target>
+            </trans-unit>
+            <trans-unit id="structured_communication_message">
+                <source>This value is not a valid structured communication code.</source>
+                <target>This value is not a valid structured communication code.</target>
+            </trans-unit>
+            <trans-unit id="swift_bic_message">
+                <source>This value is not a valid SWIFT.</source>
+                <target>This value is not a valid SWIFT.</target>
+            </trans-unit>
+            <trans-unit id="uknin_message">
+                <source>This value is not a valid NINO.</source>
+                <target>This value is not a valid NINO.</target>
+            </trans-unit>
+            <trans-unit id="vat_message">
+                <source>This value is not a valid VAT.</source>
+                <target>This value is not a valid VAT.</target>
+            </trans-unit>
+            <trans-unit id="zip_code_message">
+                <source>This value is not a valid ZIP code.</source>
+                <target>This value is not a valid ZIP code.</target>
             </trans-unit>
         </body>
     </file>
