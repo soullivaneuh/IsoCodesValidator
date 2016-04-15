@@ -47,8 +47,6 @@ matrix:
       env: ISOCODES_VERSION="dev-master"
   allow_failures:
     - php: nightly
-    - php: hhvm
-    - php: hhvm-nightly
     - env: SILEX_VERSION="2.0.x-dev as 1.3"
     - env: SYMFONY_VERSION=3.1.*@dev
     - env: ISOCODES_VERSION="dev-master"
@@ -60,9 +58,7 @@ cache:
     - $HOME/.composer/cache/files
 
 before_install:
-  - phpenv config-rm xdebug.ini
-  - alias php='php -dzend_extension=xdebug.so'
-  - alias phpunit='php $(which phpunit)'
+  - if [ "$TRAVIS_PHP_VERSION" != "hhvm" ]; then phpenv config-rm xdebug.ini && alias php='php -dzend_extension=xdebug.so' && alias phpunit='php $(which phpunit)'; fi;
 
 install:
   - composer config -g github-oauth.github.com $GITHUB_OAUTH_TOKEN
