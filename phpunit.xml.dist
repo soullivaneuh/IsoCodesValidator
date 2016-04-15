@@ -12,13 +12,14 @@
          syntaxCheck="false">
     <testsuites>
         <testsuite name="constraints">
-            <directory >./tests/Constraints</directory>
+            <directory>./tests/Constraints</directory>
+            <file>./tests/AbstractIsoCodeGenericConstraintTest.php</file>
         </testsuite>
         <testsuite name="symfony">
-            <directory >./tests/Bundle</directory>
+            <directory>./tests/Bundle</directory>
         </testsuite>
         <testsuite name="silex">
-            <directory >./tests/Provider</directory>
+            <directory>./tests/Provider</directory>
         </testsuite>
     </testsuites>
 

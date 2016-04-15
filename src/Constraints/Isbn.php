@@ -2,7 +2,7 @@
 
 namespace SLLH\IsoCodesValidator\Constraints;
 
-use Symfony\Component\Validator\Constraint;
+use SLLH\IsoCodesValidator\AbstractConstraint;
 use Symfony\Component\Validator\Exception\ConstraintDefinitionException;
 
 /**
@@ -11,7 +11,7 @@ use Symfony\Component\Validator\Exception\ConstraintDefinitionException;
  *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-final class Isbn extends Constraint
+final class Isbn extends AbstractConstraint
 {
     public $message = 'This value is not a valid ISBN.';
     public $type = null;
@@ -34,5 +34,21 @@ final class Isbn extends Constraint
     public function getDefaultOption()
     {
         return 'type';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getIsoCodesVersion()
+    {
+        return '1.2.0';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getIsoCodesClass()
+    {
+        return \IsoCodes\Isbn::class;
     }
 }

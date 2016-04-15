@@ -2,6 +2,9 @@
 
 namespace SLLH\IsoCodesValidator;
 
+use SLLH\IsoCodesValidator\Constraints\IsoCodesGeneric;
+use SLLH\IsoCodesValidator\Constraints\IsoCodesGenericValidator;
+use SLLH\IsoCodesValidator\Exception\ValidatorNotExistsException;
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
 use Symfony\Component\Validator\Context\ExecutionContext;
@@ -27,10 +30,21 @@ abstract class AbstractIsoCodesConstraintValidator extends ConstraintValidator
      */
     public function validate($value, Constraint $constraint)
     {
-        $constraintClass = preg_replace('/Validator$/', '', get_class($this));
+        $validatorClass = get_class($this);
+        if (IsoCodesGenericValidator::class === $validatorClass
+            && !($constraint instanceof AbstractIsoCodesGenericConstraint || $constraint instanceof IsoCodesGeneric)
+        ) {
+            throw new UnexpectedTypeException($constraint, AbstractIsoCodesGenericConstraint::class);
+        } elseif (IsoCodesGenericValidator::class !== $validatorClass) {
+            $constraintClass = preg_replace('/Validator$/', '', $validatorClass);
 
-        if (!$constraint instanceof $constraintClass) {
-            throw new UnexpectedTypeException($constraint, $constraintClass);
+            if (!$constraint instanceof $constraintClass) {
+                throw new UnexpectedTypeException($constraint, $constraintClass);
+            }
+        }
+
+        if (!class_exists($constraint->getIsoCodesClass())) {
+            throw new ValidatorNotExistsException($constraint);
         }
     }
 

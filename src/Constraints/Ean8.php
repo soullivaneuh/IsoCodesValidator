@@ -10,15 +10,15 @@ use SLLH\IsoCodesValidator\AbstractIsoCodesGenericConstraint;
  *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-final class Vat extends AbstractIsoCodesGenericConstraint
+final class Ean8 extends AbstractIsoCodesGenericConstraint
 {
-    public $message = 'This value is not a valid VAT.';
+    public $message = 'This EAN 8 code is not valid.';
 
     /**
      * {@inheritdoc}
      */
     public function getIsoCodesVersion()
     {
-        return '1.0.0';
+        return '2.1.0';
     }
 }
