@@ -14,6 +14,10 @@
                 <source>This value is not a valid credit card scheme.</source>
                 <target>Cette valeur n'est pas un numéro de carte de crédit valide.</target>
             </trans-unit>
+            <trans-unit id="ean_8_message">
+                <source>This value is not a valid EAN-8.</source>
+                <target>Cette valeur n'est pas un code EAN-8 valide.</target>
+            </trans-unit>
             <trans-unit id="ean_13_message">
                 <source>This value is not a valid EAN-13.</source>
                 <target>Cette valeur n'est pas un code EAN-13 valide.</target>
