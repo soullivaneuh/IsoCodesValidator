@@ -2,7 +2,7 @@
 
 namespace SLLH\IsoCodesValidator\Constraints;
 
-use Symfony\Component\Validator\Constraint;
+use SLLH\IsoCodesValidator\AbstractConstraint;
 
 /**
  * @Annotation
@@ -10,7 +10,23 @@ use Symfony\Component\Validator\Constraint;
  *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-final class Ip extends Constraint
+final class Ip extends AbstractConstraint
 {
     public $message = 'This value is not a valid IP address.';
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getIsoCodesVersion()
+    {
+        return '1.0.0';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getIsoCodesClass()
+    {
+        return \IsoCodes\IP::class;
+    }
 }
