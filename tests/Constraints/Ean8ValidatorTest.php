@@ -2,6 +2,8 @@
 
 namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
+use IsoCodes\Tests\Gtin8Test;
+
 /**
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
@@ -10,31 +12,16 @@ final class Ean8ValidatorTest extends AbstractGenericConstraintValidatorTest
     /**
      * {@inheritdoc}
      */
-    public function getValidValues()
+    protected function getInvalidMessage()
     {
-        return [
-            ['42345671'],
-            ['4719-5127'],
-            ['9638-5074'],
-        ];
-    }
-
-    public function getInvalidValues()
-    {
-        return [
-            [42345670],
-            [423456712],
-            ['423456712'],
-            ['12345671'],
-            ['4234.5671'],
-        ];
+        return 'This EAN 8 code is not valid.';
     }
 
     /**
      * {@inheritdoc}
      */
-    protected function getInvalidMessage()
+    protected function getIsoCodesTestInstance()
     {
-        return 'This EAN 8 code is not valid.';
+        return new Gtin8Test();
     }
 }
