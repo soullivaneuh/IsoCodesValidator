@@ -11,7 +11,7 @@ use SLLH\IsoCodesValidator\Tests\Fixtures\Constraints\LegacyFake;
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  * @group legacy
  */
-class IsoCodeGenericTest extends \PHPUnit_Framework_TestCase
+final class IsoCodeGenericTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @dataProvider getLegacyGenericConstraints

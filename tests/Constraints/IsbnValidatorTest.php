@@ -5,20 +5,21 @@ namespace SLLH\IsoCodesValidator\Tests\Constraints;
 use SLLH\IsoCodesValidator\Constraints\Isbn;
 use SLLH\IsoCodesValidator\Constraints\IsbnValidator;
 
-class IsbnValidatorTest extends AbstractConstraintValidatorTest
+/**
+ * @author Sullivan Senechal <soullivaneuh@gmail.com>
+ */
+final class IsbnValidatorTest extends AbstractConstraintValidatorTest
 {
     protected function createValidator()
     {
         return new IsbnValidator();
     }
 
-    protected function createConstraint()
-    {
-        return new Isbn();
-    }
-
     /**
      * @dataProvider getValidValues
+     *
+     * @param mixed    $value
+     * @param int|null $type
      */
     public function testValidValues($value, $type = null)
     {
@@ -26,6 +27,9 @@ class IsbnValidatorTest extends AbstractConstraintValidatorTest
         $this->assertNoViolation();
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function getValidValues()
     {
         return [
@@ -56,15 +60,21 @@ class IsbnValidatorTest extends AbstractConstraintValidatorTest
 
     /**
      * @dataProvider getInvalidValues
+     *
+     * @param mixed    $value
+     * @param int|null $type
      */
     public function testInvalidValues($value, $type = null)
     {
         $this->validator->validate($value, new Isbn($type));
 
-        $this->buildViolation('This value is not a valid ISBN.')
+        $this->buildViolation($this->getInvalidMessage())
             ->assertRaised();
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function getInvalidValues()
     {
         return [
@@ -87,7 +97,14 @@ class IsbnValidatorTest extends AbstractConstraintValidatorTest
             ['978-88-8183-718-2', 10],
             ['978-2-7605-1028-9', 10],
             ['2112345678900', 10],
-            [' '],
         ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function getInvalidMessage()
+    {
+        return 'This value is not a valid ISBN.';
     }
 }

@@ -2,6 +2,7 @@
 
 namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
+use SLLH\IsoCodesValidator\AbstractConstraint;
 use SLLH\IsoCodesValidator\ConstraintInterface;
 use SLLH\IsoCodesValidator\Constraints\IsoCodesGenericValidator;
 use Symfony\Component\Validator\Constraints\Blank;
@@ -22,7 +23,7 @@ abstract class AbstractConstraintValidatorTest extends BaseAbstractConstraintVal
         $this->srcConstraint = $this->createConstraint();
 
         if (!class_exists($this->srcConstraint->getIsoCodesClass())) {
-            $this->markTestSkipped('The '.$this->srcConstraint->getIsoCodesClass().' validator class does not exists.');
+            $this->markTestSkipped('The '.$this->srcConstraint->getIsoCodesClass().' validator final class does not exists.');
         }
     }
 
@@ -52,6 +53,14 @@ abstract class AbstractConstraintValidatorTest extends BaseAbstractConstraintVal
         $this->assertNoViolation();
     }
 
+    public function testBlankButNotEmptyStringIsInvalid()
+    {
+        $this->validator->validate(' ', $this->createConstraint());
+
+        $this->buildViolation($this->getInvalidMessage())
+            ->assertRaised();
+    }
+
     public function testItImplementsInterface()
     {
         $this->assertInstanceOf(ConstraintInterface::class, $this->srcConstraint);
@@ -66,10 +75,35 @@ abstract class AbstractConstraintValidatorTest extends BaseAbstractConstraintVal
         );
     }
 
+    /**
+     * @return array[]
+     */
+    abstract public function getValidValues();
+
+    /**
+     * @return array[]
+     */
+    abstract public function getInvalidValues();
+
     protected function createValidator()
     {
         return new IsoCodesGenericValidator();
     }
 
-    abstract protected function createConstraint();
+    /**
+     * @return AbstractConstraint
+     */
+    protected function createConstraint()
+    {
+        $validatorTestClassTab = explode('\\', get_class($this));
+        $constraintClass = 'SLLH\\IsoCodesValidator\\Constraints\\'
+            .str_replace('ValidatorTest', '', end($validatorTestClassTab));
+
+        return new $constraintClass();
+    }
+
+    /**
+     * @return string
+     */
+    abstract protected function getInvalidMessage();
 }

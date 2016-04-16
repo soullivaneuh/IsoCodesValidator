@@ -2,24 +2,14 @@
 
 namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
-use SLLH\IsoCodesValidator\Constraints\StructuredCommunication;
-
-class StructuredCommunicationValidatorTest extends AbstractConstraintValidatorTest
+/**
+ * @author Sullivan Senechal <soullivaneuh@gmail.com>
+ */
+final class StructuredCommunicationValidatorTest extends AbstractGenericConstraintValidatorTest
 {
-    protected function createConstraint()
-    {
-        return new StructuredCommunication();
-    }
-
     /**
-     * @dataProvider getValidValues
+     * {@inheritdoc}
      */
-    public function testValidValues($value)
-    {
-        $this->validator->validate($value, new StructuredCommunication());
-        $this->assertNoViolation();
-    }
-
     public function getValidValues()
     {
         return [
@@ -30,16 +20,8 @@ class StructuredCommunicationValidatorTest extends AbstractConstraintValidatorTe
     }
 
     /**
-     * @dataProvider getInvalidValues
+     * {@inheritdoc}
      */
-    public function testInvalidValues($value)
-    {
-        $this->validator->validate($value, new StructuredCommunication());
-
-        $this->buildViolation('This value is not a valid structured communication code.')
-            ->assertRaised();
-    }
-
     public function getInvalidValues()
     {
         return [
@@ -50,7 +32,14 @@ class StructuredCommunicationValidatorTest extends AbstractConstraintValidatorTe
             [10132748107],
             [1013274810067],
             [101374810060],
-            [' '],
         ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function getInvalidMessage()
+    {
+        return 'This value is not a valid structured communication code.';
     }
 }

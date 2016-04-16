@@ -2,24 +2,14 @@
 
 namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
-use SLLH\IsoCodesValidator\Constraints\Vat;
-
-class VatValidatorTest extends AbstractConstraintValidatorTest
+/**
+ * @author Sullivan Senechal <soullivaneuh@gmail.com>
+ */
+final class VatValidatorTest extends AbstractGenericConstraintValidatorTest
 {
-    protected function createConstraint()
-    {
-        return new Vat();
-    }
-
     /**
-     * @dataProvider getValidValues
+     * {@inheritdoc}
      */
-    public function testValidValues($value)
-    {
-        $this->validator->validate($value, new Vat());
-        $this->assertNoViolation();
-    }
-
     public function getValidValues()
     {
         return [
@@ -71,20 +61,11 @@ class VatValidatorTest extends AbstractConstraintValidatorTest
     }
 
     /**
-     * @dataProvider getInvalidValues
+     * {@inheritdoc}
      */
-    public function testInvalidValues($value)
-    {
-        $this->validator->validate($value, new Vat());
-
-        $this->buildViolation('This value is not a valid VAT.')
-            ->assertRaised();
-    }
-
     public function getInvalidValues()
     {
         return [
-            [' '],
             [999999999],
             [9999.9999],
             ['aaa'],
@@ -146,5 +127,13 @@ class VatValidatorTest extends AbstractConstraintValidatorTest
             ['XX1234579'],
             ['de123456789'],
         ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function getInvalidMessage()
+    {
+        return 'This value is not a valid VAT.';
     }
 }

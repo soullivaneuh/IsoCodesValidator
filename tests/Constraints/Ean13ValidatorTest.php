@@ -2,24 +2,14 @@
 
 namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
-use SLLH\IsoCodesValidator\Constraints\Ean13;
-
-class Ean13ValidatorTest extends AbstractConstraintValidatorTest
+/**
+ * @author Sullivan Senechal <soullivaneuh@gmail.com>
+ */
+final class Ean13ValidatorTest extends AbstractGenericConstraintValidatorTest
 {
-    protected function createConstraint()
-    {
-        return new Ean13();
-    }
-
     /**
-     * @dataProvider getValidValues
+     * {@inheritdoc}
      */
-    public function testValidValues($value)
-    {
-        $this->validator->validate($value, new Ean13());
-        $this->assertNoViolation();
-    }
-
     public function getValidValues()
     {
         return [
@@ -33,16 +23,8 @@ class Ean13ValidatorTest extends AbstractConstraintValidatorTest
     }
 
     /**
-     * @dataProvider getInvalidValues
+     * {@inheritdoc}
      */
-    public function testInvalidValues($value)
-    {
-        $this->validator->validate($value, new Ean13());
-
-        $this->buildViolation('This EAN 13 code is not valid.')
-            ->assertRaised();
-    }
-
     public function getInvalidValues()
     {
         return [
@@ -51,7 +33,14 @@ class Ean13ValidatorTest extends AbstractConstraintValidatorTest
             ['A782868890061'],
             ['4006381333932'],
             ['4719.5120.0288.9'],
-            [' '],
         ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function getInvalidMessage()
+    {
+        return 'This EAN 13 code is not valid.';
     }
 }

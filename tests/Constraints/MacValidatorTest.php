@@ -2,22 +2,14 @@
 
 namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
-use SLLH\IsoCodesValidator\Constraints\Mac;
-
 /**
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-class MacValidatorTest extends AbstractConstraintValidatorTest
+final class MacValidatorTest extends AbstractGenericConstraintValidatorTest
 {
     /**
-     * @dataProvider getValidValues
+     * {@inheritdoc}
      */
-    public function testValidValues($value)
-    {
-        $this->validator->validate($value, new Mac());
-        $this->assertNoViolation();
-    }
-
     public function getValidValues()
     {
         return [
@@ -31,16 +23,8 @@ class MacValidatorTest extends AbstractConstraintValidatorTest
     }
 
     /**
-     * @dataProvider getInvalidValues
+     * {@inheritdoc}
      */
-    public function testInvalidValues($value)
-    {
-        $this->validator->validate($value, new Mac());
-
-        $this->buildViolation('This value is not a valid MAC address.')
-            ->assertRaised();
-    }
-
     public function getInvalidValues()
     {
         return [
@@ -51,12 +35,14 @@ class MacValidatorTest extends AbstractConstraintValidatorTest
             ['01-2d-4c-EF-89-ab'],
             ['01-2d-4C-ef-89-ab'],
             ['01-2dc-4c-ef-89-ab'],
-            [' '],
         ];
     }
 
-    protected function createConstraint()
+    /**
+     * {@inheritdoc}
+     */
+    protected function getInvalidMessage()
     {
-        return new Mac();
+        return 'This value is not a valid MAC address.';
     }
 }
