@@ -2,24 +2,14 @@
 
 namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
-use SLLH\IsoCodesValidator\Constraints\Insee;
-
-class InseeValidatorTest extends AbstractConstraintValidatorTest
+/**
+ * @author Sullivan Senechal <soullivaneuh@gmail.com>
+ */
+final class InseeValidatorTest extends AbstractGenericConstraintValidatorTest
 {
-    protected function createConstraint()
-    {
-        return new Insee();
-    }
-
     /**
-     * @dataProvider getValidValues
+     * {@inheritdoc}
      */
-    public function testValidValues($value)
-    {
-        $this->validator->validate($value, new Insee());
-        $this->assertNoViolation();
-    }
-
     public function getValidValues()
     {
         return [
@@ -32,22 +22,21 @@ class InseeValidatorTest extends AbstractConstraintValidatorTest
     }
 
     /**
-     * @dataProvider getInvalidValues
+     * {@inheritdoc}
      */
-    public function testInvalidValues($value)
-    {
-        $this->validator->validate($value, new Insee());
-
-        $this->buildViolation('This INSEE number is not valid.')
-            ->assertRaised();
-    }
-
     public function getInvalidValues()
     {
         return [
             ['353072B07300483'],
             ['253072C07300483'],
-            [' '],
         ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function getInvalidMessage()
+    {
+        return 'This INSEE number is not valid.';
     }
 }

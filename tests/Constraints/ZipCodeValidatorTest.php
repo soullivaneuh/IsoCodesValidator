@@ -5,16 +5,11 @@ namespace SLLH\IsoCodesValidator\Tests\Constraints;
 use SLLH\IsoCodesValidator\Constraints\ZipCode;
 use SLLH\IsoCodesValidator\Constraints\ZipCodeValidator;
 
-class ZipCodeValidatorTest extends AbstractConstraintValidatorTest
+final class ZipCodeValidatorTest extends AbstractConstraintValidatorTest
 {
     protected function createValidator()
     {
         return new ZipCodeValidator();
-    }
-
-    protected function createConstraint()
-    {
-        return new ZipCode();
     }
 
     /**
@@ -30,6 +25,9 @@ class ZipCodeValidatorTest extends AbstractConstraintValidatorTest
         $this->assertNoViolation();
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function getValidValues()
     {
         return [
@@ -67,10 +65,13 @@ class ZipCodeValidatorTest extends AbstractConstraintValidatorTest
             'country' => $country,
         ]));
 
-        $this->buildViolation('This value is not a valid ZIP code.')
+        $this->buildViolation($this->getInvalidMessage())
             ->assertRaised();
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function getInvalidValues()
     {
         return [
@@ -136,7 +137,14 @@ class ZipCodeValidatorTest extends AbstractConstraintValidatorTest
             ['Lorem Ipsum', 'all'],
             ['LOREM IPSUM', 'all'],
             ['lorem ipsum', 'all'],
-            [' ', 'all'],
         ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function getInvalidMessage()
+    {
+        return 'This value is not a valid ZIP code.';
     }
 }

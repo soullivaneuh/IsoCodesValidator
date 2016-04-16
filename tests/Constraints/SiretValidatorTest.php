@@ -2,24 +2,14 @@
 
 namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
-use SLLH\IsoCodesValidator\Constraints\Siret;
-
-class SiretValidatorTest extends AbstractConstraintValidatorTest
+/**
+ * @author Sullivan Senechal <soullivaneuh@gmail.com>
+ */
+final class SiretValidatorTest extends AbstractGenericConstraintValidatorTest
 {
-    protected function createConstraint()
-    {
-        return new Siret();
-    }
-
     /**
-     * @dataProvider getValidValues
+     * {@inheritdoc}
      */
-    public function testValidValues($value)
-    {
-        $this->validator->validate($value, new Siret());
-        $this->assertNoViolation();
-    }
-
     public function getValidValues()
     {
         return [
@@ -34,16 +24,8 @@ class SiretValidatorTest extends AbstractConstraintValidatorTest
     }
 
     /**
-     * @dataProvider getInvalidValues
+     * {@inheritdoc}
      */
-    public function testInvalidValues($value)
-    {
-        $this->validator->validate($value, new Siret());
-
-        $this->buildViolation('This value is not a valid SIRET.')
-            ->assertRaised();
-    }
-
     public function getInvalidValues()
     {
         return [
@@ -56,9 +38,16 @@ class SiretValidatorTest extends AbstractConstraintValidatorTest
             ['33493272000018'],
             ['44028837100015'],
             ['51743954300012'],
-            [' '],
             ['azertyuiopqsdf'],
 
         ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function getInvalidMessage()
+    {
+        return 'This value is not a valid SIRET.';
     }
 }

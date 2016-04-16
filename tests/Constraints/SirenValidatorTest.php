@@ -2,24 +2,14 @@
 
 namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
-use SLLH\IsoCodesValidator\Constraints\Siren;
-
-class SirenValidatorTest extends AbstractConstraintValidatorTest
+/**
+ * @author Sullivan Senechal <soullivaneuh@gmail.com>
+ */
+final class SirenValidatorTest extends AbstractGenericConstraintValidatorTest
 {
-    protected function createConstraint()
-    {
-        return new Siren();
-    }
-
     /**
-     * @dataProvider getValidValues
+     * {@inheritdoc}
      */
-    public function testValidValues($value)
-    {
-        $this->validator->validate($value, new Siren());
-        $this->assertNoViolation();
-    }
-
     public function getValidValues()
     {
         return [
@@ -33,16 +23,8 @@ class SirenValidatorTest extends AbstractConstraintValidatorTest
     }
 
     /**
-     * @dataProvider getInvalidValues
+     * {@inheritdoc}
      */
-    public function testInvalidValues($value)
-    {
-        $this->validator->validate($value, new Siren());
-
-        $this->buildViolation('This value is not a valid SIREN.')
-            ->assertRaised();
-    }
-
     public function getInvalidValues()
     {
         return [
@@ -56,8 +38,15 @@ class SirenValidatorTest extends AbstractConstraintValidatorTest
             ['334932721'],
             ['440288372'],
             ['517439544'],
-            [' '],
             ['azertyuio'],
         ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function getInvalidMessage()
+    {
+        return 'This value is not a valid SIREN.';
     }
 }

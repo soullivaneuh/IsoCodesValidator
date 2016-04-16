@@ -2,24 +2,14 @@
 
 namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
-use SLLH\IsoCodesValidator\Constraints\SwiftBic;
-
-class SwiftBicValidatorTest extends AbstractConstraintValidatorTest
+/**
+ * @author Sullivan Senechal <soullivaneuh@gmail.com>
+ */
+final class SwiftBicValidatorTest extends AbstractGenericConstraintValidatorTest
 {
-    protected function createConstraint()
-    {
-        return new SwiftBic();
-    }
-
     /**
-     * @dataProvider getValidValues
+     * {@inheritdoc}
      */
-    public function testValidValues($value)
-    {
-        $this->validator->validate($value, new SwiftBic());
-        $this->assertNoViolation();
-    }
-
     public function getValidValues()
     {
         return [
@@ -34,22 +24,21 @@ class SwiftBicValidatorTest extends AbstractConstraintValidatorTest
     }
 
     /**
-     * @dataProvider getInvalidValues
+     * {@inheritdoc}
      */
-    public function testInvalidValues($value)
-    {
-        $this->validator->validate($value, new SwiftBic());
-
-        $this->buildViolation('This value is not a valid SWIFT.')
-            ->assertRaised();
-    }
-
     public function getInvalidValues()
     {
         return [
             ['CE1EL2LLFFF'],
             ['E31DCLLFFF'],
-            [' '],
         ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function getInvalidMessage()
+    {
+        return 'This value is not a valid SWIFT.';
     }
 }

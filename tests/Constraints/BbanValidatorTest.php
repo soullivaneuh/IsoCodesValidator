@@ -2,24 +2,14 @@
 
 namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
-use SLLH\IsoCodesValidator\Constraints\Bban;
-
-class BbanValidatorTest extends AbstractConstraintValidatorTest
+/**
+ * @author Sullivan Senechal <soullivaneuh@gmail.com>
+ */
+final class BbanValidatorTest extends AbstractGenericConstraintValidatorTest
 {
-    protected function createConstraint()
-    {
-        return new Bban();
-    }
-
     /**
-     * @dataProvider getValidValues
+     * {@inheritdoc}
      */
-    public function testValidValues($value)
-    {
-        $this->validator->validate($value, new Bban());
-        $this->assertNoViolation();
-    }
-
     public function getValidValues()
     {
         return [
@@ -29,16 +19,8 @@ class BbanValidatorTest extends AbstractConstraintValidatorTest
     }
 
     /**
-     * @dataProvider getInvalidValues
+     * {@inheritdoc}
      */
-    public function testInvalidValues($value)
-    {
-        $this->validator->validate($value, new Bban());
-
-        $this->buildViolation('This value is not a valid BBAN.')
-            ->assertRaised();
-    }
-
     public function getInvalidValues()
     {
         return [
@@ -46,7 +28,14 @@ class BbanValidatorTest extends AbstractConstraintValidatorTest
             ['15459 45000 0411700920U 62'],
             ['10207000260402601177084'],
             [10207000260402601177084],
-            [' '],
         ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function getInvalidMessage()
+    {
+        return 'This value is not a valid BBAN.';
     }
 }

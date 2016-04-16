@@ -2,24 +2,14 @@
 
 namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
-use SLLH\IsoCodesValidator\Constraints\Uknin;
-
-class UkninValidatorTest extends AbstractConstraintValidatorTest
+/**
+ * @author Sullivan Senechal <soullivaneuh@gmail.com>
+ */
+final class UkninValidatorTest extends AbstractGenericConstraintValidatorTest
 {
-    protected function createConstraint()
-    {
-        return new Uknin();
-    }
-
     /**
-     * @dataProvider getValidValues
+     * {@inheritdoc}
      */
-    public function testValidValues($value)
-    {
-        $this->validator->validate($value, new Uknin());
-        $this->assertNoViolation();
-    }
-
     public function getValidValues()
     {
         return [
@@ -30,16 +20,8 @@ class UkninValidatorTest extends AbstractConstraintValidatorTest
     }
 
     /**
-     * @dataProvider getInvalidValues
+     * {@inheritdoc}
      */
-    public function testInvalidValues($value)
-    {
-        $this->validator->validate($value, new Uknin());
-
-        $this->buildViolation('This value is not a valid NINO.')
-            ->assertRaised();
-    }
-
     public function getInvalidValues()
     {
         return [
@@ -49,8 +31,15 @@ class UkninValidatorTest extends AbstractConstraintValidatorTest
             ['AF123456C'],
             ['AB123456F'],
             ['TN011258F'],
-            [' '],
             ['azertyuiop'],
         ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function getInvalidMessage()
+    {
+        return 'This value is not a valid NINO.';
     }
 }
