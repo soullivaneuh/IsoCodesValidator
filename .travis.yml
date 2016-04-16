@@ -30,8 +30,6 @@ matrix:
     - php: 5.6
       env: SILEX_VERSION="2.0.*"
     - php: 5.6
-      env: ISOCODES_VERSION=2.0.*
-    - php: 5.6
       env: ISOCODES_VERSION=2.1.*
     - php: 5.6
       env: ISOCODES_VERSION="dev-master"
