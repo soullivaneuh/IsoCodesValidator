@@ -38,6 +38,10 @@
                 <source>This value is not a valid ISBN.</source>
                 <target>This value is not a valid ISBN.</target>
             </trans-unit>
+            <trans-unit id="mac_message">
+                <source>This value is not a valid MAC address.</source>
+                <target>This value is not a valid MAC address.</target>
+            </trans-unit>
             <trans-unit id="nif_message">
                 <source>This value is not a valid NIF.</source>
                 <target>This value is not a valid NIF.</target>
