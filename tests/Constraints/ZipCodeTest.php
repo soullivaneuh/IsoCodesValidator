@@ -4,7 +4,7 @@ namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
 use SLLH\IsoCodesValidator\Constraints\ZipCode;
 
-class ZipCodeTest extends \PHPUnit_Framework_TestCase
+final class ZipCodeTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @dataProvider getValidCountries

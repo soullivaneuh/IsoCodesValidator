@@ -12,7 +12,7 @@ use Symfony\Component\Validator\Tests\Constraints\AbstractConstraintValidatorTes
  *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-class NotExistsValidatorTest extends BaseAbstractConstraintValidatorTest
+final class NotExistsValidatorTest extends BaseAbstractConstraintValidatorTest
 {
     public function testExceptionIsThrown()
     {
