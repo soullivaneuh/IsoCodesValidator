@@ -10,7 +10,7 @@ matrix:
 clone_folder: c:\projects\IsoCodesValidator
 
 init:
-  - SET PATH=c:\tools\php;%PATH%
+  - SET PATH=C:\Program Files\OpenSSL;c:\tools\php;%PATH%
 
 install:
   - cinst OpenSSL.Light
@@ -22,6 +22,7 @@ install:
   - echo extension=php_openssl.dll >> php.ini
   - echo @php %%~dp0composer.phar %%* > composer.bat
   - appveyor DownloadFile https://getcomposer.org/composer.phar
+  - ls -la
   - cd c:\projects\IsoCodesValidator
   - ls -la
   - composer global require phpunit/phpunit:@stable --no-update
