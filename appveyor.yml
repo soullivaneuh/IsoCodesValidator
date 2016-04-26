@@ -20,13 +20,13 @@ install:
   - echo date.timezone="UTC" >> php.ini
   - echo extension_dir=ext >> php.ini
   - echo extension=php_openssl.dll >> php.ini
-  - echo @php %%~dp0composer.phar %%* > composer.bat
   - appveyor DownloadFile https://getcomposer.org/composer.phar
+  - appveyor DownloadFile https://phar.phpunit.de/phpunit.phar
   - ls -la
   - cd c:\projects\IsoCodesValidator
   - ls -la
   - php c:\tools\php\composer.phar global require phpunit/phpunit:@stable --no-update
-  - php c:\tools\php\composer.phar global update --prefer-dist --no-interaction
-  - php c:\tools\php\composer.phar update --prefer-dist --no-interaction
+  - php c:\tools\php\composer.phar global update --prefer-dist --no-interaction --no-progress
+  - php c:\tools\php\composer.phar update --prefer-dist --no-interaction --no-progress
 
-test_script: phpunit -c phpunit.xml.dist
+test_script: php c:\tools\php\phpunit.phar -c phpunit.xml.dist
