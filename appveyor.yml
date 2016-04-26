@@ -1,3 +1,4 @@
+build: false
 shallow_clone: false
 
 platform:
@@ -24,6 +25,5 @@ install:
   - appveyor DownloadFile https://phar.phpunit.de/phpunit.phar
   - cd c:\projects\IsoCodesValidator
   - php c:\tools\php\composer.phar update --prefer-dist --no-interaction --no-progress
-  - echo "END INSTALL"
 
 test_script: php c:\tools\php\phpunit.phar -c phpunit.xml.dist
