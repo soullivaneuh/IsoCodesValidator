@@ -25,8 +25,8 @@ install:
   - ls -la
   - cd c:\projects\IsoCodesValidator
   - ls -la
-  - composer global require phpunit/phpunit:@stable --no-update
-  - composer global update --prefer-dist --no-interaction
-  - composer update --prefer-dist --no-interaction
+  - php c:\tools\php\composer.phar global require phpunit/phpunit:@stable --no-update
+  - php c:\tools\php\composer.phar global update --prefer-dist --no-interaction
+  - php c:\tools\php\composer.phar update --prefer-dist --no-interaction
 
 test_script: phpunit -c phpunit.xml.dist
