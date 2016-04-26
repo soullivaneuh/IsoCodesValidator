@@ -1,4 +1,4 @@
-#version: 2.x.{build}
+version: {build}
 
 shallow_clone: false
 
