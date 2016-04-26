@@ -23,8 +23,6 @@ install:
   - appveyor DownloadFile https://getcomposer.org/composer.phar
   - appveyor DownloadFile https://phar.phpunit.de/phpunit.phar
   - cd c:\projects\IsoCodesValidator
-  - php c:\tools\php\composer.phar global require phpunit/phpunit:@stable --no-update
-  - php c:\tools\php\composer.phar global update --prefer-dist --no-interaction --no-progress
   - php c:\tools\php\composer.phar update --prefer-dist --no-interaction --no-progress
 
 test_script: php c:\tools\php\phpunit.phar -c phpunit.xml.dist
