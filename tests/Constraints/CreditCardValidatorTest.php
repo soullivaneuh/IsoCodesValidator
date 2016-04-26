@@ -24,7 +24,6 @@ final class CreditCardValidatorTest extends AbstractGenericConstraintValidatorTe
             ['4903010000000009'],
             ['4111111111111111'],
             ['6304100000000008'],
-            [6304100000000008],
         ];
     }
 
