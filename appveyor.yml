@@ -1,0 +1,35 @@
+build: false
+shallow_clone: false
+
+platform:
+  - x86
+  - x64
+
+environment:
+  matrix:
+    - php: 5.6.17
+    - php: 7.0.4
+
+matrix:
+  fast_finish: true
+
+clone_folder: c:\projects\IsoCodesValidator
+
+init:
+  - SET PATH=C:\Program Files\OpenSSL;c:\tools\php;%PATH%
+
+install:
+  - cinst OpenSSL.Light
+  - cinst php -version %php%
+  - cd c:\tools\php
+  - copy php.ini-production php.ini
+  - echo date.timezone="UTC" >> php.ini
+  - echo extension_dir=ext >> php.ini
+  - echo extension=php_openssl.dll >> php.ini
+  - echo extension=php_intl.dll >> php.ini
+  - appveyor DownloadFile https://getcomposer.org/composer.phar
+  - appveyor DownloadFile https://phar.phpunit.de/phpunit.phar
+  - cd c:\projects\IsoCodesValidator
+  - php c:\tools\php\composer.phar update --prefer-dist --no-interaction --no-progress
+
+test_script: php c:\tools\php\phpunit.phar -c phpunit.xml.dist
