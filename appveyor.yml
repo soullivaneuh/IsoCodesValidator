@@ -22,9 +22,7 @@ install:
   - echo extension=php_openssl.dll >> php.ini
   - appveyor DownloadFile https://getcomposer.org/composer.phar
   - appveyor DownloadFile https://phar.phpunit.de/phpunit.phar
-  - ls -la
   - cd c:\projects\IsoCodesValidator
-  - ls -la
   - php c:\tools\php\composer.phar global require phpunit/phpunit:@stable --no-update
   - php c:\tools\php\composer.phar global update --prefer-dist --no-interaction --no-progress
   - php c:\tools\php\composer.phar update --prefer-dist --no-interaction --no-progress
