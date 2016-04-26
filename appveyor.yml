@@ -5,6 +5,12 @@ platform:
   - x86
   - x64
 
+environment:
+  matrix:
+    php: 5.6
+  matrix:
+    php: 7.0
+
 matrix:
   fast_finish: true
 
@@ -15,7 +21,7 @@ init:
 
 install:
   - cinst OpenSSL.Light
-  - cinst php
+  - cinst php -version %php%
   - cd c:\tools\php
   - copy php.ini-production php.ini
   - echo date.timezone="UTC" >> php.ini
