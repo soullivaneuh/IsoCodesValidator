@@ -13,6 +13,7 @@ Symfony validator wrapper of [IsoCodes](https://github.com/ronanguilloux/IsoCode
 [![Daily Downloads](https://poser.pugx.org/sllh/iso-codes-validator/d/daily)](https://packagist.org/packages/sllh/iso-codes-validator)
 
 [![Build Status](https://travis-ci.org/Soullivaneuh/IsoCodesValidator.svg?branch=master)](https://travis-ci.org/Soullivaneuh/IsoCodesValidator)
+[![AppVeyor Status](https://ci.appveyor.com/api/projects/status/32r7s2skrgm9ubva/branch/master?svg=true)](https://ci.appveyor.com/project/Soullivaneuh/isocodesvalidator)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Soullivaneuh/IsoCodesValidator/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Soullivaneuh/IsoCodesValidator/?branch=master)
 [![Code Climate](https://codeclimate.com/github/Soullivaneuh/IsoCodesValidator/badges/gpa.svg)](https://codeclimate.com/github/Soullivaneuh/IsoCodesValidator)
 [![Coverage Status](https://coveralls.io/repos/Soullivaneuh/IsoCodesValidator/badge.svg?branch=master)](https://coveralls.io/r/Soullivaneuh/IsoCodesValidator?branch=master)
