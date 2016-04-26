@@ -2,38 +2,14 @@
 
 namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
-use SLLH\IsoCodesValidator\Constraints\CreditCard;
-use SLLH\IsoCodesValidator\Constraints\CreditCardValidator;
-
-class CreditCardValidatorTest extends AbstractConstraintValidatorTest
+/**
+ * @author Sullivan Senechal <soullivaneuh@gmail.com>
+ */
+final class CreditCardValidatorTest extends AbstractGenericConstraintValidatorTest
 {
     /**
-     * @group legacy
+     * {@inheritdoc}
      */
-    protected function setUp()
-    {
-        parent::setUp();
-    }
-
-    protected function createValidator()
-    {
-        return new CreditCardValidator();
-    }
-
-    protected function createConstraint()
-    {
-        return new CreditCard();
-    }
-
-    /**
-     * @dataProvider getValidValues
-     */
-    public function testValidValues($value)
-    {
-        $this->validator->validate($value, new CreditCard());
-        $this->assertNoViolation();
-    }
-
     public function getValidValues()
     {
         return [
@@ -53,22 +29,21 @@ class CreditCardValidatorTest extends AbstractConstraintValidatorTest
     }
 
     /**
-     * @dataProvider getInvalidValues
+     * {@inheritdoc}
      */
-    public function testInvalidValues($value)
-    {
-        $this->validator->validate($value, new CreditCard());
-
-        $this->buildViolation('This value is not a valid credit card scheme.')
-            ->assertRaised();
-    }
-
     public function getInvalidValues()
     {
         return [
             ['CE1EL2LLFFF'],
             ['E31DCLLFFF'],
-            [' '],
         ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function getInvalidMessage()
+    {
+        return 'This value is not a valid credit card scheme.';
     }
 }

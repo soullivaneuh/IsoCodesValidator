@@ -2,33 +2,31 @@
 
 namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
-use SLLH\IsoCodesValidator\Constraints\Bban;
-use SLLH\IsoCodesValidator\Constraints\Cif;
-use SLLH\IsoCodesValidator\Constraints\Iban;
+use SLLH\IsoCodesValidator\AbstractIsoCodesGenericConstraint;
 use SLLH\IsoCodesValidator\Constraints\IsoCodesGeneric;
+use SLLH\IsoCodesValidator\Constraints\IsoCodesGenericValidator;
+use SLLH\IsoCodesValidator\Tests\Fixtures\Constraints\LegacyFake;
 
 /**
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
+ * @group legacy
  */
-class IsoCodeGenericTest extends \PHPUnit_Framework_TestCase
+final class IsoCodeGenericTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @dataProvider getGenericConstraints
+     * @dataProvider getLegacyGenericConstraints
      *
-     * @param IsoCodesGeneric $constraint
-     * @param                 $validatorName
+     * @param IsoCodesGeneric|AbstractIsoCodesGenericConstraint $constraint
      */
-    public function testValidatorName(IsoCodesGeneric $constraint)
+    public function testValidatorName($constraint)
     {
-        $this->assertSame('SLLH\IsoCodesValidator\Constraints\IsoCodesGenericValidator', $constraint->validatedBy());
+        $this->assertSame(IsoCodesGenericValidator::class, $constraint->validatedBy());
     }
 
-    public function getGenericConstraints()
+    public function getLegacyGenericConstraints()
     {
         return [
-            [new Bban()],
-            [new Cif()],
-            [new Iban()],
+            [new LegacyFake()],
         ];
     }
 }

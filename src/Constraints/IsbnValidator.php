@@ -9,7 +9,7 @@ use Symfony\Component\Validator\Constraint;
 /**
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-class IsbnValidator extends AbstractIsoCodesConstraintValidator
+final class IsbnValidator extends AbstractIsoCodesConstraintValidator
 {
     /**
      * {@inheritdoc}

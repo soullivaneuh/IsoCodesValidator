@@ -2,30 +2,24 @@
 
 namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
-use SLLH\IsoCodesValidator\Constraints\Ip;
 use SLLH\IsoCodesValidator\Constraints\IpValidator;
 
-class IpValidatorTest extends AbstractConstraintValidatorTest
+/**
+ * @author Sullivan Senechal <soullivaneuh@gmail.com>
+ */
+final class IpValidatorTest extends AbstractGenericConstraintValidatorTest
 {
+    /**
+     * {@inheritdoc}
+     */
     protected function createValidator()
     {
         return new IpValidator();
     }
 
-    protected function createConstraint()
-    {
-        return new Ip();
-    }
-
     /**
-     * @dataProvider getValidValues
+     * {@inheritdoc}
      */
-    public function testValidValues($value)
-    {
-        $this->validator->validate($value, new Ip());
-        $this->assertNoViolation();
-    }
-
     public function getValidValues()
     {
         return [
@@ -43,16 +37,8 @@ class IpValidatorTest extends AbstractConstraintValidatorTest
     }
 
     /**
-     * @dataProvider getInvalidValues
+     * {@inheritdoc}
      */
-    public function testInvalidValues($value)
-    {
-        $this->validator->validate($value, new Ip());
-
-        $this->buildViolation('This value is not a valid IP address.')
-            ->assertRaised();
-    }
-
     public function getInvalidValues()
     {
         return [
@@ -61,5 +47,13 @@ class IpValidatorTest extends AbstractConstraintValidatorTest
             ['0db8:0000:85a3:0000:0000:ac1f:8001'],
             ['2001:0db8:0000:85a3:0000:0000:ac1f'],
         ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function getInvalidMessage()
+    {
+        return 'This value is not a valid IP address.';
     }
 }

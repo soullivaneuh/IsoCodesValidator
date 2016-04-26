@@ -2,38 +2,14 @@
 
 namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
-use SLLH\IsoCodesValidator\Constraints\Nif;
-use SLLH\IsoCodesValidator\Constraints\NifValidator;
-
-class NifValidatorTest extends AbstractConstraintValidatorTest
+/**
+ * @author Sullivan Senechal <soullivaneuh@gmail.com>
+ */
+final class NifValidatorTest extends AbstractGenericConstraintValidatorTest
 {
     /**
-     * @group legacy
+     * {@inheritdoc}
      */
-    protected function setUp()
-    {
-        parent::setUp();
-    }
-
-    protected function createValidator()
-    {
-        return new NifValidator();
-    }
-
-    protected function createConstraint()
-    {
-        return new Nif();
-    }
-
-    /**
-     * @dataProvider getValidValues
-     */
-    public function testValidValues($value)
-    {
-        $this->validator->validate($value, new Nif());
-        $this->assertNoViolation();
-    }
-
     public function getValidValues()
     {
         return [
@@ -46,16 +22,8 @@ class NifValidatorTest extends AbstractConstraintValidatorTest
     }
 
     /**
-     * @dataProvider getInvalidValues
+     * {@inheritdoc}
      */
-    public function testInvalidValues($value)
-    {
-        $this->validator->validate($value, new Nif());
-
-        $this->buildViolation('This value is not a valid NIF.')
-            ->assertRaised();
-    }
-
     public function getInvalidValues()
     {
         return [
@@ -67,7 +35,14 @@ class NifValidatorTest extends AbstractConstraintValidatorTest
             ['L9999999K'],
             ['A9999999L'],
             ['A9999999L'],
-            [' '],
         ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function getInvalidMessage()
+    {
+        return 'This value is not a valid NIF.';
     }
 }

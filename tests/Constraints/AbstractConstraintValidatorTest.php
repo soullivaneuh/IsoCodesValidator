@@ -2,8 +2,9 @@
 
 namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
+use SLLH\IsoCodesValidator\AbstractConstraint;
+use SLLH\IsoCodesValidator\ConstraintInterface;
 use SLLH\IsoCodesValidator\Constraints\IsoCodesGenericValidator;
-use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\Constraints\Blank;
 use Symfony\Component\Validator\Tests\Constraints\AbstractConstraintValidatorTest as BaseAbstractConstraintValidatorTest;
 use Symfony\Component\Validator\Validation;
@@ -11,7 +12,7 @@ use Symfony\Component\Validator\Validation;
 abstract class AbstractConstraintValidatorTest extends BaseAbstractConstraintValidatorTest
 {
     /**
-     * @var Constraint
+     * @var ConstraintInterface
      */
     protected $srcConstraint;
 
@@ -20,6 +21,10 @@ abstract class AbstractConstraintValidatorTest extends BaseAbstractConstraintVal
         parent::setUp();
 
         $this->srcConstraint = $this->createConstraint();
+
+        if (!class_exists($this->srcConstraint->getIsoCodesClass())) {
+            $this->markTestSkipped('The '.$this->srcConstraint->getIsoCodesClass().' validator final class does not exists.');
+        }
     }
 
     protected function getApiVersion()
@@ -48,10 +53,57 @@ abstract class AbstractConstraintValidatorTest extends BaseAbstractConstraintVal
         $this->assertNoViolation();
     }
 
+    public function testBlankButNotEmptyStringIsInvalid()
+    {
+        $this->validator->validate(' ', $this->createConstraint());
+
+        $this->buildViolation($this->getInvalidMessage())
+            ->assertRaised();
+    }
+
+    public function testItImplementsInterface()
+    {
+        $this->assertInstanceOf(ConstraintInterface::class, $this->srcConstraint);
+    }
+
+    public function testItProvidesAnIsoCodesVersion()
+    {
+        $this->assertStringMatchesFormat(
+            '%d.%d.%d',
+            $this->srcConstraint->getIsoCodesVersion(),
+            'You should provide a proper version of IsoCodes library.'
+        );
+    }
+
+    /**
+     * @return array[]
+     */
+    abstract public function getValidValues();
+
+    /**
+     * @return array[]
+     */
+    abstract public function getInvalidValues();
+
     protected function createValidator()
     {
         return new IsoCodesGenericValidator();
     }
 
-    abstract protected function createConstraint();
+    /**
+     * @return AbstractConstraint
+     */
+    protected function createConstraint()
+    {
+        $validatorTestClassTab = explode('\\', get_class($this));
+        $constraintClass = 'SLLH\\IsoCodesValidator\\Constraints\\'
+            .str_replace('ValidatorTest', '', end($validatorTestClassTab));
+
+        return new $constraintClass();
+    }
+
+    /**
+     * @return string
+     */
+    abstract protected function getInvalidMessage();
 }

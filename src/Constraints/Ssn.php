@@ -2,7 +2,7 @@
 
 namespace SLLH\IsoCodesValidator\Constraints;
 
-use Symfony\Component\Validator\Constraint;
+use SLLH\IsoCodesValidator\AbstractIsoCodesGenericConstraint;
 
 /**
  * @Annotation
@@ -10,7 +10,15 @@ use Symfony\Component\Validator\Constraint;
  *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-class Ssn extends Constraint
+final class Ssn extends AbstractIsoCodesGenericConstraint
 {
     public $message = 'This value is not a valid SSN.';
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getIsoCodesVersion()
+    {
+        return '1.0.0';
+    }
 }

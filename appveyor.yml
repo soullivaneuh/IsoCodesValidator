@@ -1,0 +1,32 @@
+version: 2.x.{build}
+
+shallow_clone: false
+
+platform:
+  - x86
+  - x64
+
+matrix:
+  fast_finish: true
+
+clone_folder: c:\projects\IsoCodesValidator
+
+init:
+  - SET PATH=c:\tools\php;%PATH%
+
+install:
+  - cinst OpenSSL.Light
+  - cinst php
+  - cd c:\tools\php
+  - copy php.ini-production php.ini
+  - echo date.timezone="UTC" >> php.ini
+  - echo extension_dir=ext >> php.ini
+  - echo extension=php_openssl.dll >> php.ini
+  - php -r "readfile('http://getcomposer.org/installer');" | php
+  - cd c:\projects\IsoCodesValidator
+  - ls -la
+  - composer.phar global require phpunit/phpunit:@stable --no-update
+  - composer.phar global update --prefer-dist --no-interaction
+  - composer.phar update --prefer-dist --no-interaction
+
+test_script: make test

@@ -2,38 +2,14 @@
 
 namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
-use SLLH\IsoCodesValidator\Constraints\SwiftBic;
-use SLLH\IsoCodesValidator\Constraints\SwiftBicValidator;
-
-class SwiftBicValidatorTest extends AbstractConstraintValidatorTest
+/**
+ * @author Sullivan Senechal <soullivaneuh@gmail.com>
+ */
+final class SwiftBicValidatorTest extends AbstractGenericConstraintValidatorTest
 {
     /**
-     * @group legacy
+     * {@inheritdoc}
      */
-    protected function setUp()
-    {
-        parent::setUp();
-    }
-
-    protected function createValidator()
-    {
-        return new SwiftBicValidator();
-    }
-
-    protected function createConstraint()
-    {
-        return new SwiftBic();
-    }
-
-    /**
-     * @dataProvider getValidValues
-     */
-    public function testValidValues($value)
-    {
-        $this->validator->validate($value, new SwiftBic());
-        $this->assertNoViolation();
-    }
-
     public function getValidValues()
     {
         return [
@@ -48,22 +24,21 @@ class SwiftBicValidatorTest extends AbstractConstraintValidatorTest
     }
 
     /**
-     * @dataProvider getInvalidValues
+     * {@inheritdoc}
      */
-    public function testInvalidValues($value)
-    {
-        $this->validator->validate($value, new SwiftBic());
-
-        $this->buildViolation('This value is not a valid SWIFT.')
-            ->assertRaised();
-    }
-
     public function getInvalidValues()
     {
         return [
             ['CE1EL2LLFFF'],
             ['E31DCLLFFF'],
-            [' '],
         ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function getInvalidMessage()
+    {
+        return 'This value is not a valid SWIFT.';
     }
 }

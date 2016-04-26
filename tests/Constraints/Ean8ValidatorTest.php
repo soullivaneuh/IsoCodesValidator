@@ -5,7 +5,7 @@ namespace SLLH\IsoCodesValidator\Tests\Constraints;
 /**
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-final class InseeValidatorTest extends AbstractGenericConstraintValidatorTest
+final class Ean8ValidatorTest extends AbstractGenericConstraintValidatorTest
 {
     /**
      * {@inheritdoc}
@@ -13,22 +13,20 @@ final class InseeValidatorTest extends AbstractGenericConstraintValidatorTest
     public function getValidValues()
     {
         return [
-            ['177022A00100229'],
-            ['253012B073004'],
-            ['177025626004544'],
-            ['253077507300483'],
-            ['188057208107893'],
+            ['42345671'],
+            ['4719-5127'],
+            ['9638-5074'],
         ];
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getInvalidValues()
     {
         return [
-            ['353072B07300483'],
-            ['253072C07300483'],
+            [42345670],
+            [423456712],
+            ['423456712'],
+            ['12345671'],
+            ['4234.5671'],
         ];
     }
 
@@ -37,6 +35,6 @@ final class InseeValidatorTest extends AbstractGenericConstraintValidatorTest
      */
     protected function getInvalidMessage()
     {
-        return 'This INSEE number is not valid.';
+        return 'This EAN 8 code is not valid.';
     }
 }

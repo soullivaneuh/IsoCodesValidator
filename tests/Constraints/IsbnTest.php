@@ -4,7 +4,7 @@ namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
 use SLLH\IsoCodesValidator\Constraints\Isbn;
 
-class IsbnTest extends \PHPUnit_Framework_TestCase
+final class IsbnTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @dataProvider getValidTypes

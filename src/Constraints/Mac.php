@@ -5,20 +5,17 @@ namespace SLLH\IsoCodesValidator\Constraints;
 use SLLH\IsoCodesValidator\AbstractIsoCodesGenericConstraint;
 
 /**
- * @Annotation
- * @Target({"PROPERTY", "METHOD", "ANNOTATION"})
- *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-final class Vat extends AbstractIsoCodesGenericConstraint
+final class Mac extends AbstractIsoCodesGenericConstraint
 {
-    public $message = 'This value is not a valid VAT.';
+    public $message = 'This value is not a valid MAC address.';
 
     /**
      * {@inheritdoc}
      */
     public function getIsoCodesVersion()
     {
-        return '1.0.0';
+        return '2.0.0';
     }
 }

@@ -2,38 +2,14 @@
 
 namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
-use SLLH\IsoCodesValidator\Constraints\Iban;
-use SLLH\IsoCodesValidator\Constraints\IbanValidator;
-
-class IbanValidatorTest extends AbstractConstraintValidatorTest
+/**
+ * @author Sullivan Senechal <soullivaneuh@gmail.com>
+ */
+final class IbanValidatorTest extends AbstractGenericConstraintValidatorTest
 {
     /**
-     * @group legacy
+     * {@inheritdoc}
      */
-    protected function setUp()
-    {
-        parent::setUp();
-    }
-
-    protected function createValidator()
-    {
-        return new IbanValidator();
-    }
-
-    protected function createConstraint()
-    {
-        return new Iban();
-    }
-
-    /**
-     * @dataProvider getValidValues
-     */
-    public function testValidValues($value)
-    {
-        $this->validator->validate($value, new Iban());
-        $this->assertNoViolation();
-    }
-
     public function getValidValues()
     {
         return [
@@ -368,16 +344,8 @@ class IbanValidatorTest extends AbstractConstraintValidatorTest
     }
 
     /**
-     * @dataProvider getInvalidValues
+     * {@inheritdoc}
      */
-    public function testInvalidValues($value)
-    {
-        $this->validator->validate($value, new Iban());
-
-        $this->buildViolation('This value is not a valid IBAN.')
-            ->assertRaised();
-    }
-
     public function getInvalidValues()
     {
         return [
@@ -387,7 +355,14 @@ class IbanValidatorTest extends AbstractConstraintValidatorTest
             ['DE10002300A1023502601'],
             ['PL12100500000123456789'],
             ['DE912371399260788663742'],
-            [' '],
         ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function getInvalidMessage()
+    {
+        return 'This value is not a valid IBAN.';
     }
 }

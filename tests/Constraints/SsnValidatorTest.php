@@ -2,30 +2,14 @@
 
 namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
-use SLLH\IsoCodesValidator\Constraints\Ssn;
-use SLLH\IsoCodesValidator\Constraints\SsnValidator;
-
-class SsnValidatorTest extends AbstractConstraintValidatorTest
+/**
+ * @author Sullivan Senechal <soullivaneuh@gmail.com>
+ */
+final class SsnValidatorTest extends AbstractGenericConstraintValidatorTest
 {
-    protected function createValidator()
-    {
-        return new SsnValidator();
-    }
-
-    protected function createConstraint()
-    {
-        return new Ssn();
-    }
-
     /**
-     * @dataProvider getValidValues
+     * {@inheritdoc}
      */
-    public function testValidValues($value)
-    {
-        $this->validator->validate($value, new Ssn());
-        $this->assertNoViolation();
-    }
-
     public function getValidValues()
     {
         return [
@@ -38,16 +22,8 @@ class SsnValidatorTest extends AbstractConstraintValidatorTest
     }
 
     /**
-     * @dataProvider getInvalidValues
+     * {@inheritdoc}
      */
-    public function testInvalidValues($value)
-    {
-        $this->validator->validate($value, new Ssn());
-
-        $this->buildViolation('This value is not a valid SSN.')
-            ->assertRaised();
-    }
-
     public function getInvalidValues()
     {
         return [
@@ -56,7 +32,14 @@ class SsnValidatorTest extends AbstractConstraintValidatorTest
             ['1234-567-89'],
             ['123456789'],
             ['773-45-6789'],
-            [' '],
         ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function getInvalidMessage()
+    {
+        return 'This value is not a valid SSN.';
     }
 }
