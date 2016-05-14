@@ -26,6 +26,7 @@ install:
   - echo extension_dir=ext >> php.ini
   - echo extension=php_openssl.dll >> php.ini
   - echo extension=php_intl.dll >> php.ini
+  - echo extension=php_mbstring.dll >> php.ini
   - appveyor DownloadFile https://getcomposer.org/composer.phar
   - appveyor DownloadFile https://phar.phpunit.de/phpunit.phar
   - cd c:\projects\IsoCodesValidator
