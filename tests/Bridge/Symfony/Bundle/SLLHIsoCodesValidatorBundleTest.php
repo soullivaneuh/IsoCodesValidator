@@ -1,9 +1,9 @@
 <?php
 
-namespace SLLH\IsoCodesValidator\Tests\Bundle;
+namespace SLLH\IsoCodesValidator\Tests\Bridge\Symfony\Bundle;
 
 use Matthias\SymfonyDependencyInjectionTest\PhpUnit\AbstractContainerBuilderTestCase;
-use SLLH\IsoCodesValidator\Bundle\SLLHIsoCodesValidatorBundle;
+use SLLH\IsoCodesValidator\Bridge\Symfony\Bundle\SLLHIsoCodesValidatorBundle;
 
 /**
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
@@ -29,7 +29,7 @@ class SLLHIsoCodesValidatorBundleTest extends AbstractContainerBuilderTestCase
         $passes = $this->container->getCompilerPassConfig()->getPasses();
         $this->assertCount(2, $passes, 'Bundle must contains a TranslationPass instance.');
         $this->assertInstanceOf(
-            'SLLH\IsoCodesValidator\Bundle\DependencyInjection\Compiler\TranslationPass',
+            'SLLH\IsoCodesValidator\Bridge\Symfony\DependencyInjection\Compiler\TranslationPass',
             $passes[1],
             'Bundle must contains a TranslationPass instance.'
         );

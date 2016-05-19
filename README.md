@@ -80,7 +80,7 @@ public function registerBundles()
 {
     $bundles = array(
         // ...
-        new SLLH\IsoCodesValidator\Bundle\SLLHIsoCodesValidatorBundle(),
+        new SLLH\IsoCodesValidator\Bridge\Symfony\Bundle\SLLHIsoCodesValidatorBundle(),
     );
 }
 ```
