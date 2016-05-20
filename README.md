@@ -96,13 +96,13 @@ $ composer require silex/silex
 #### Register the service
 
 ```php
-use SLLH\IsoCodesValidator\Provider\IsoCodesValidatorServiceProvider;
+use SLLH\IsoCodesValidator\Bridge\Silex\IsoCodesValidatorSilex1ServiceProvider;
 
 // Get translation working
 $app->register(new TranslationServiceProvider());
 
 // Register the provider
-$app->register(new IsoCodesValidatorServiceProvider());
+$app->register(new IsoCodesValidatorSilex1ServiceProvider());
 ```
 
 ## Usage

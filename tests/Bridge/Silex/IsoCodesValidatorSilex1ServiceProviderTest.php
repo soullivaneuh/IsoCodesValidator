@@ -1,22 +1,22 @@
 <?php
 
-namespace SLLH\IsoCodesValidator\Tests\Provider;
+namespace SLLH\IsoCodesValidator\Tests\Bridge\Silex;
 
 use Silex\Application;
 use Silex\Provider\TranslationServiceProvider;
-use SLLH\IsoCodesValidator\Provider\IsoCodesValidatorServiceProvider;
+use SLLH\IsoCodesValidator\Bridge\Silex\IsoCodesValidatorSilex1ServiceProvider;
 use Symfony\Component\Translation\TranslatorInterface;
 
 /**
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-class IsoCodesValidatorServiceProviderTest extends \PHPUnit_Framework_TestCase
+class IsoCodesValidatorSilex1ServiceProviderTest extends \PHPUnit_Framework_TestCase
 {
     public function testRegisterAndBoot()
     {
         $app = new Application();
 
-        $app->register(new IsoCodesValidatorServiceProvider());
+        $app->register(new IsoCodesValidatorSilex1ServiceProvider());
         $app->boot();
 
         return $app;
@@ -27,7 +27,7 @@ class IsoCodesValidatorServiceProviderTest extends \PHPUnit_Framework_TestCase
         $app = new Application();
 
         $app->register(new TranslationServiceProvider());
-        $app->register(new IsoCodesValidatorServiceProvider());
+        $app->register(new IsoCodesValidatorSilex1ServiceProvider());
     }
 
     /**
@@ -40,7 +40,7 @@ class IsoCodesValidatorServiceProviderTest extends \PHPUnit_Framework_TestCase
         ]);
 
         $app->register(new TranslationServiceProvider());
-        $app->register(new IsoCodesValidatorServiceProvider());
+        $app->register(new IsoCodesValidatorSilex1ServiceProvider());
 
         /** @var TranslatorInterface $translator */
         $translator = $app['translator'];
