@@ -3,20 +3,22 @@
 namespace SLLH\IsoCodesValidator\Tests\Bridge\Silex;
 
 use Silex\Application;
+use Silex\Provider\LocaleServiceProvider;
 use Silex\Provider\TranslationServiceProvider;
+use SLLH\IsoCodesValidator\Bridge\Silex\IsoCodesValidatorServiceProvider;
 use SLLH\IsoCodesValidator\Bridge\Silex\IsoCodesValidatorSilex1ServiceProvider;
 use Symfony\Component\Translation\TranslatorInterface;
 
 /**
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-class IsoCodesValidatorSilex1ServiceProviderTest extends \PHPUnit_Framework_TestCase
+final class IsoCodesValidatorServiceProviderTest extends \PHPUnit_Framework_TestCase
 {
     public function testRegisterAndBoot()
     {
         $app = new Application();
 
-        $app->register(new IsoCodesValidatorSilex1ServiceProvider());
+        $app->register($this->getServiceProvider());
         $app->boot();
 
         return $app;
@@ -26,8 +28,12 @@ class IsoCodesValidatorSilex1ServiceProviderTest extends \PHPUnit_Framework_Test
     {
         $app = new Application();
 
+        // Silex >=2.0 BC
+        if (class_exists('Silex\Provider\LocaleServiceProvider')) {
+            $app->register(new LocaleServiceProvider());
+        }
         $app->register(new TranslationServiceProvider());
-        $app->register(new IsoCodesValidatorSilex1ServiceProvider());
+        $app->register($this->getServiceProvider());
     }
 
     /**
@@ -40,7 +46,7 @@ class IsoCodesValidatorSilex1ServiceProviderTest extends \PHPUnit_Framework_Test
         ]);
 
         $app->register(new TranslationServiceProvider());
-        $app->register(new IsoCodesValidatorSilex1ServiceProvider());
+        $app->register($this->getServiceProvider());
 
         /** @var TranslatorInterface $translator */
         $translator = $app['translator'];
@@ -61,5 +67,18 @@ class IsoCodesValidatorSilex1ServiceProviderTest extends \PHPUnit_Framework_Test
             ['fr', true],
             ['mad_locale', false],
         ];
+    }
+
+    /**
+     * @return IsoCodesValidatorServiceProvider|IsoCodesValidatorSilex1ServiceProvider
+     */
+    private function getServiceProvider()
+    {
+        // Silex <2.0 BC
+        if (interface_exists('Silex\ServiceProviderInterface')) {
+            return new IsoCodesValidatorSilex1ServiceProvider();
+        }
+
+        return new IsoCodesValidatorServiceProvider();
     }
 }

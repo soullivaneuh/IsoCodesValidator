@@ -19,7 +19,7 @@
     "require-dev": {
         "matthiasnoback/symfony-dependency-injection-test": "^0.7.4",
         "sebastian/exporter": "^1.2.0",
-        "silex/silex": "^1.2",
+        "silex/silex": "^1.2 || ^2.0",
         "sllh/php-cs-fixer-styleci-bridge": "^1.0",
         "symfony/dependency-injection": "^2.7 || ^3.0",
         "symfony/finder": "^2.7 || ^3.0",
@@ -33,7 +33,7 @@
         "symfony/finder": "For Symfony integration as a bundle"
     },
     "conflict": {
-        "silex/silex": "<1.2 || >=2.0",
+        "silex/silex": "<1.2 || >=3.0",
         "symfony/dependency-injection": "<2.7 || >=4.0",
         "symfony/http-kernel": "<2.7 || >=4.0",
         "symfony/finder": "<2.7 || >=4.0"
