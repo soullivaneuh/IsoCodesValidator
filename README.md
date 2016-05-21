@@ -12,11 +12,11 @@ Symfony validator wrapper of [IsoCodes](https://github.com/ronanguilloux/IsoCode
 [![Monthly Downloads](https://poser.pugx.org/sllh/iso-codes-validator/d/monthly)](https://packagist.org/packages/sllh/iso-codes-validator)
 [![Daily Downloads](https://poser.pugx.org/sllh/iso-codes-validator/d/daily)](https://packagist.org/packages/sllh/iso-codes-validator)
 
-[![Build Status](https://travis-ci.org/Soullivaneuh/IsoCodesValidator.svg?branch=master)](https://travis-ci.org/Soullivaneuh/IsoCodesValidator)
-[![AppVeyor Status](https://ci.appveyor.com/api/projects/status/6ha1gcdv6uwg4ukc/branch/master?svg=true)](https://ci.appveyor.com/project/Soullivaneuh/isocodesvalidator)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Soullivaneuh/IsoCodesValidator/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Soullivaneuh/IsoCodesValidator/?branch=master)
+[![Build Status](https://travis-ci.org/Soullivaneuh/IsoCodesValidator.svg?branch=3.x)](https://travis-ci.org/Soullivaneuh/IsoCodesValidator)
+[![AppVeyor Status](https://ci.appveyor.com/api/projects/status/6ha1gcdv6uwg4ukc/branch/3.x?svg=true)](https://ci.appveyor.com/project/Soullivaneuh/isocodesvalidator)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Soullivaneuh/IsoCodesValidator/badges/quality-score.png?b=3.x)](https://scrutinizer-ci.com/g/Soullivaneuh/IsoCodesValidator/?branch=3.x)
 [![Code Climate](https://codeclimate.com/github/Soullivaneuh/IsoCodesValidator/badges/gpa.svg)](https://codeclimate.com/github/Soullivaneuh/IsoCodesValidator)
-[![Coverage Status](https://coveralls.io/repos/Soullivaneuh/IsoCodesValidator/badge.svg?branch=master)](https://coveralls.io/r/Soullivaneuh/IsoCodesValidator?branch=master)
+[![Coverage Status](https://coveralls.io/repos/Soullivaneuh/IsoCodesValidator/badge.svg?branch=3.x)](https://coveralls.io/r/Soullivaneuh/IsoCodesValidator?branch=3.x)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/15e2cfed-cfb8-4856-ac0d-92768fc0c324/mini.png)](https://insight.sensiolabs.com/projects/15e2cfed-cfb8-4856-ac0d-92768fc0c324)
 
 ## Documentation
@@ -24,7 +24,7 @@ Symfony validator wrapper of [IsoCodes](https://github.com/ronanguilloux/IsoCode
 All the installation and usage instructions are located in this README.
 Check it for specific version:
 
-* [__3.x__ (unstable)](https://github.com/Soullivaneuh/IsoCodesValidator/tree/master) with support for Symfony `^2.7|^3.0` and Silex `^1.2|^2.0`
+* [__3.x__](https://github.com/Soullivaneuh/IsoCodesValidator/tree/3.x) with support for Symfony `^2.7|^3.0` and Silex `^1.2|^2.0`
 * [__2.x__](https://github.com/Soullivaneuh/IsoCodesValidator/tree/2.x) with support for Symfony `^2.7|^3.0` and Silex `^1.2|^2.0`
 * [__1.x__](https://github.com/Soullivaneuh/IsoCodesValidator/tree/1.x) with support for Symfony `^2.3|^3.0` and Silex `^1.1`
 
