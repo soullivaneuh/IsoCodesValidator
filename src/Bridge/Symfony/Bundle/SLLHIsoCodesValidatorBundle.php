@@ -9,7 +9,7 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 /**
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-class SLLHIsoCodesValidatorBundle extends Bundle
+final class SLLHIsoCodesValidatorBundle extends Bundle
 {
     /**
      * {@inheritdoc}

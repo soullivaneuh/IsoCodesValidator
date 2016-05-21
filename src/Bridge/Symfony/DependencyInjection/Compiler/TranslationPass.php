@@ -14,7 +14,7 @@ use Symfony\Component\Finder\Finder;
  *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-class TranslationPass implements CompilerPassInterface
+final class TranslationPass implements CompilerPassInterface
 {
     /**
      * {@inheritdoc}

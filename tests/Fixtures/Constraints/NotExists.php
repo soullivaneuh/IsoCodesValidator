@@ -7,7 +7,7 @@ use SLLH\IsoCodesValidator\AbstractIsoCodesGenericConstraint;
 /**
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-class NotExists extends AbstractIsoCodesGenericConstraint
+final class NotExists extends AbstractIsoCodesGenericConstraint
 {
     /**
      * {@inheritdoc}

@@ -8,7 +8,7 @@ use Symfony\Component\Validator\Constraint;
 /**
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-class IsoCodesGenericValidator extends AbstractIsoCodesConstraintValidator
+final class IsoCodesGenericValidator extends AbstractIsoCodesConstraintValidator
 {
     /**
      * {@inheritdoc}
