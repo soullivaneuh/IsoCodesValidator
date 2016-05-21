@@ -24,8 +24,8 @@ Symfony validator wrapper of [IsoCodes](https://github.com/ronanguilloux/IsoCode
 All the installation and usage instructions are located in this README.
 Check it for specific version:
 
-* [__3.x__ (unstable)](https://github.com/Soullivaneuh/IsoCodesValidator/tree/master) with support for Symfony `^2.7|^3.0` and Silex `^1.2`
-* [__2.x__](https://github.com/Soullivaneuh/IsoCodesValidator/tree/2.x) with support for Symfony `^2.7|^3.0` and Silex `^1.2`
+* [__3.x__ (unstable)](https://github.com/Soullivaneuh/IsoCodesValidator/tree/master) with support for Symfony `^2.7|^3.0` and Silex `^1.2|^2.0`
+* [__2.x__](https://github.com/Soullivaneuh/IsoCodesValidator/tree/2.x) with support for Symfony `^2.7|^3.0` and Silex `^1.2|^2.0`
 * [__1.x__](https://github.com/Soullivaneuh/IsoCodesValidator/tree/1.x) with support for Symfony `^2.3|^3.0` and Silex `^1.1`
 
 ## Prerequisites
@@ -80,7 +80,7 @@ public function registerBundles()
 {
     $bundles = array(
         // ...
-        new SLLH\IsoCodesValidator\Bundle\SLLHIsoCodesValidatorBundle(),
+        new SLLH\IsoCodesValidator\Bridge\Symfony\Bundle\SLLHIsoCodesValidatorBundle(),
     );
 }
 ```
@@ -95,11 +95,31 @@ $ composer require silex/silex
 
 #### Register the service
 
+##### Silex 1.x
+
 ```php
-use SLLH\IsoCodesValidator\Provider\IsoCodesValidatorServiceProvider;
+use Silex\Provider\TranslationServiceProvider();
+use SLLH\IsoCodesValidator\Bridge\Silex\IsoCodesValidatorSilex1ServiceProvider;
 
 // Get translation working
 $app->register(new TranslationServiceProvider());
+
+// Register the provider
+$app->register(new IsoCodesValidatorSilex1ServiceProvider());
+```
+
+##### Silex 2.x
+
+```php
+use Silex\Provider\LocaleServiceProvider();
+use Silex\Provider\TranslationServiceProvider();
+use SLLH\IsoCodesValidator\Bridge\Silex\IsoCodesValidatorServiceProvider();
+
+// Get translation working
+$app->register(new LocaleServiceProvider());
+$app->register(new TranslationServiceProvider(), array(
+    'locale_fallbacks' => array('en'),
+));
 
 // Register the provider
 $app->register(new IsoCodesValidatorServiceProvider());
