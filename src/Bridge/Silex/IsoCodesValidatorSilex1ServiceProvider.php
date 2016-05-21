@@ -8,7 +8,7 @@ use Silex\ServiceProviderInterface;
 /**
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-class IsoCodesValidatorSilex1ServiceProvider implements ServiceProviderInterface
+final class IsoCodesValidatorSilex1ServiceProvider implements ServiceProviderInterface
 {
     /**
      * {@inheritdoc}

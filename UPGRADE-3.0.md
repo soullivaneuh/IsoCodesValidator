@@ -13,3 +13,13 @@ See also the [diff code](https://github.com/Soullivaneuh/IsoCodesValidator/compa
 The translations file was moved from `Resources/translations` to `translations`.
 
 Developers using the Symfony or Silex integration should not be impacted.
+
+## API closing
+
+Some classes are now `final` you should not override them:
+
+* `IsoCodesValidatorSilex1ServiceProvider`
+* `SLLHIsoCodesValidatorBundle`
+* `TranslationPass`
+* `IsoCodesGenericValidator`
+* Some test classes
