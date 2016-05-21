@@ -1,5 +1,13 @@
 # CHANGELOG
 
+* 2.1.0 (2016-05-21)
+
+ * Add `Mac` constraint.
+ * Add `Ean8` constraint.
+ * Add `ValidatorNotExistsException`.
+ * Deprecate `IsoCodesGeneric` abstract class.
+ * Move Silex and Symfony integrations classes onto `Bridge` namespace.
+
 * 2.0.0 (2016-04-15)
 
  * Make PHP 5.6 as a minimum requirement.
