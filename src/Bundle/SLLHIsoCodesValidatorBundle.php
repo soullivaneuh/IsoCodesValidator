@@ -3,7 +3,7 @@
 namespace SLLH\IsoCodesValidator\Bundle;
 
 @trigger_error(
-    'The '.__NAMESPACE__.'\SLLHIsoCodesValidatorBundle class is deprecated since version 3.1 and will be removed in 4.0.'
+    'The '.__NAMESPACE__.'\SLLHIsoCodesValidatorBundle class is deprecated since version 2.1 and will be removed in 3.0.'
     .' Use SLLH\IsoCodesValidator\Bridge\Symfony\Bundle\SLLHIsoCodesValidatorBundle instead.',
     E_USER_DEPRECATED
 );
