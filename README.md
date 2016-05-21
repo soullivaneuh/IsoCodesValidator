@@ -219,11 +219,11 @@ Remember to replace `Assert` by `IsoCodesAssert` with the correct import stateme
 
 ## Constraints reference
 
-Constraints classes can be found on [src/Constraints](https://github.com/Soullivaneuh/IsoCodesValidator/tree/master/src/Constraints).
+Constraints classes can be found on [src/Constraints](src/Constraints).
 
 All works "as is" without any options unless `message`.
 
-Only [ZipCode](https://github.com/Soullivaneuh/IsoCodesValidator/blob/master/src/Constraints/ZipCode.php) constraint
+Only [ZipCode](src/Constraints/ZipCode.php) constraint
 accept a `country` option to limit validation ('all' by default).
 
 Please note that some [IsoCodes](https://github.com/ronanguilloux/IsoCodes/tree/master/src/IsoCodes) classes
@@ -234,7 +234,7 @@ If you think an IsoCodes class is missing, feel free to open an issue or make a 
 
 ## License
 
-This bundle is under the MIT license. See the complete license on the [LICENSE](https://github.com/Soullivaneuh/IsoCodesValidator/blob/master/LICENSE) file.
+This bundle is under the MIT license. See the complete license on the [LICENSE](LICENSE) file.
 
 ## TODO
 
