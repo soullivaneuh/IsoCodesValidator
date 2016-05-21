@@ -239,6 +239,4 @@ This bundle is under the MIT license. See the complete license on the [LICENSE](
 ## TODO
 
  * Try to implement [OrganismeType12NormeB2](https://github.com/ronanguilloux/IsoCodes/blob/master/src/IsoCodes/OrganismeType12NormeB2.php) (Maybe with a special form type?)
- * Contributing: Precise that core validation issue must be opened on vendor project
  * Implement and test xml/yaml assert config for Symfony: http://symfony.com/doc/current/book/validation.html#the-basics-of-validation
- * Make a Silex provider of this library: https://github.com/fabpot/Silex/blob/master/src/Silex/Provider/ValidatorServiceProvider.php#L36-L40
