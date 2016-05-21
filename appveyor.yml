@@ -19,7 +19,6 @@ init:
   - SET PATH=C:\Program Files\OpenSSL;c:\tools\php;%PATH%
 
 install:
-  - cinst OpenSSL.Light
   - cinst php -version %php%
   - cd c:\tools\php
   - copy php.ini-production php.ini
