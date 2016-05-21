@@ -12,7 +12,7 @@
     ],
     "require": {
         "php": "^5.6 || ^7.0",
-        "ronanguilloux/isocodes": "^2.0",
+        "ronanguilloux/isocodes": "dev-master",
         "symfony/translation": "^2.7 || ^3.0",
         "symfony/validator": "^2.7 || ^3.0"
     },
@@ -49,7 +49,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "2.x-dev"
+            "dev-master": "3.x-dev"
         }
     }
 }

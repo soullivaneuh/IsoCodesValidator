@@ -2,6 +2,7 @@
 
 namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
+use IsoCodes\Tests\AbstractIsoCodeTest;
 use SLLH\IsoCodesValidator\AbstractConstraint;
 use SLLH\IsoCodesValidator\ConstraintInterface;
 use SLLH\IsoCodesValidator\Constraints\IsoCodesGenericValidator;
@@ -76,14 +77,20 @@ abstract class AbstractConstraintValidatorTest extends BaseAbstractConstraintVal
     }
 
     /**
-     * @return array[]
+     * {@inheritdoc}
      */
-    abstract public function getValidValues();
+    public function getValidValues()
+    {
+        return $this->filterEmptyValues($this->getIsoCodesTestInstance()->getValidValues());
+    }
 
     /**
-     * @return array[]
+     * {@inheritdoc}
      */
-    abstract public function getInvalidValues();
+    public function getInvalidValues()
+    {
+        return $this->filterEmptyValues($this->getIsoCodesTestInstance()->getInvalidValues());
+    }
 
     protected function createValidator()
     {
@@ -105,5 +112,48 @@ abstract class AbstractConstraintValidatorTest extends BaseAbstractConstraintVal
     /**
      * @return string
      */
+    protected function getIsoCodesTestClass()
+    {
+        $validatorTestClassTab = explode('\\', get_class($this));
+
+        return str_replace('ValidatorTest', '', end($validatorTestClassTab)).'Test';
+    }
+
+    /**
+     * @return string
+     */
     abstract protected function getInvalidMessage();
+
+    /**
+     * @param array[] $values
+     *
+     * @return array[]
+     */
+    private function filterEmptyValues($values)
+    {
+        foreach ($values as $v => $value) {
+            if (empty($value[0])) {
+                unset($values[$v]);
+            }
+        }
+
+        return $values;
+    }
+
+    /**
+     * @return AbstractIsoCodeTest
+     */
+    private function getIsoCodesTestInstance()
+    {
+        // Test classes seems not be autoloaded by default.
+        require_once __DIR__.'/../../vendor/ronanguilloux/isocodes/tests/IsoCodes/Tests/AbstractIsoCodeTest.php';
+        require_once __DIR__.'/../../vendor/ronanguilloux/isocodes/tests/IsoCodes/Tests/AbstractIsoCodeInterfaceTest.php';
+
+        $isoCodesTestClass = $this->getIsoCodesTestClass();
+        $isoCodesTestFQNC = '\IsoCodes\\Tests\\'.$isoCodesTestClass;
+
+        require_once __DIR__.'/../../vendor/ronanguilloux/isocodes/tests/IsoCodes/Tests/'.$isoCodesTestClass.'.php';
+
+        return new $isoCodesTestFQNC();
+    }
 }
