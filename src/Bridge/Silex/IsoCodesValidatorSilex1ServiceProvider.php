@@ -16,7 +16,7 @@ class IsoCodesValidatorSilex1ServiceProvider implements ServiceProviderInterface
     public function register(Application $app)
     {
         if (isset($app['translator'])) {
-            $file = __DIR__.'/../../Resources/translations/validators.'.$app['locale'].'.xlf';
+            $file = __DIR__.'/../../translations/validators.'.$app['locale'].'.xlf';
             if (file_exists($file)) {
                 $app['translator']->addResource('xliff', $file, $app['locale'], 'validators');
             }

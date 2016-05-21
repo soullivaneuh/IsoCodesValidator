@@ -13,7 +13,7 @@ final class IsoCodesValidatorServiceProvider implements ServiceProviderInterface
     public function register(Container $pimple)
     {
         if (isset($pimple['translator'])) {
-            $file = __DIR__.'/../../Resources/translations/validators.'.$pimple['locale'].'.xlf';
+            $file = __DIR__.'/../../translations/validators.'.$pimple['locale'].'.xlf';
             if (file_exists($file)) {
                 $pimple['translator']->addResource('xliff', $file, $pimple['locale'], 'validators');
             }
