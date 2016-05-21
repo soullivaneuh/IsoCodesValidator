@@ -2,9 +2,11 @@
 
 namespace SLLH\IsoCodesValidator\Bundle\DependencyInjection\Compiler;
 
-use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
-use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\Finder\Finder;
+@trigger_error(
+    'The '.__NAMESPACE__.'\TranslationPass class is deprecated since version 3.1 and will be removed in 4.0.'
+    .' Use SLLH\IsoCodesValidator\Bridge\Symfony\DependencyInjection\Compiler\TranslationPass instead.',
+    E_USER_DEPRECATED
+);
 
 /**
  * Register IsoCodesValidator translations files.
@@ -13,31 +15,9 @@ use Symfony\Component\Finder\Finder;
  * Symfony\Bundle\FrameworkBundle\DependencyInjection\FrameworkExtension::registerTranslatorConfiguration
  *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
+ *
+ * @deprecated since version 2.1, to be removed in 3.0. Use SLLH\IsoCodesValidator\Bridge\Symfony\DependencyInjection\Compiler\TranslationPass instead.
  */
-class TranslationPass implements CompilerPassInterface
+class TranslationPass extends \SLLH\IsoCodesValidator\Bridge\Symfony\DependencyInjection\Compiler\TranslationPass
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function process(ContainerBuilder $container)
-    {
-        if (!$container->hasDefinition('translator.default')) {
-            return;
-        }
-
-        $translator = $container->findDefinition('translator.default');
-
-        $finder = Finder::create()
-            ->files()
-            ->filter(function (\SplFileInfo $file) {
-                return 2 === substr_count($file->getBasename(), '.') && preg_match('/\.\w+$/', $file->getBasename());
-            })
-            ->in(__DIR__.'/../../../Resources/translations')
-        ;
-
-        foreach ($finder as $file) {
-            list($domain, $locale, $format) = explode('.', $file->getBasename(), 3);
-            $translator->addMethodCall('addResource', [$format, (string) $file, $locale, $domain]);
-        }
-    }
 }
