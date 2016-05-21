@@ -1,5 +1,13 @@
 # CHANGELOG
 
+* 3.0.0 (2016-05-21)
+
+ * Move translations files from `Resources/translations` to `translations`.
+ * Some classes are now final. Check UPGRADE-3.0.md for mor details.
+ * Remove classes from deprecated `Bundle` namespace.
+ * Remove classes from deprecated `Provider` namespace.
+ * Remove deprecated `IsoCodesGeneric` class.
+
 * 2.1.0 (2016-05-21)
 
  * Add `Mac` constraint.

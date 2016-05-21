@@ -2,25 +2,24 @@
 
 namespace SLLH\IsoCodesValidator\Constraints;
 
+use ;
 use SLLH\IsoCodesValidator\AbstractIsoCodesConstraintValidator;
 use Symfony\Component\Validator\Constraint;
 
 /**
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-final class IsoCodesGenericValidator extends AbstractIsoCodesConstraintValidator
+class PhoneNumberValidator extends AbstractIsoCodesConstraintValidator
 {
     /**
-     * {@inheritdoc}
+     * @param mixed                  $value
+     * @param PhoneNumber|Constraint $constraint
      */
     public function validate($value, Constraint $constraint)
     {
         parent::validate($value, $constraint);
 
-        $constraintClass = str_replace('SLLH\\IsoCodesValidator\\Constraints\\', '', get_class($constraint));
-        $isoCodesClass = 'IsoCodes\\'.$constraintClass;
-
-        if ($value && !$isoCodesClass::validate($value)) {
+        if ($value && !\IsoCodes\PhoneNumber::validate($value, $constraint->country)) {
             $this->createViolation($constraint->message);
         }
     }

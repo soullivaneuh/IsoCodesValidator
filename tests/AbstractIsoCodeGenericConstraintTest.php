@@ -11,7 +11,7 @@ use SLLH\IsoCodesValidator\Constraints\IsoCodesGenericValidator;
 /**
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-class AbstractIsoCodeGenericConstraintTest extends \PHPUnit_Framework_TestCase
+final class AbstractIsoCodeGenericConstraintTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @dataProvider getGenericConstraints

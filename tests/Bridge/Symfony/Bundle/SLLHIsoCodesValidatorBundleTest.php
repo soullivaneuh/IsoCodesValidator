@@ -8,7 +8,7 @@ use SLLH\IsoCodesValidator\Bridge\Symfony\Bundle\SLLHIsoCodesValidatorBundle;
 /**
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-class SLLHIsoCodesValidatorBundleTest extends AbstractContainerBuilderTestCase
+final class SLLHIsoCodesValidatorBundleTest extends AbstractContainerBuilderTestCase
 {
     /**
      * @var SLLHIsoCodesValidatorBundle

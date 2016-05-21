@@ -7,6 +7,6 @@ use SLLH\IsoCodesValidator\Constraints\IsoCodesGeneric;
 /**
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-class LegacyFake extends IsoCodesGeneric
+final class LegacyFake extends IsoCodesGeneric
 {
 }

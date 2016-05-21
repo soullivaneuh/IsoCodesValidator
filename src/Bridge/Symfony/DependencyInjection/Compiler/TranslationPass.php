@@ -14,7 +14,7 @@ use Symfony\Component\Finder\Finder;
  *
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-class TranslationPass implements CompilerPassInterface
+final class TranslationPass implements CompilerPassInterface
 {
     /**
      * {@inheritdoc}
@@ -32,7 +32,7 @@ class TranslationPass implements CompilerPassInterface
             ->filter(function (\SplFileInfo $file) {
                 return 2 === substr_count($file->getBasename(), '.') && preg_match('/\.\w+$/', $file->getBasename());
             })
-            ->in(__DIR__.'/../../../../Resources/translations')
+            ->in(__DIR__.'/../../../../translations')
         ;
 
         foreach ($finder as $file) {
