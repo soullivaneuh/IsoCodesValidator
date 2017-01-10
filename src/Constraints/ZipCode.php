@@ -14,7 +14,7 @@ use Symfony\Component\Validator\Exception\ConstraintDefinitionException;
  */
 final class ZipCode extends AbstractConstraint
 {
-    const ALL           = 'all';
+    const ALL = 'all';
 
     public $country = self::ALL;
 
