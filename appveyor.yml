@@ -19,7 +19,7 @@ init:
   - SET PATH=C:\Program Files\OpenSSL;c:\tools\php;%PATH%
 
 install:
-  - cinst php -version %php%
+  - cinst php --allow-empty-checksums -version %php%
   - cd c:\tools\php
   - copy php.ini-production php.ini
   - echo date.timezone="UTC" >> php.ini
