@@ -9,6 +9,7 @@ environment:
   matrix:
     - php: 5.6.17
     - php: 7.0.4
+    - php: 7.1.11
 
 matrix:
   fast_finish: true
@@ -19,7 +20,9 @@ init:
   - SET PATH=C:\Program Files\OpenSSL;c:\tools\php;%PATH%
 
 install:
-  - cinst php --allow-empty-checksums -version %php%
+  # Windows update service
+  - ps: Set-Service wuauserv -StartupType Manual
+  - cinst --params '""/InstallDir:C:\tools\php""' php --allow-empty-checksums -version %php%
   - cd c:\tools\php
   - copy php.ini-production php.ini
   - echo date.timezone="UTC" >> php.ini
