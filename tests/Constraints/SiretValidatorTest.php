@@ -39,7 +39,6 @@ final class SiretValidatorTest extends AbstractGenericConstraintValidatorTest
             ['44028837100015'],
             ['51743954300012'],
             ['azertyuiopqsdf'],
-
         ];
     }
 
