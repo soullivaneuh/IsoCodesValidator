@@ -1,4 +1,6 @@
+/src-dev            export-ignore
 /tests              export-ignore
+/generate           export-ignore
 /.*                 export-ignore
 /*.md               export-ignore
 /composer.*         export-ignore

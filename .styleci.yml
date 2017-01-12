@@ -11,3 +11,7 @@ enabled:
 disabled:
   - unalign_double_arrow
   - unalign_equals
+
+finder:
+  not-name:
+    - "*.php.twig"
