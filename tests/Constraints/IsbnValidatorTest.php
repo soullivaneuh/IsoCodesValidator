@@ -43,12 +43,4 @@ final class IsbnValidatorTest extends AbstractConstraintValidatorTest
     {
         return new IsbnValidator();
     }
-
-    /**
-     * {@inheritdoc}
-     */
-    protected function getInvalidMessage()
-    {
-        return 'This value is not a valid ISBN.';
-    }
 }

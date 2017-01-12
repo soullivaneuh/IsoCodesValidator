@@ -7,11 +7,4 @@ namespace SLLH\IsoCodesValidator\Tests\Constraints;
  */
 final class SiretValidatorTest extends AbstractGenericConstraintValidatorTest
 {
-    /**
-     * {@inheritdoc}
-     */
-    protected function getInvalidMessage()
-    {
-        return 'This value is not a valid SIRET.';
-    }
 }

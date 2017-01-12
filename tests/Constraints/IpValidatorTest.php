@@ -39,14 +39,6 @@ final class IpValidatorTest extends AbstractGenericConstraintValidatorTest
     /**
      * {@inheritdoc}
      */
-    protected function getInvalidMessage()
-    {
-        return 'This value is not a valid IP address.';
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     protected function getIsoCodesTestInstance()
     {
         return new IPTest();

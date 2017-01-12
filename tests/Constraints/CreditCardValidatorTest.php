@@ -14,12 +14,4 @@ final class CreditCardValidatorTest extends AbstractGenericConstraintValidatorTe
             return is_string($value[0]);
         });
     }
-
-    /**
-     * {@inheritdoc}
-     */
-    protected function getInvalidMessage()
-    {
-        return 'This value is not a valid credit card scheme.';
-    }
 }
