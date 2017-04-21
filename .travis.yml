@@ -6,6 +6,8 @@ php:
   - nightly
   - hhvm
 
+dist: trusty
+
 env:
   global:
     - PATH="$HOME/.composer/vendor/bin:$PATH"
