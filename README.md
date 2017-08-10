@@ -174,7 +174,7 @@ class Company
     private $vat;
 
     /**
-     * @IsoCodesAssert\ZipCode(country = "France")
+     * @IsoCodesAssert\ZipCode(country = "FR")
      */
     private $zipCode;
 
