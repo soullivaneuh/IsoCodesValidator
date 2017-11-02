@@ -28,8 +28,8 @@ install:
   - echo extension=php_intl.dll >> php.ini
   - echo extension=php_mbstring.dll >> php.ini
   - appveyor DownloadFile https://getcomposer.org/composer.phar
-  - appveyor DownloadFile https://phar.phpunit.de/phpunit.phar
+  - appveyor DownloadFile https://phar.phpunit.de/phpunit-5.7.phar
   - cd c:\projects\IsoCodesValidator
-  - php c:\tools\php\composer.phar update --prefer-dist --no-interaction --no-progress
+  - php c:\tools\php\composer.phar update --no-scripts --prefer-dist --no-interaction --no-progress
 
-test_script: php c:\tools\php\phpunit.phar -c phpunit.xml.dist
+test_script: php c:\tools\php\phpunit-5.7.phar -c phpunit.xml.dist
