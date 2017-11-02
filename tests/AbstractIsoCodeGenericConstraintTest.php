@@ -2,6 +2,7 @@
 
 namespace SLLH\IsoCodesValidator\Tests;
 
+use PHPUnit\Framework\TestCase;
 use SLLH\IsoCodesValidator\AbstractIsoCodesGenericConstraint;
 use SLLH\IsoCodesValidator\Constraints\Bban;
 use SLLH\IsoCodesValidator\Constraints\Cif;
@@ -11,7 +12,7 @@ use SLLH\IsoCodesValidator\Constraints\IsoCodesGenericValidator;
 /**
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
  */
-final class AbstractIsoCodeGenericConstraintTest extends \PHPUnit_Framework_TestCase
+final class AbstractIsoCodeGenericConstraintTest extends TestCase
 {
     /**
      * @dataProvider getGenericConstraints

@@ -2,9 +2,10 @@
 
 namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
+use PHPUnit\Framework\TestCase;
 use SLLH\IsoCodesValidator\Constraints\Isbn;
 
-final class IsbnTest extends \PHPUnit_Framework_TestCase
+final class IsbnTest extends TestCase
 {
     /**
      * @dataProvider getValidTypes
