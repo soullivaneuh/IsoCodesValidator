@@ -23,7 +23,7 @@ final class Isbn extends AbstractConstraint
     {
         parent::__construct($options);
 
-        if ($this->type !== null && !in_array($this->type, [10, 13])) {
+        if (null !== $this->type && !in_array($this->type, [10, 13])) {
             throw new ConstraintDefinitionException('The option "type" must be 10 or 13');
         }
     }

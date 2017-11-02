@@ -54,7 +54,7 @@ final class IsoCodesValidatorServiceProviderTest extends \PHPUnit_Framework_Test
 
         $source = 'This value is not a valid VAT.';
         $translation = $translator->trans($source, [], 'validators', $locale);
-        if ($locale !== 'en') {
+        if ('en' !== $locale) {
             // String should be translated
             $existing ? $this->assertNotSame($source, $translation) : $this->assertSame($source, $translation);
         }
