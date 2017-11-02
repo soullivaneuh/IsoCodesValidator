@@ -122,9 +122,14 @@ abstract class AbstractConstraintValidatorTest extends BaseAbstractConstraintVal
     }
 
     /**
+     * By default, the message property of the constraint if not dynamic.
+     *
      * @return string
      */
-    abstract protected function getInvalidMessage();
+    protected function getInvalidMessage()
+    {
+        return $this->createConstraint()->message;
+    }
 
     /**
      * @param array[] $values

@@ -7,11 +7,4 @@ namespace SLLH\IsoCodesValidator\Tests\Constraints;
  */
 final class MacValidatorTest extends AbstractGenericConstraintValidatorTest
 {
-    /**
-     * {@inheritdoc}
-     */
-    protected function getInvalidMessage()
-    {
-        return 'This value is not a valid MAC address.';
-    }
 }

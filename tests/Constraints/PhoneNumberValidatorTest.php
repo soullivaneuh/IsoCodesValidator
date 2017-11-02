@@ -41,12 +41,4 @@ final class PhoneNumberValidatorTest extends AbstractConstraintValidatorTest
     {
         return new PhoneNumberValidator();
     }
-
-    /**
-     * {@inheritdoc}
-     */
-    protected function getInvalidMessage()
-    {
-        return 'This value is not a valid phone number.';
-    }
 }

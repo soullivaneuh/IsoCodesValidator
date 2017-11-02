@@ -1,0 +1,24 @@
+<?php
+
+namespace SLLH\IsoCodesValidator\Constraints;
+
+use SLLH\IsoCodesValidator\AbstractIsoCodesGenericConstraint;
+
+/**
+ * @Annotation
+ * @Target({"PROPERTY", "METHOD", "ANNOTATION"})
+ *
+ * @author Sullivan Senechal <soullivaneuh@gmail.com>
+ */
+final class {{ class_name }} extends AbstractIsoCodesGenericConstraint
+{
+    public $message = '{{ class_message|upper }}';
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getIsoCodesVersion()
+    {
+        return '{{ class_version }}';
+    }
+}

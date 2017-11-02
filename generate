@@ -1,0 +1,15 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__.'/vendor/autoload.php';
+
+use SLLH\IsoCodesValidator\Dev\Console\Command\GenerateCommand;
+use Symfony\Component\Console\Application;
+
+$application = new Application('generate');
+$command = new GenerateCommand();
+
+$application->add($command);
+
+$application->setDefaultCommand($command->getName(), true);
+$application->run();

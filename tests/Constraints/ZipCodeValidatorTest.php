@@ -40,12 +40,4 @@ final class ZipCodeValidatorTest extends AbstractConstraintValidatorTest
     {
         return new ZipCodeValidator();
     }
-
-    /**
-     * {@inheritdoc}
-     */
-    protected function getInvalidMessage()
-    {
-        return 'This value is not a valid ZIP code.';
-    }
 }
