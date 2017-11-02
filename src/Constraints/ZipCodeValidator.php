@@ -23,15 +23,16 @@ final class ZipCodeValidator extends AbstractIsoCodesConstraintValidator
             return;
         }
 
-        if ($constraint->country == ZipCode::ALL) {
+        if (ZipCode::ALL == $constraint->country) {
             $validated = false;
             foreach (IsoCodes\ZipCode::getAvailableCountries() as $country) {
                 if (IsoCodes\ZipCode::validate($value, $country)) {
                     $validated = true;
+
                     break;
                 }
             }
-            if ($validated === false) {
+            if (false === $validated) {
                 $this->createViolation($constraint->message);
             }
         } elseif (!IsoCodes\ZipCode::validate($value, $constraint->country)) {
