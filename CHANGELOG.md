@@ -1,5 +1,9 @@
 # CHANGELOG
 
+* 3.1.0 (2017-07-31)
+
+ * PhoneNumber validator
+
 * 3.0.0 (2016-05-21)
 
  * Move translations files from `Resources/translations` to `translations`.

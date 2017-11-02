@@ -2,21 +2,22 @@
 
 namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
-use SLLH\IsoCodesValidator\Constraints\ZipCode;
-use SLLH\IsoCodesValidator\Constraints\ZipCodeValidator;
+use SLLH\IsoCodesValidator\Constraints\PhoneNumber;
+use SLLH\IsoCodesValidator\Constraints\PhoneNumberValidator;
 
-final class ZipCodeValidatorTest extends AbstractConstraintValidatorTest
+/**
+ * @author Sullivan Senechal <soullivaneuh@gmail.com>
+ */
+final class PhoneNumberValidatorTest extends AbstractConstraintValidatorTest
 {
     /**
      * @dataProvider getValidValues
      */
     public function testValidValues($value, $country)
     {
-        $this->validator->validate($value, new ZipCode([
-            'country' => $country,
+        $this->validator->validate($value, new PhoneNumber([
+            'country' => !$country ? PhoneNumber::ANY : $country,
         ]));
-        $this->assertNoViolation();
-        $this->validator->validate($value, new ZipCode());
         $this->assertNoViolation();
     }
 
@@ -25,8 +26,8 @@ final class ZipCodeValidatorTest extends AbstractConstraintValidatorTest
      */
     public function testInvalidValues($value, $country)
     {
-        $this->validator->validate($value, new ZipCode([
-            'country' => $country,
+        $this->validator->validate($value, new PhoneNumber([
+            'country' => !$country ? PhoneNumber::ANY : $country,
         ]));
 
         $this->buildViolation($this->getInvalidMessage())
@@ -38,7 +39,7 @@ final class ZipCodeValidatorTest extends AbstractConstraintValidatorTest
      */
     protected function createValidator()
     {
-        return new ZipCodeValidator();
+        return new PhoneNumberValidator();
     }
 
     /**
@@ -46,6 +47,6 @@ final class ZipCodeValidatorTest extends AbstractConstraintValidatorTest
      */
     protected function getInvalidMessage()
     {
-        return 'This value is not a valid ZIP code.';
+        return 'This value is not a valid phone number.';
     }
 }

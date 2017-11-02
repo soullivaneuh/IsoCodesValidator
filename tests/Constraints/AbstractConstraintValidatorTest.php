@@ -2,6 +2,7 @@
 
 namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
+use IsoCodes\Tests\AbstractIsoCodeTest;
 use SLLH\IsoCodesValidator\AbstractConstraint;
 use SLLH\IsoCodesValidator\ConstraintInterface;
 use SLLH\IsoCodesValidator\Constraints\IsoCodesGenericValidator;
@@ -76,14 +77,20 @@ abstract class AbstractConstraintValidatorTest extends BaseAbstractConstraintVal
     }
 
     /**
-     * @return array[]
+     * {@inheritdoc}
      */
-    abstract public function getValidValues();
+    public function getValidValues()
+    {
+        return $this->filterEmptyValues($this->getIsoCodesTestInstance()->getValidValues());
+    }
 
     /**
-     * @return array[]
+     * {@inheritdoc}
      */
-    abstract public function getInvalidValues();
+    public function getInvalidValues()
+    {
+        return $this->filterEmptyValues($this->getIsoCodesTestInstance()->getInvalidValues());
+    }
 
     protected function createValidator()
     {
@@ -103,7 +110,34 @@ abstract class AbstractConstraintValidatorTest extends BaseAbstractConstraintVal
     }
 
     /**
+     * @return AbstractIsoCodeTest
+     */
+    protected function getIsoCodesTestInstance()
+    {
+        $validatorTestClassTab = explode('\\', get_class($this));
+        $testClass = 'IsoCodes\\Tests\\'.str_replace('ValidatorTest', '', end($validatorTestClassTab)).'Test';
+
+        return new $testClass();
+    }
+
+    /**
      * @return string
      */
     abstract protected function getInvalidMessage();
+
+    /**
+     * @param array[] $values
+     *
+     * @return array[]
+     */
+    private function filterEmptyValues($values)
+    {
+        foreach ($values as $v => $value) {
+            if (empty($value[0])) {
+                unset($values[$v]);
+            }
+        }
+
+        return $values;
+    }
 }

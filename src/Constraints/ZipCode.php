@@ -14,7 +14,7 @@ use Symfony\Component\Validator\Exception\ConstraintDefinitionException;
  */
 final class ZipCode extends AbstractConstraint
 {
-    const ALL           = 'all';
+    const ALL = 'all';
 
     public $country = self::ALL;
 
@@ -27,7 +27,7 @@ final class ZipCode extends AbstractConstraint
     {
         parent::__construct($options);
 
-        if ($this->country != self::ALL && !in_array($this->country, IsoCodes\ZipCode::getAvailableCountries())) {
+        if (self::ALL != $this->country && !in_array($this->country, IsoCodes\ZipCode::getAvailableCountries())) {
             throw new ConstraintDefinitionException(sprintf(
                 'The option "country" must be one of "%s" or "all"',
                 implode('", "', IsoCodes\ZipCode::getAvailableCountries())

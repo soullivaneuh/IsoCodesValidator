@@ -19,14 +19,14 @@ init:
   - SET PATH=C:\Program Files\OpenSSL;c:\tools\php;%PATH%
 
 install:
-  - cinst OpenSSL.Light
-  - cinst php -version %php%
+  - cinst php --allow-empty-checksums -version %php%
   - cd c:\tools\php
   - copy php.ini-production php.ini
   - echo date.timezone="UTC" >> php.ini
   - echo extension_dir=ext >> php.ini
   - echo extension=php_openssl.dll >> php.ini
   - echo extension=php_intl.dll >> php.ini
+  - echo extension=php_mbstring.dll >> php.ini
   - appveyor DownloadFile https://getcomposer.org/composer.phar
   - appveyor DownloadFile https://phar.phpunit.de/phpunit.phar
   - cd c:\projects\IsoCodesValidator
