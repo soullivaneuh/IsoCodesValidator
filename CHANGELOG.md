@@ -1,5 +1,9 @@
 # CHANGELOG
 
+* 3.1.1 (2017-11-03)
+
+ * Remove max version conflicts
+
 * 3.1.0 (2017-07-31)
 
  * PhoneNumber validator
