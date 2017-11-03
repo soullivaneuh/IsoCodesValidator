@@ -33,10 +33,10 @@
         "symfony/finder": "For Symfony integration as a bundle"
     },
     "conflict": {
-        "silex/silex": "<1.2 || >=3.0",
-        "symfony/dependency-injection": "<2.7 || >=4.0",
-        "symfony/http-kernel": "<2.7 || >=4.0",
-        "symfony/finder": "<2.7 || >=4.0"
+        "silex/silex": "<1.2",
+        "symfony/dependency-injection": "<2.7",
+        "symfony/http-kernel": "<2.7",
+        "symfony/finder": "<2.7"
     },
     "autoload": {
         "psr-4": { "SLLH\\IsoCodesValidator\\": "src" }
