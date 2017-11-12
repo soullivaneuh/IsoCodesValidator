@@ -12,6 +12,6 @@ final class InseeValidatorTest extends AbstractGenericConstraintValidatorTest
      */
     protected function getInvalidMessage()
     {
-        return 'This INSEE number is not valid.';
+        return 'This value is not a valid INSEE number.';
     }
 }
