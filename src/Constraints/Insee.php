@@ -12,7 +12,7 @@ use SLLH\IsoCodesValidator\AbstractIsoCodesGenericConstraint;
  */
 final class Insee extends AbstractIsoCodesGenericConstraint
 {
-    public $message = 'This INSEE number is not valid.';
+    public $message = 'This value is not a valid INSEE number.';
 
     /**
      * {@inheritdoc}
