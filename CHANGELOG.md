@@ -1,5 +1,9 @@
 # CHANGELOG
 
+* 3.1.2 (2017-11-13)
+
+ * Fix INSEE message translation mismatch
+
 * 3.1.1 (2017-11-03)
 
  * Remove max version conflicts
