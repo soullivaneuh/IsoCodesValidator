@@ -25,7 +25,8 @@ final class TranslationPass implements CompilerPassInterface
             return;
         }
 
-        $translator = $container->findDefinition('translator.default');
+        $translator = $container->findDefinition('translator.default')
+            ->setPublic(true);
 
         $finder = Finder::create()
             ->files()
