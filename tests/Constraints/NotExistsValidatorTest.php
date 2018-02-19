@@ -5,7 +5,7 @@ namespace SLLH\IsoCodesValidator\Tests\Constraints;
 use SLLH\IsoCodesValidator\Constraints\IsoCodesGenericValidator;
 use SLLH\IsoCodesValidator\Exception\ValidatorNotExistsException;
 use SLLH\IsoCodesValidator\Tests\Fixtures\Constraints\NotExists;
-use Symfony\Component\Validator\Tests\Constraints\AbstractConstraintValidatorTest as BaseAbstractConstraintValidatorTest;
+use Symfony\Component\Validator\Test\ConstraintValidatorTestCase as BaseAbstractConstraintValidatorTest;
 
 /**
  * Special validator to test ValidatorNotExistsException.
