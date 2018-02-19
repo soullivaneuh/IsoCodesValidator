@@ -27,10 +27,11 @@ final class SLLHIsoCodesValidatorBundleTest extends AbstractContainerBuilderTest
         $this->bundle->build($this->container);
 
         $passes = $this->container->getCompilerPassConfig()->getPasses();
-        $this->assertCount(2, $passes, 'Bundle must contains a TranslationPass instance.');
+
+        $this->assertCount(7, $passes, 'Bundle must contains a TranslationPass instance.');
         $this->assertInstanceOf(
             'SLLH\IsoCodesValidator\Bridge\Symfony\DependencyInjection\Compiler\TranslationPass',
-            $passes[1],
+            $passes[4],
             'Bundle must contains a TranslationPass instance.'
         );
     }
