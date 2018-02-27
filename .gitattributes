@@ -1,5 +1,4 @@
 /tests              export-ignore
 /.*                 export-ignore
 /*.md               export-ignore
-/composer.*         export-ignore
 /phpunit.xml.dist   export-ignore
