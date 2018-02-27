@@ -14,6 +14,7 @@ use Symfony\Component\Validator\Exception\ConstraintDefinitionException;
 final class Isbn extends AbstractConstraint
 {
     public $message = 'This value is not a valid ISBN.';
+
     public $type = null;
 
     /**
