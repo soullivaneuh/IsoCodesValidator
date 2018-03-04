@@ -9,7 +9,6 @@ use SLLH\IsoCodesValidator\Constraints\IsoCodesGenericValidator;
 use Symfony\Component\Validator\Constraints\Blank;
 use Symfony\Component\Validator\Exception\UnexpectedTypeException;
 use Symfony\Component\Validator\Test\ConstraintValidatorTestCase as BaseAbstractConstraintValidatorTest;
-use Symfony\Component\Validator\Validation;
 
 abstract class AbstractConstraintValidatorTest extends BaseAbstractConstraintValidatorTest
 {
