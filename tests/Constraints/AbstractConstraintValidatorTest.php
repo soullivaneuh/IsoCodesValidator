@@ -8,7 +8,6 @@ use SLLH\IsoCodesValidator\ConstraintInterface;
 use SLLH\IsoCodesValidator\Constraints\IsoCodesGenericValidator;
 use Symfony\Component\Validator\Constraints\Blank;
 use Symfony\Component\Validator\Exception\UnexpectedTypeException;
-use Symfony\Component\Validator\Validation;
 use Symfony\Component\Validator\Test\ConstraintValidatorTestCase as BaseAbstractConstraintValidatorTest;
 
 abstract class AbstractConstraintValidatorTest extends BaseAbstractConstraintValidatorTest
@@ -27,11 +26,6 @@ abstract class AbstractConstraintValidatorTest extends BaseAbstractConstraintVal
         if (!class_exists($this->srcConstraint->getIsoCodesClass())) {
             $this->markTestSkipped('The '.$this->srcConstraint->getIsoCodesClass().' validator final class does not exists.');
         }
-    }
-
-    protected function getApiVersion()
-    {
-        return Validation::API_VERSION_2_5;
     }
 
     public function testUnexpectedConstraintException()
