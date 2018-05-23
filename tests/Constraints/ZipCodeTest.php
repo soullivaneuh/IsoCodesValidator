@@ -2,9 +2,10 @@
 
 namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
+use PHPUnit\Framework\TestCase;
 use SLLH\IsoCodesValidator\Constraints\ZipCode;
 
-final class ZipCodeTest extends \PHPUnit_Framework_TestCase
+final class ZipCodeTest extends TestCase
 {
     /**
      * @dataProvider getValidCountries

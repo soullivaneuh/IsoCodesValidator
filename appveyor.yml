@@ -9,6 +9,7 @@ environment:
   matrix:
     - php: 5.6.17
     - php: 7.0.4
+    - php: 7.1.11
 
 matrix:
   fast_finish: true
@@ -19,7 +20,9 @@ init:
   - SET PATH=C:\Program Files\OpenSSL;c:\tools\php;%PATH%
 
 install:
-  - cinst php --allow-empty-checksums -version %php%
+  # Windows update service
+  - ps: Set-Service wuauserv -StartupType Manual
+  - cinst --params '""/InstallDir:C:\tools\php""' php --allow-empty-checksums -version %php%
   - cd c:\tools\php
   - copy php.ini-production php.ini
   - echo date.timezone="UTC" >> php.ini
@@ -28,8 +31,8 @@ install:
   - echo extension=php_intl.dll >> php.ini
   - echo extension=php_mbstring.dll >> php.ini
   - appveyor DownloadFile https://getcomposer.org/composer.phar
-  - appveyor DownloadFile https://phar.phpunit.de/phpunit.phar
+  - appveyor DownloadFile https://phar.phpunit.de/phpunit-5.7.phar
   - cd c:\projects\IsoCodesValidator
-  - php c:\tools\php\composer.phar update --prefer-dist --no-interaction --no-progress
+  - php c:\tools\php\composer.phar update --no-scripts --prefer-dist --no-interaction --no-progress
 
-test_script: php c:\tools\php\phpunit.phar -c phpunit.xml.dist
+test_script: php c:\tools\php\phpunit-5.7.phar -c phpunit.xml.dist

@@ -17,7 +17,7 @@
         "symfony/validator": "^2.7 || ^3.0"
     },
     "require-dev": {
-        "matthiasnoback/symfony-dependency-injection-test": "^0.7.4",
+        "matthiasnoback/symfony-dependency-injection-test": "^1.0.1 || ^2.0",
         "sebastian/exporter": "^1.2.0",
         "silex/silex": "^1.2 || ^2.0",
         "sllh/php-cs-fixer-styleci-bridge": "^1.0",
@@ -33,10 +33,10 @@
         "symfony/finder": "For Symfony integration as a bundle"
     },
     "conflict": {
-        "silex/silex": "<1.2 || >=3.0",
-        "symfony/dependency-injection": "<2.7 || >=4.0",
-        "symfony/http-kernel": "<2.7 || >=4.0",
-        "symfony/finder": "<2.7 || >=4.0"
+        "silex/silex": "<1.2",
+        "symfony/dependency-injection": "<2.7",
+        "symfony/http-kernel": "<2.7",
+        "symfony/finder": "<2.7"
     },
     "autoload": {
         "psr-4": { "SLLH\\IsoCodesValidator\\": "src" }
@@ -44,6 +44,11 @@
     "autoload-dev": {
         "psr-4": { "SLLH\\IsoCodesValidator\\Tests\\": "tests" },
         "psr-0": { "IsoCodes\\Tests\\": "vendor/ronanguilloux/isocodes/tests" }
+    },
+    "scripts": {
+        "isocodes-test-namespace": "sed -i 's/PHPUnit_Framework_TestCase/PHPUnit\\\\Framework\\\\TestCase/' vendor/ronanguilloux/isocodes/tests/IsoCodes/Tests/AbstractIsoCodeTest.php",
+        "post-install-cmd": "@isocodes-test-namespace",
+        "post-update-cmd": "@isocodes-test-namespace"
     },
     "config": {
         "sort-packages": true
