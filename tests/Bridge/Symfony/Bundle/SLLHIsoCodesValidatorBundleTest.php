@@ -4,8 +4,6 @@ namespace SLLH\IsoCodesValidator\Tests\Bridge\Symfony\Bundle;
 
 use Matthias\SymfonyDependencyInjectionTest\PhpUnit\AbstractContainerBuilderTestCase;
 use SLLH\IsoCodesValidator\Bridge\Symfony\Bundle\SLLHIsoCodesValidatorBundle;
-use SLLH\IsoCodesValidator\Bridge\Symfony\DependencyInjection\Compiler\TranslationPass;
-use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 
 /**
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
