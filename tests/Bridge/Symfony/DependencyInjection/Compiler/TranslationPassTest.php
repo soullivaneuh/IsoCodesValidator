@@ -23,6 +23,7 @@ final class TranslationPassTest extends AbstractCompilerPassTestCase
         $translatorDefinition = $this->registerService('translator.default', 'Symfony\Component\Translation\Translator');
         $translatorDefinition->setArguments(['fr']);
         $translatorDefinition->addMethodCall('addLoader', ['xlf', new XliffFileLoader()]);
+        $translatorDefinition->setPublic(true);
         $this->compile();
 
         /** @var Translator $translator */
