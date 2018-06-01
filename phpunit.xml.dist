@@ -20,11 +20,6 @@
             <file>./tests/AbstractIsoCodeGenericConstraintTest.php</file>
             <directory>./tests/Bridge/Symfony</directory>
         </testsuite>
-        <testsuite name="silex">
-            <directory>./tests/Constraints</directory>
-            <file>./tests/AbstractIsoCodeGenericConstraintTest.php</file>
-            <directory>./tests/Bridge/Silex</directory>
-        </testsuite>
     </testsuites>
 
     <filter>
