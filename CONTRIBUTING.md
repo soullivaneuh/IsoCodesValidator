@@ -6,7 +6,7 @@ If you happen to find a bug, we kindly request you to report it. You may report 
   * A clear title to resume the issue
   * A description of the workflow needed to reproduce the bug,
 
-> _NOTE:_ Don’t hesitate giving as much information as you can (OS, PHP/Symfony/Silex version, extensions...)
+> _NOTE:_ Don’t hesitate giving as much information as you can (OS, PHP/Symfony version, extensions...)
 
 **BE AWARE**: If you found a bug provided by IsoCodes core, please submit an issue directly on the concerned repository: https://github.com/ronanguilloux/IsoCodes
 

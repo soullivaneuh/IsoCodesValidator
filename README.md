@@ -24,7 +24,7 @@ Symfony validator wrapper of [IsoCodes](https://github.com/ronanguilloux/IsoCode
 All the installation and usage instructions are located in this README.
 Check it for specific version:
 
-* [__4.x__(unstable)](https://github.com/Soullivaneuh/IsoCodesValidator/tree/master) with support for Symfony `^2.7|^3.0` and Silex `^1.2|^2.0`
+* [__4.x__(unstable)](https://github.com/Soullivaneuh/IsoCodesValidator/tree/master) with support for Symfony `^2.7|^3.0`
 * [__3.x__](https://github.com/Soullivaneuh/IsoCodesValidator/tree/3.x) with support for Symfony `^2.7|^3.0` and Silex `^1.2|^2.0`
 * [__2.x__](https://github.com/Soullivaneuh/IsoCodesValidator/tree/2.x) with support for Symfony `^2.7|^3.0` and Silex `^1.2|^2.0`
 * [__1.x__](https://github.com/Soullivaneuh/IsoCodesValidator/tree/1.x) with support for Symfony `^2.3|^3.0` and Silex `^1.1`
@@ -36,7 +36,6 @@ This version of the project requires:
 * PHP 5.6+ or 7.0+
 * Symfony Validator component 2.7+
 * Symfony 2.7+ or 3.0+ for bundle integration
-* Silex 1.2+ for service provider integration
 
 ## Installation
 
@@ -48,7 +47,7 @@ $ composer require sllh/iso-codes-validator
 
 After this, you can use it as is.
 
-If you are using it on a **Symfony** or **Silex** project,
+If you are using it on a **Symfony** project,
 you should read the following instructions for a better integration.
 
 ### As a Symfony bundle
@@ -84,46 +83,6 @@ public function registerBundles()
         new SLLH\IsoCodesValidator\Bridge\Symfony\Bundle\SLLHIsoCodesValidatorBundle(),
     );
 }
-```
-
-### As a Silex service provider
-
-Add Silex dependency on your project:
-
-```bash
-$ composer require silex/silex
-```
-
-#### Register the service
-
-##### Silex 1.x
-
-```php
-use Silex\Provider\TranslationServiceProvider();
-use SLLH\IsoCodesValidator\Bridge\Silex\IsoCodesValidatorSilex1ServiceProvider;
-
-// Get translation working
-$app->register(new TranslationServiceProvider());
-
-// Register the provider
-$app->register(new IsoCodesValidatorSilex1ServiceProvider());
-```
-
-##### Silex 2.x
-
-```php
-use Silex\Provider\LocaleServiceProvider();
-use Silex\Provider\TranslationServiceProvider();
-use SLLH\IsoCodesValidator\Bridge\Silex\IsoCodesValidatorServiceProvider();
-
-// Get translation working
-$app->register(new LocaleServiceProvider());
-$app->register(new TranslationServiceProvider(), array(
-    'locale_fallbacks' => array('en'),
-));
-
-// Register the provider
-$app->register(new IsoCodesValidatorServiceProvider());
 ```
 
 ## Usage
@@ -195,28 +154,6 @@ $company = new Company('48853781200015', '432167567', 'DE123456789', '59000');
 
 $violations = $validator->validate($company);
 ```
-
-### Silex method
-
-> You can validate values directly using the validateValue validator method
-
-```php
-use SLLH\IsoCodesValidator\Constraints as IsoCodesAssert;
-
-$app->get('/validate/{vat}', function ($vat) use ($app) {
-    $errors = $app['validator']->validateValue($vat, new IsoCodesAssert\Vat());
-
-    if (count($errors) > 0) {
-        return (string) $errors;
-    } else {
-        return 'The VAT is valid';
-    }
-});
-```
-
-More implementations could be found on official [Silex Validator usage](http://silex.sensiolabs.org/doc/providers/validator.html#usage) documentation.
-
-Remember to replace `Assert` by `IsoCodesAssert` with the correct import statement.
 
 ## Constraints reference
 
