@@ -1,5 +1,11 @@
 # CHANGELOG
 
+* 4.0.0 (2018-06-28)
+
+ * Drop Silex support
+ * Drop Symfony v2 support
+ * Add Symfony v4 support
+
 * 3.1.2 (2017-11-13)
 
  * Fix INSEE message translation mismatch
