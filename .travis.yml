@@ -44,7 +44,7 @@ install:
   - if [ "$ISOCODES_VERSION" != "" ]; then composer require "ronanguilloux/isocodes:${ISOCODES_VERSION}" --no-update; fi;
   - composer update --prefer-dist --no-interaction $COMPOSER_FLAGS
 
-script: ./vendor/bin/simple-phpunit --coverage-clover build/logs/clover.xml ${PHPUNIT_OPTION}
+script: XDEBUG_MODE=coverage ./vendor/bin/simple-phpunit --coverage-clover build/logs/clover.xml ${PHPUNIT_OPTION}
 
 after_script:
   - coveralls -v
