@@ -4,6 +4,7 @@ namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
 use PHPUnit\Framework\TestCase;
 use SLLH\IsoCodesValidator\Constraints\ZipCode;
+use Symfony\Component\Validator\Exception\ConstraintDefinitionException;
 
 final class ZipCodeTest extends TestCase
 {
@@ -29,10 +30,10 @@ final class ZipCodeTest extends TestCase
 
     /**
      * @dataProvider getInvalidCountries
-     * @expectedException \Symfony\Component\Validator\Exception\ConstraintDefinitionException
      */
     public function testInvalidCountries($country)
     {
+        $this->expectException(ConstraintDefinitionException::class);
         new ZipCode(['country' => $country]);
     }
 

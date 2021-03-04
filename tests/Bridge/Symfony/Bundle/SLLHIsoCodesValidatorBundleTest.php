@@ -17,7 +17,7 @@ final class SLLHIsoCodesValidatorBundleTest extends AbstractContainerBuilderTest
      */
     protected $bundle;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
 
