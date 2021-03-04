@@ -13,7 +13,7 @@ use Symfony\Component\Translation\Translator;
  */
 final class TranslationPassTest extends AbstractCompilerPassTestCase
 {
-    protected function registerCompilerPass(ContainerBuilder $container)
+    protected function registerCompilerPass(ContainerBuilder $container): void
     {
         $container->addCompilerPass(new TranslationPass());
     }

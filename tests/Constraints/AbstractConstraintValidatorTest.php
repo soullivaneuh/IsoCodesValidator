@@ -17,7 +17,7 @@ abstract class AbstractConstraintValidatorTest extends ConstraintValidatorTestCa
      */
     protected $srcConstraint;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
 
