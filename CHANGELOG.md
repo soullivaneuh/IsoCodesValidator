@@ -1,5 +1,8 @@
 # CHANGELOG
 
+Note: Next releases are documented with commits following
+[conventional commits convention](https://www.conventionalcommits.org/).
+
 * 4.0.0 (2018-06-28)
 
  * Drop Silex support

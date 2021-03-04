@@ -4,6 +4,7 @@ namespace SLLH\IsoCodesValidator\Tests\Constraints;
 
 use PHPUnit\Framework\TestCase;
 use SLLH\IsoCodesValidator\Constraints\Isbn;
+use Symfony\Component\Validator\Exception\ConstraintDefinitionException;
 
 final class IsbnTest extends TestCase
 {
@@ -28,10 +29,10 @@ final class IsbnTest extends TestCase
 
     /**
      * @dataProvider getInvalidTypes
-     * @expectedException \Symfony\Component\Validator\Exception\ConstraintDefinitionException
      */
     public function testInvalidTypes($type)
     {
+        $this->expectException(ConstraintDefinitionException::class);
         $isbn = new Isbn(['type' => $type]);
     }
 

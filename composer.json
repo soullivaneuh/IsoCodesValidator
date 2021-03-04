@@ -11,18 +11,19 @@
         }
     ],
     "require": {
-        "php": "^5.6 || ^7.0",
-        "ronanguilloux/isocodes": "^2.1.1",
-        "symfony/translation": "^3.4 || ^4.0",
-        "symfony/validator": "^3.4 || ^4.0"
+        "php": "^7.4 || ^8.0",
+        "ronanguilloux/isocodes": "^2.3.4",
+        "symfony/translation": "^4.4 || ^5.0",
+        "symfony/validator": "^4.4 || ^5.0"
     },
     "require-dev": {
-        "matthiasnoback/symfony-dependency-injection-test": "^1.0.1 || ^2.0",
+        "cweagans/composer-patches": "^1.7",
+        "matthiasnoback/symfony-dependency-injection-test": "^4.2",
         "sebastian/exporter": "^1.2.0",
-        "symfony/dependency-injection": "^3.4 || ^4.0",
-        "symfony/finder": "^3.4 || ^4.0",
-        "symfony/http-kernel": "^3.4 || ^4.0",
-        "symfony/phpunit-bridge": "^3.4 || ^4.0"
+        "symfony/dependency-injection": "^4.4 || ^5.0",
+        "symfony/finder": "^4.4 || ^5.0",
+        "symfony/http-kernel": "^4.4 || ^5.0",
+        "symfony/phpunit-bridge": "^4.4 || ^5.0"
     },
     "suggest": {
         "symfony/dependency-injection": "For Symfony integration as a bundle",
@@ -41,17 +42,17 @@
         "psr-4": { "SLLH\\IsoCodesValidator\\Tests\\": "tests" },
         "psr-0": { "IsoCodes\\Tests\\": "vendor/ronanguilloux/isocodes/tests" }
     },
-    "scripts": {
-        "isocodes-test-namespace": "sed -i 's/PHPUnit_Framework_TestCase/PHPUnit\\\\Framework\\\\TestCase/' vendor/ronanguilloux/isocodes/tests/IsoCodes/Tests/AbstractIsoCodeTest.php",
-        "post-install-cmd": "@isocodes-test-namespace",
-        "post-update-cmd": "@isocodes-test-namespace"
-    },
     "config": {
         "sort-packages": true
     },
     "extra": {
         "branch-alias": {
             "dev-master": "5.x-dev"
+        },
+        "patches": {
+            "ronanguilloux/isocodes": {
+                "fix(gtin8): wrong interface signature match": "https://github.com/ronanguilloux/IsoCodes/pull/169.patch"
+            }
         }
     }
 }
