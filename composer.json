@@ -46,9 +46,6 @@
         "sort-packages": true
     },
     "extra": {
-        "branch-alias": {
-            "dev-master": "5.x-dev"
-        },
         "patches": {
             "ronanguilloux/isocodes": {
                 "fix(gtin8): wrong interface signature match": "https://github.com/ronanguilloux/IsoCodes/pull/169.patch"
