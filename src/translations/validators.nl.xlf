@@ -12,7 +12,7 @@
             </trans-unit>
             <trans-unit id="credit_card_message">
                 <source>This value is not a valid credit card scheme.</source>
-                <target>Deze waarde is geen geldig credit card nummer .</target>
+                <target>Deze waarde is geen geldig credit card nummer.</target>
             </trans-unit>
             <trans-unit id="ean_8_message">
                 <source>This value is not a valid EAN-8.</source>
