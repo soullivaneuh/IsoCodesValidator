@@ -18,10 +18,21 @@ final class TranslationPassTest extends AbstractCompilerPassTestCase
         $container->addCompilerPass(new TranslationPass());
     }
 
-    public function testWithTranslatorService()
+    public function providerWithTranslatorService(): array
+    {
+        return [
+            ['fr', 'Cette valeur n\'est pas un code BBAN valide.'],
+            ['nl', 'Deze waarde is geen geldige BBAN.'],
+        ];
+    }
+
+    /**
+     * @dataProvider providerWithTranslatorService
+     */
+    public function testWithTranslatorService($locale, $expect)
     {
         $translatorDefinition = $this->registerService('translator.default', 'Symfony\Component\Translation\Translator');
-        $translatorDefinition->setArguments(['fr']);
+        $translatorDefinition->setArguments([$locale]);
         $translatorDefinition->addMethodCall('addLoader', ['xlf', new XliffFileLoader()]);
         $translatorDefinition->setPublic(true);
         $this->compile();
@@ -29,7 +40,7 @@ final class TranslationPassTest extends AbstractCompilerPassTestCase
         /** @var Translator $translator */
         $translator = $this->container->get('translator.default');
         $this->assertSame(
-            'Cette valeur n\'est pas un code BBAN valide.',
+            $expect,
             $translator->trans('This value is not a valid BBAN.', [], 'validators')
         );
     }

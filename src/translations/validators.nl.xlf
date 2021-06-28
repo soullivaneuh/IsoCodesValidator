@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="bban_message">
+                <source>This value is not a valid BBAN.</source>
+                <target>Deze waarde is geen geldige BBAN.</target>
+            </trans-unit>
+            <trans-unit id="cif_message">
+                <source>This value is not a valid CIF.</source>
+                <target>Deze waarde is geen geldige CIF.</target>
+            </trans-unit>
+            <trans-unit id="credit_card_message">
+                <source>This value is not a valid credit card scheme.</source>
+                <target>Deze waarde is geen geldig credit card nummer.</target>
+            </trans-unit>
+            <trans-unit id="ean_8_message">
+                <source>This value is not a valid EAN-8.</source>
+                <target>Deze waarde is geen geldige EAN-8.</target>
+            </trans-unit>
+            <trans-unit id="ean_13_message">
+                <source>This value is not a valid EAN-13.</source>
+                <target>Deze waarde is geen geldige EAN-13.</target>
+            </trans-unit>
+            <trans-unit id="iban_message">
+                <source>This value is not a valid IBAN.</source>
+                <target>Deze waarde is geen geldige IBAN.</target>
+            </trans-unit>
+            <trans-unit id="insee_message">
+                <source>This value is not a valid INSEE number.</source>
+                <target>Deze waarde is geen geldige INSEE nummer.</target>
+            </trans-unit>
+            <trans-unit id="ip_message">
+                <source>This value is not a valid IP address.</source>
+                <target>Deze waarde is geen geldig IP-adres.</target>
+            </trans-unit>
+            <trans-unit id="isbn_message">
+                <source>This value is not a valid ISBN.</source>
+                <target>Deze waarde is geen geldig ISBN.</target>
+            </trans-unit>
+            <trans-unit id="mac_message">
+                <source>This value is not a valid MAC address.</source>
+                <target>Deze waarde is geen geldig MAC address.</target>
+            </trans-unit>
+            <trans-unit id="nif_message">
+                <source>This value is not a valid NIF.</source>
+                <target>Deze waarde is geen geldige NIF.</target>
+            </trans-unit>
+            <trans-unit id="phone_number_message">
+                <source>This value is not a valid phone number.</source>
+                <target>Deze waarde is geen geldig telefoonnummer.</target>
+            </trans-unit>
+            <trans-unit id="siren_message">
+                <source>This value is not a valid SIREN.</source>
+                <target>Deze waarde is geen geldige SIREN.</target>
+            </trans-unit>
+            <trans-unit id="siret_message">
+                <source>This value is not a valid SIRET.</source>
+                <target>Deze waarde is geen geldige SIRET.</target>
+            </trans-unit>
+            <trans-unit id="ssn_message">
+                <source>This value is not a valid SSN.</source>
+                <target>Deze waarde is geen geldig SSN.</target>
+            </trans-unit>
+            <trans-unit id="structured_communication_message">
+                <source>This value is not a valid structured communication code.</source>
+                <target>Deze waarde is geen geldige gestructureerde communicatiecode.</target>
+            </trans-unit>
+            <trans-unit id="swift_bic_message">
+                <source>This value is not a valid SWIFT.</source>
+                <target>Deze waarde is geen geldige SWIFT.</target>
+            </trans-unit>
+            <trans-unit id="uknin_message">
+                <source>This value is not a valid NINO.</source>
+                <target>Deze waarde is geen geldige NINO.</target>
+            </trans-unit>
+            <trans-unit id="vat_message">
+                <source>This value is not a valid VAT.</source>
+                <target>Deze waarde is geen geldige BTW code.</target>
+            </trans-unit>
+            <trans-unit id="zip_code_message">
+                <source>This value is not a valid ZIP code.</source>
+                <target>Deze waarde is geen geldige postcode.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
